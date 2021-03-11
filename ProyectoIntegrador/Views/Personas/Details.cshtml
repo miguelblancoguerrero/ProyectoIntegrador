@@ -1,0 +1,90 @@
+﻿@model ProyectoIntegrador.Models.DBModels.Persona
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Persona</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.GeneroF.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GeneroF.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdentificacionTipoF.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdentificacionTipoF.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdentificacionNumero)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdentificacionNumero)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombres)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombres)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PrimerApellido)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrimerApellido)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SegundoApellido)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SegundoApellido)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaNacimiento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaNacimiento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CorreoElectronico)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CorreoElectronico)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Telefonos)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Telefonos)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -49,10 +49,10 @@ namespace ProyectoIntegrador.Models.DBModels
 
 
         [ForeignKey("Afiliado")]
-        private Afiliado AfiliadoF { get; set; }
+        public Afiliado AfiliadoF { get; set; }
         [ForeignKey("Medico")]
-        private Empleado MedicoF { get; set; }
+        public Empleado MedicoF { get; set; }
         [ForeignKey("Consultorio")]
-        private Consultorio ConsultorioF { get; set; }
+        public Consultorio ConsultorioF { get; set; }
     }
 }
