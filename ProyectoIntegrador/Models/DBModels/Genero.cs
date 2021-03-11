@@ -1,0 +1,27 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
+using System.Web;
+
+namespace ProyectoIntegrador.Models.DBModels
+{
+    [Table("generos")]
+    public class Genero
+    {
+        [Key]
+        [Column("id")]
+        public long Id { get; set; }
+        
+        [Column("nombre")]
+        [MaxLength(20)]
+        [Required]
+        public string Nombre { get; set; }
+
+        [Column("sexo_equivalente")]
+        [MaxLength(1)]
+        [Required]
+        public string SexoEquivalente { get; set; }
+    }
+}
