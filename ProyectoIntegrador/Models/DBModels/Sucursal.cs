@@ -36,6 +36,6 @@ namespace ProyectoIntegrador.Models.DBModels
 
 
         [ForeignKey("Municipio")]
-        private Municipio MunicipioF;
+        public Municipio MunicipioF { get; set; }
     }
 }
