@@ -27,6 +27,11 @@ namespace ProyectoIntegrador.Models.DBModels
         [Required]
         public long Orden { get; set; }
 
+        [Column("factura")]
+        [MaxLength(50)]
+        public string factura { get; set; }
+
+
         [ForeignKey("Orden")]
         public Orden OrdenF { get; set; }
     }

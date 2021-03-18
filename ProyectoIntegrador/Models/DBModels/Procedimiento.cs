@@ -7,7 +7,7 @@ using System.Web;
 
 namespace ProyectoIntegrador.Models.DBModels
 {
-    [Table("prcedimientos")]
+    [Table("procedimientos")]
     public class Procedimiento
     {
         [Key]

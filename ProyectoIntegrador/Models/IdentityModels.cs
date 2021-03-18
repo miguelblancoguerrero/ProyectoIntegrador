@@ -60,6 +60,7 @@ namespace ProyectoIntegrador.Models
         public DbSet<Pasillo> Pasillo { get; set; }
         public DbSet<Persona> Persona { get; set; }
         public DbSet<Piso> Piso { get; set; }
+        public DbSet<PisoMaterial> PisoMaterial { get; set; }
         public DbSet<Procedimiento> Procedimiento { get; set; }
         public DbSet<ProcedimientoMaterial> ProcedimientoMaterial { get; set; }
         public DbSet<Proveedor> Proveedor { get; set; }
