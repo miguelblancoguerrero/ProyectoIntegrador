@@ -168,9 +168,9 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\Administrativos\PersonasController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\PersonasController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -185,6 +185,14 @@
     <Compile Include="Migrations\202103110300106_partial_01_08_03_21.cs" />
     <Compile Include="Migrations\202103110300106_partial_01_08_03_21.Designer.cs">
       <DependentUpon>202103110300106_partial_01_08_03_21.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202103180122183_partial_01_08_03_21_2.cs" />
+    <Compile Include="Migrations\202103180122183_partial_01_08_03_21_2.Designer.cs">
+      <DependentUpon>202103180122183_partial_01_08_03_21_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202103180123341_partial_01_08_03_21_3.cs" />
+    <Compile Include="Migrations\202103180123341_partial_01_08_03_21_3.Designer.cs">
+      <DependentUpon>202103180123341_partial_01_08_03_21_3.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -211,6 +219,7 @@
     <Compile Include="Models\DBModels\Pasillo.cs" />
     <Compile Include="Models\DBModels\Persona.cs" />
     <Compile Include="Models\DBModels\Piso.cs" />
+    <Compile Include="Models\DBModels\PisoMaterial.cs" />
     <Compile Include="Models\DBModels\Procedimiento.cs" />
     <Compile Include="Models\DBModels\ProcedimientoMaterial.cs" />
     <Compile Include="Models\DBModels\Proveedor.cs" />
@@ -227,27 +236,16 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\bootstrap-theme.css" />
-    <Content Include="Content\bootstrap-theme.min.css" />
-    <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\custom.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
-    <Content Include="Scripts\jquery-3.4.1.js" />
-    <Content Include="Scripts\jquery-3.4.1.min.js" />
-    <Content Include="Scripts\jquery-3.4.1.slim.js" />
-    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
-    <None Include="Scripts\jquery.validate-vsdoc.js" />
-    <Content Include="Scripts\jquery.validate.js" />
-    <Content Include="Scripts\jquery.validate.min.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\jquery-3.2.1.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\popper.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -282,15 +280,14 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Personas\Create.cshtml" />
-    <Content Include="Views\Personas\Delete.cshtml" />
-    <Content Include="Views\Personas\Details.cshtml" />
-    <Content Include="Views\Personas\Edit.cshtml" />
-    <Content Include="Views\Personas\Index.cshtml" />
+    <Content Include="Views\Administrativas\Personas\Create.cshtml" />
+    <Content Include="Views\Administrativas\Personas\Delete.cshtml" />
+    <Content Include="Views\Administrativas\Personas\Details.cshtml" />
+    <Content Include="Views\Administrativas\Personas\Edit.cshtml" />
+    <Content Include="Views\Administrativas\Personas\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Pruebas\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -298,12 +295,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\bootstrap.min.css.map" />
-    <Content Include="Content\bootstrap.css.map" />
-    <Content Include="Content\bootstrap-theme.min.css.map" />
-    <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="packages.config" />
-    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
-    <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202103091609006_InitialCreate.resx">
@@ -314,6 +306,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202103110300106_partial_01_08_03_21.resx">
       <DependentUpon>202103110300106_partial_01_08_03_21.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103180122183_partial_01_08_03_21_2.resx">
+      <DependentUpon>202103180122183_partial_01_08_03_21_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103180123341_partial_01_08_03_21_3.resx">
+      <DependentUpon>202103180123341_partial_01_08_03_21_3.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

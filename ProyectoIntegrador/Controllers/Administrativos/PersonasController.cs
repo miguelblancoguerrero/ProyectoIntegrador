@@ -9,7 +9,7 @@ using System.Web.Mvc;
 using ProyectoIntegrador.Models;
 using ProyectoIntegrador.Models.DBModels;
 
-namespace ProyectoIntegrador.Controllers
+namespace ProyectoIntegrador.Controllers.Administrativos
 {
     public class PersonasController : Controller
     {
@@ -19,7 +19,7 @@ namespace ProyectoIntegrador.Controllers
         public ActionResult Index()
         {
             var persona = db.Persona.Include(p => p.GeneroF).Include(p => p.IdentificacionTipoF);
-            return View(persona.ToList());
+            return View("/Views/Administrativas/Personas/Index.cshtml", persona.ToList());
         }
 
         // GET: Personas/Details/5
@@ -34,7 +34,7 @@ namespace ProyectoIntegrador.Controllers
             {
                 return HttpNotFound();
             }
-            return View(persona);
+            return View("/Views/Administrativas/Personas/Details.cshtml", persona);
         }
 
         // GET: Personas/Create
@@ -42,7 +42,7 @@ namespace ProyectoIntegrador.Controllers
         {
             ViewBag.Genero = new SelectList(db.Genero, "Id", "Nombre");
             ViewBag.IdentificacionTipo = new SelectList(db.TipoIdentifiacion, "Id", "Nombre");
-            return View();
+            return View("/Views/Administrativas/Personas/Create.cshtml");
         }
 
         // POST: Personas/Create
@@ -61,7 +61,7 @@ namespace ProyectoIntegrador.Controllers
 
             ViewBag.Genero = new SelectList(db.Genero, "Id", "Nombre", persona.Genero);
             ViewBag.IdentificacionTipo = new SelectList(db.TipoIdentifiacion, "Id", "Nombre", persona.IdentificacionTipo);
-            return View(persona);
+            return View("/Views/Administrativas/Personas/Index.cshtml", persona);
         }
 
         // GET: Personas/Edit/5
@@ -78,7 +78,7 @@ namespace ProyectoIntegrador.Controllers
             }
             ViewBag.Genero = new SelectList(db.Genero, "Id", "Nombre", persona.Genero);
             ViewBag.IdentificacionTipo = new SelectList(db.TipoIdentifiacion, "Id", "Nombre", persona.IdentificacionTipo);
-            return View(persona);
+            return View("/Views/Administrativas/Personas/Edit.cshtml", persona);
         }
 
         // POST: Personas/Edit/5
@@ -96,7 +96,7 @@ namespace ProyectoIntegrador.Controllers
             }
             ViewBag.Genero = new SelectList(db.Genero, "Id", "Nombre", persona.Genero);
             ViewBag.IdentificacionTipo = new SelectList(db.TipoIdentifiacion, "Id", "Nombre", persona.IdentificacionTipo);
-            return View(persona);
+            return View("/Views/Administrativas/Personas/Edit.cshtml", persona);
         }
 
         // GET: Personas/Delete/5
@@ -111,7 +111,7 @@ namespace ProyectoIntegrador.Controllers
             {
                 return HttpNotFound();
             }
-            return View(persona);
+            return View("/Views/Administrativas/Personas/Delete.cshtml", persona);
         }
 
         // POST: Personas/Delete/5

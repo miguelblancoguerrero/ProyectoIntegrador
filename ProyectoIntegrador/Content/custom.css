@@ -1,0 +1,12 @@
+﻿body {
+}
+
+
+.footer {
+    position: fixed;
+    bottom: 0px;
+}
+
+.footer p{
+    margin: 0px 0px;
+}

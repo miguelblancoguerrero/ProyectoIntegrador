@@ -53,9 +53,13 @@ namespace ProyectoIntegrador.Models.DBModels
         public DateTime FechaRetiro { get; set; }
 
 
+        [ForeignKey("Persona")]
         public Persona PersonaF { get; set; }
+        [ForeignKey("RecidenciaMunicipio")]
         public Municipio RecidenciaMunicipioF { get; set; }
+        [ForeignKey("TipoUsuario")]
         public TipoUsuarioAfiliado TipoUsuarioF { get; set; }
+        [ForeignKey("TipoAfiliado")]
         public TipoAfiliado TipoAfiliadoF { get; set; }
     }
 }
