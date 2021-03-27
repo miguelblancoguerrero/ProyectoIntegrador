@@ -1,45 +1,51 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Mi aplicación ASP.NET</title>
-    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/bootstrap.min.css")
+    @Styles.Render("~/Content/custom.css")
     @Scripts.Render("~/bundles/modernizr")
 
 </head>
-<body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+<body class="bg-light">
+    <div class="navbar navbar-expand-lg navbar-light bg-primary">
         <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Nombre de la aplicación", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
+            @Html.ActionLink("Proyecto Integrador", "Index", "Home", new { area = "" }, new { @class = "navbar-brand text-white" })
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse" id="navbarNav">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Acerca de", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contacto", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Inicio", "Index", "Home", new { area = "" }, new { @class = "nav-link text-white" })</li>
+                    <li class="nav-item dropdown ">
+                        <a class="nav-link dropdown-toggle text-white" id="navbarDropdownAdministrativas" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Administrativas
+                        </a>
+                        <div class="dropdown-menu text-white" aria-labelledby="navbarDropdownAdministrativas">
+                            <a class="dropdown-item" href="/administrativos/personas">Personas</a>
+                        </div>
+                    </li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
         </div>
     </div>
-    <div class="container body-content">
+    <div class="container bg-white pt-5">
         @RenderBody()
         <hr />
+    </div>
+    <div class="container bg-dark rounded-top footer text-white d-flex justify-content-center align-items-center pt-2">
         <footer>
             <p>&copy; @DateTime.Now.Year - Mi aplicación ASP.NET</p>
         </footer>
     </div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/Scripts/jquery-3.2.1.min.js")
+    @Scripts.Render("~/Scripts/popper.min.js")
+    @Scripts.Render("~/Scripts/bootstrap.min.js")
     @RenderSection("scripts", required: false)
 </body>
 </html>
