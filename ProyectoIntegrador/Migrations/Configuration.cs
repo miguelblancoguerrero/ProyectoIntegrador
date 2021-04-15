@@ -9,7 +9,7 @@ namespace ProyectoIntegrador.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
             ContextKey = "ProyectoIntegrador.Models.ApplicationDbContext";
         }
 
