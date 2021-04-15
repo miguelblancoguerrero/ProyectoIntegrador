@@ -7,7 +7,7 @@ namespace ProyectoIntegrador.Migrations
     {
         public override void Up()
         {
-            Down();
+            
             RenameTable(name: "dbo.prcedimientos", newName: "procedimientos");
         }
         

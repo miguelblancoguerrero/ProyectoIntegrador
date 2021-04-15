@@ -7,7 +7,7 @@ namespace ProyectoIntegrador.Migrations
     {
         public override void Up()
         {
-            Down();
+            
             CreateTable(
                 "dbo.pisos_materiales",
                 c => new

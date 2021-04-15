@@ -7,7 +7,7 @@ namespace ProyectoIntegrador.Migrations
     {
         public override void Up()
         {
-            Down();
+            
             DropForeignKey("dbo.AspNetUserRoles", "RoleId", "dbo.AspNetRoles");
             DropForeignKey("dbo.AspNetUserClaims", "UserId", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserLogins", "UserId", "dbo.AspNetUsers");
