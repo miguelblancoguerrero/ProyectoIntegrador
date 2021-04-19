@@ -167,6 +167,7 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="App_Start\Filters\SessionFilter.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\Administrativos\GenerosController.cs" />
     <Compile Include="Controllers\Administrativos\HistoriaMedicasController.cs" />
@@ -181,6 +182,16 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\Administrativos\ProcedimientosController.cs" />
+    <Compile Include="Controllers\Administrativos\CargosController.cs" />
+    <Compile Include="Controllers\Administrativos\CitasController.cs" />
+    <Compile Include="Controllers\Administrativos\ConsultoriosController.cs" />
+    <Compile Include="Controllers\Administrativos\DepartamentosController.cs" />
+    <Compile Include="Controllers\Administrativos\EmpleadosController.cs" />
+    <Compile Include="Controllers\Administrativos\FinalidadesController.cs" />
+    <Compile Include="Controllers\Administrativos\MunicipiosController.cs" />
+    <Compile Include="Controllers\Administrativos\AfiliadosController.cs" />
+    <Compile Include="Controllers\Administrativos\ProveedorController.cs" />
+    <Compile Include="Controllers\Administrativos\SucursalesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -246,6 +257,10 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\aspnet-ProyectoIntegrador-20210308103256.mdf" />
+    <Content Include="App_Data\aspnet-ProyectoIntegrador-20210308103256_log.ldf">
+      <DependentUpon>aspnet-ProyectoIntegrador-20210308103256.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\custom.css" />
     <Content Include="favicon.ico" />
@@ -296,9 +311,7 @@
     <Content Include="Views\Administrativas\Personas\Edit.cshtml" />
     <Content Include="Views\Administrativas\Personas\Index.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -356,6 +369,56 @@
     <Content Include="Views\Administrativas\ProcedimientoMaterials\Details.cshtml" />
     <Content Include="Views\Administrativas\ProcedimientoMaterials\Edit.cshtml" />
     <Content Include="Views\Administrativas\ProcedimientoMaterials\Index.cshtml" />
+    <Content Include="Views\Administrativas\Afiliados\Create.cshtml" />
+    <Content Include="Views\Administrativas\Afiliados\Delete.cshtml" />
+    <Content Include="Views\Administrativas\Afiliados\Details.cshtml" />
+    <Content Include="Views\Administrativas\Afiliados\Edit.cshtml" />
+    <Content Include="Views\Administrativas\Afiliados\Index.cshtml" />
+    <Content Include="Views\Administrativas\Empleados\Create.cshtml" />
+    <Content Include="Views\Administrativas\Empleados\Delete.cshtml" />
+    <Content Include="Views\Administrativas\Empleados\Details.cshtml" />
+    <Content Include="Views\Administrativas\Empleados\Edit.cshtml" />
+    <Content Include="Views\Administrativas\Empleados\Index.cshtml" />
+    <Content Include="Views\Administrativas\Cargos\Create.cshtml" />
+    <Content Include="Views\Administrativas\Cargos\Delete.cshtml" />
+    <Content Include="Views\Administrativas\Cargos\Details.cshtml" />
+    <Content Include="Views\Administrativas\Cargos\Edit.cshtml" />
+    <Content Include="Views\Administrativas\Cargos\Index.cshtml" />
+    <Content Include="Views\Administrativas\Proveedor\Create.cshtml" />
+    <Content Include="Views\Administrativas\Proveedor\Delete.cshtml" />
+    <Content Include="Views\Administrativas\Proveedor\Details.cshtml" />
+    <Content Include="Views\Administrativas\Proveedor\Edit.cshtml" />
+    <Content Include="Views\Administrativas\Proveedor\Index.cshtml" />
+    <Content Include="Views\Administrativas\Municipios\Create.cshtml" />
+    <Content Include="Views\Administrativas\Municipios\Delete.cshtml" />
+    <Content Include="Views\Administrativas\Municipios\Details.cshtml" />
+    <Content Include="Views\Administrativas\Municipios\Edit.cshtml" />
+    <Content Include="Views\Administrativas\Municipios\Index.cshtml" />
+    <Content Include="Views\Administrativas\Departamentos\Create.cshtml" />
+    <Content Include="Views\Administrativas\Departamentos\Delete.cshtml" />
+    <Content Include="Views\Administrativas\Departamentos\Details.cshtml" />
+    <Content Include="Views\Administrativas\Departamentos\Edit.cshtml" />
+    <Content Include="Views\Administrativas\Departamentos\Index.cshtml" />
+    <Content Include="Views\Administrativas\Sucursales\Create.cshtml" />
+    <Content Include="Views\Administrativas\Sucursales\Delete.cshtml" />
+    <Content Include="Views\Administrativas\Sucursales\Details.cshtml" />
+    <Content Include="Views\Administrativas\Sucursales\Edit.cshtml" />
+    <Content Include="Views\Administrativas\Sucursales\Index.cshtml" />
+    <Content Include="Views\Administrativas\Consultorios\Create.cshtml" />
+    <Content Include="Views\Administrativas\Consultorios\Delete.cshtml" />
+    <Content Include="Views\Administrativas\Consultorios\Details.cshtml" />
+    <Content Include="Views\Administrativas\Consultorios\Edit.cshtml" />
+    <Content Include="Views\Administrativas\Consultorios\Index.cshtml" />
+    <Content Include="Views\Administrativas\Citas\Create.cshtml" />
+    <Content Include="Views\Administrativas\Citas\Delete.cshtml" />
+    <Content Include="Views\Administrativas\Citas\Details.cshtml" />
+    <Content Include="Views\Administrativas\Citas\Edit.cshtml" />
+    <Content Include="Views\Administrativas\Citas\Index.cshtml" />
+    <Content Include="Views\Administrativas\Finalidades\Create.cshtml" />
+    <Content Include="Views\Administrativas\Finalidades\Delete.cshtml" />
+    <Content Include="Views\Administrativas\Finalidades\Details.cshtml" />
+    <Content Include="Views\Administrativas\Finalidades\Edit.cshtml" />
+    <Content Include="Views\Administrativas\Finalidades\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202103091609006_InitialCreate.resx">

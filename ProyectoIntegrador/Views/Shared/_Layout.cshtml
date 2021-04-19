@@ -35,7 +35,6 @@
                             <a class="dropdown-item" href="/administrativos/RecetaMedicas">Receta Médica</a>
                             <a class="dropdown-item" href="/administrativos/RecetaMedicaMaterials">Receta Médica - Material</a>
                             <a class="dropdown-item" href="/administrativos/HistoriaMedicas"> Historia Médica</a>
-
                             <a class="dropdown-item" href="/administrativos/Afiliados">Afiliados</a>
                             <a class="dropdown-item" href="/administrativos/Empleados">Empleados</a>
                             <a class="dropdown-item" href="/administrativos/Cargos">Cargos</a>
@@ -48,30 +47,42 @@
                             <a class="dropdown-item" href="/administrativos/Finalidades">Finalidades</a>
                         </div>
                     </li>
+                    <li class="nav-item dropdown ">
+                        <a class="nav-link dropdown-toggle text-white" id="navbarDropdownAdministrativas" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Citas
+                        </a>
+                        <div class="dropdown-menu text-white" aria-labelledby="navbarDropdownAdministrativas">
+                            <a class="dropdown-item" href="">None</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown ">
+                        <a class="nav-link dropdown-toggle text-white" id="navbarDropdownAdministrativas" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Inventarios
+                        </a>
+                        <div class="dropdown-menu text-white" aria-labelledby="navbarDropdownAdministrativas">
+                            <a class="dropdown-item" href="">None</a>
+                        </div>
+                    </li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
         </div>
     </div>
-    <div class="container bg-white pt-5">
+    <div class="container bg-white pt-5" style="flex-grow: 1;">
         @RenderBody()
-        
-        
+
+
     </div>
-    
+    <div class="container-fluid bg-dark rounded-top footer text-white d-flex justify-content-center align-items-center pt-2">
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Proyecto Integrador</p>
+        </footer>
+    </div>
 
     @Scripts.Render("~/Scripts/jquery-3.2.1.min.js")
     @Scripts.Render("~/Scripts/popper.min.js")
     @Scripts.Render("~/Scripts/bootstrap.min.js")
     @RenderSection("scripts", required: false)
 </body>
-<div class="container footer text-dark font-weight-bold h3">
-    <footer>
-        <div id="footer">
-            <p><marquee direction=left>
-            <p>&copy; @DateTime.Now.Year Miguel Guerrero - Camilo Quintana - Andres Perdomo     VacunaApp</p>
-            </marquee></p>
-        </div>
-    </footer>
-</div>
+
 </html>
