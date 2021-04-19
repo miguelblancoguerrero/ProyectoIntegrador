@@ -4,6 +4,8 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
+using System.ComponentModel;
+
 namespace ProyectoIntegrador.Models.DBModels
 {
     [Table("causas_externas")]
@@ -16,6 +18,7 @@ namespace ProyectoIntegrador.Models.DBModels
         [Column("descripcion")]
         [MaxLength(100)]
         [Required]
+        [DisplayName("Descripción de la causa externa")]
         public string Descripcion { get; set; }
     }
 }

@@ -1,0 +1,45 @@
+﻿@model ProyectoIntegrador.Models.DBModels.RecetaMedica
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalles</h2>
+
+<div>
+    <h4>RecetaMedica</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.HistoriaMedicaF.Codigo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HistoriaMedicaF.Codigo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Observaciones)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Observaciones)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <a href="/RecetaMedicas" value="Volver" class="btn btn-secondary">Volver</a>
+        </div>
+    </div>
+</p>

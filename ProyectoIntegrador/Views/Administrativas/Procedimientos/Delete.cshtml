@@ -1,0 +1,68 @@
+﻿    @model ProyectoIntegrador.Models.DBModels.Procedimiento
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Eliminar</h2>
+
+<h2>¿Desea eliminar el siguiente registro?</h2>
+<div>
+    <h4>Procedimiento</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CitaF.Tipo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CitaF.Tipo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ambito)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ambito)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Codigo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Codigo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Finalidad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Finalidad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaRealiza)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaRealiza)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Eliminar" class="btn btn-primary" />
+                <a href="/Procedimientos" value="Volver" class="btn btn-secondary">Volver</a>
+            </div>
+        </div>
+
+    }
+</div>

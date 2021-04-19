@@ -1,0 +1,52 @@
+﻿@model ProyectoIntegrador.Models.DBModels.RecetaMedica
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Eliminar</h2>
+
+<h2>¿Desea eliminar el siguiente registro?</h2>
+<div>
+    <h4>RecetaMedica</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.HistoriaMedicaF.Codigo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HistoriaMedicaF.Codigo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Observaciones)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Observaciones)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Eliminar" class="btn btn-primary" />
+                <a href="/RecetaMedicas" value="Volver" class="btn btn-secondary">Volver</a>
+            </div>
+        </div>
+
+    }
+</div>

@@ -1,0 +1,116 @@
+﻿@model ProyectoIntegrador.Models.DBModels.HistoriaMedica
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Eliminar</h2>
+
+<h2>¿Desea eliminar el siguiente registro?</h2>
+<div>
+    <h4>HistoriaMedica</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Procedimiento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Procedimiento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Persona)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Persona)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Medico)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Medico)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Finalidad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Finalidad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CausaExterna)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CausaExterna)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Codigo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Codigo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaRealiza)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaRealiza)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CodigoDiagnostico)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CodigoDiagnostico)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CodigoDiagnosticoN1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CodigoDiagnosticoN1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CodigoDiagnosticoN2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CodigoDiagnosticoN2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CodigoDiagnosticoN3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CodigoDiagnosticoN3)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Eliminar" class="btn btn-primary" />
+                <a href="/HistoriaMedicas" value="Volver" class="btn btn-secondary">Volver</a>
+            </div>
+        </div>
+
+    }
+</div>

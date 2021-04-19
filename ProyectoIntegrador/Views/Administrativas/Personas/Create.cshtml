@@ -4,7 +4,7 @@
     ViewBag.Title = "Create";
 }
 
-<h2>Create</h2>
+<h2>Crear Persona</h2>
 
 
 @using (Html.BeginForm()) 
@@ -18,7 +18,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.IdentificacionTipo, "IdentificacionTipo", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownList("IdentificacionTipo", null, htmlAttributes: new { @class = "form-control" })
+                @Html.DropDownList("IdentificacionTipo", null, htmlAttributes: new { @class = "form-control"})
                 @Html.ValidationMessageFor(model => model.IdentificacionTipo, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -26,7 +26,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.IdentificacionNumero, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.IdentificacionNumero, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.IdentificacionNumero, new { htmlAttributes = new { @class = "form-control", placeholder = "Ingrese número identificación", numbermask = "" } })
                 @Html.ValidationMessageFor(model => model.IdentificacionNumero, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -34,7 +34,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Nombres, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Nombres, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.Nombres, new { htmlAttributes = new { @class = "form-control", placeholder = "Ingrese sus nombres"} })
                 @Html.ValidationMessageFor(model => model.Nombres, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -42,7 +42,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.PrimerApellido, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.PrimerApellido, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.PrimerApellido, new { htmlAttributes = new { @class = "form-control", placeholder = "Ingrese su primer apellido" } })
                 @Html.ValidationMessageFor(model => model.PrimerApellido, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -50,7 +50,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.SegundoApellido, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.SegundoApellido, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.SegundoApellido, new { htmlAttributes = new { @class = "form-control", placeholder = "Ingrese su segundo apellido" } })
                 @Html.ValidationMessageFor(model => model.SegundoApellido, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -58,7 +58,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Genero, "Genero", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownList("Genero", null, htmlAttributes: new { @class = "form-control" })
+                @Html.DropDownList("Genero", null, htmlAttributes: new { @class = "form-control"})
                 @Html.ValidationMessageFor(model => model.Genero, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -74,31 +74,45 @@
         <div class="form-group">
             @Html.LabelFor(model => model.CorreoElectronico, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.CorreoElectronico, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.CorreoElectronico, new { htmlAttributes = new { @class = "form-control", placeholder = "Ingrese su correo electrónico" } })
                 @Html.ValidationMessageFor(model => model.CorreoElectronico, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Telefonos, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Telefonos, htmlAttributes: new { @class = "control-label col-md-2"})
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Telefonos, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.Telefonos , new { htmlAttributes = new { @class = "form-control", placeholder = "Ingrese Télefonos", numbermask = "" } })
                 @Html.ValidationMessageFor(model => model.Telefonos, "", new { @class = "text-danger" })
             </div>
         </div>
-
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" value="Crear" class="btn btn-primary" />
+                <a href="/personas" value="Volver" class="btn btn-secondary">Volver</a>
             </div>
-        </div>
+        </div>  
+
+        
     </div>
 }
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        //called when key is pressed in textbox
+        $("input[numbermask]").keypress(function (e) {
+            //if the letter is not digit then display error and don't type anything
+            if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+                //display error message
+                $("#errmsg").html("Digits Only").show().fadeOut("slow");
+                return false;
+            }
+        });
+    });
+</script>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }
+
+

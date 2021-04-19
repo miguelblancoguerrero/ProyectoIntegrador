@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
+using System.ComponentModel;
 
 namespace ProyectoIntegrador.Models.DBModels
 {
@@ -16,14 +17,17 @@ namespace ProyectoIntegrador.Models.DBModels
 
         [Column("procedimiento")]
         [Required]
+        [DisplayName("Procedimiento a realizar")]
         public long Procedimiento { get; set; }
 
         [Column("material")]
         [Required]
+        [DisplayName("Mmaterial a retirar")]
         public long Material { get; set; }
 
         [Column("cantidad")]
         [Required]
+        [DisplayName("Cantidad material a retirar")]
         public long Cantidad { get; set; }
 
 
