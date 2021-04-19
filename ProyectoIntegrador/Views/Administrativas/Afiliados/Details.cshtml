@@ -1,0 +1,90 @@
+﻿@model ProyectoIntegrador.Models.DBModels.Afiliado
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Afiliado</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PersonaF.IdentificacionNumero)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PersonaF.IdentificacionNumero)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RecidenciaMunicipioF.Codigo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RecidenciaMunicipioF.Codigo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoAfiliadoF.Codigo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoAfiliadoF.Codigo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoUsuarioF.Codigo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoUsuarioF.Codigo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RecidenciaBarrio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RecidenciaBarrio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RecidenciaDireccion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RecidenciaDireccion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RecidenciaZona)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RecidenciaZona)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaAfiliacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaAfiliacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaRetiro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaRetiro)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,81 @@
+﻿@model IEnumerable<ProyectoIntegrador.Models.DBModels.Afiliado>
+
+@{
+    ViewBag.Title = "Afiliados";
+}
+
+<h2>Afiliados</h2>
+
+<p>
+    @Html.ActionLink("Crear nuevo afiliado", "Create", null, new { @class = "btn btn-primary" })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PersonaF.IdentificacionNumero)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RecidenciaMunicipioF.Codigo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TipoAfiliadoF.Codigo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TipoUsuarioF.Codigo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RecidenciaBarrio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RecidenciaDireccion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RecidenciaZona)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaAfiliacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaRetiro)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PersonaF.IdentificacionNumero)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RecidenciaMunicipioF.Codigo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoAfiliadoF.Codigo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoUsuarioF.Codigo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RecidenciaBarrio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RecidenciaDireccion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RecidenciaZona)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaAfiliacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaRetiro)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>
