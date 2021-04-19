@@ -4,7 +4,7 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<h2>Detalles</h2>
 
 <div>
     <h4>Persona</h4>
@@ -83,8 +83,10 @@
         </dd>
 
     </dl>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <a href="/personas" value="Volver" class="btn btn-secondary">Volver</a>
+        </div>
+    </div>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+

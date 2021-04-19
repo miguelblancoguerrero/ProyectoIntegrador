@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -18,7 +19,9 @@ namespace ProyectoIntegrador.Models.DBModels
         [Column("nombre")]
         [MaxLength(20)]
         [Required]
+        [DisplayName("Nombre del tipo de identificación")]
         public string Nombre { get; set; }
+
 
     }
 }

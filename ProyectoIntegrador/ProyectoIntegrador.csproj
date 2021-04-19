@@ -164,24 +164,23 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
-    <Compile Include="App_Start\Filters\SessionFilter.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\Administrativos\CargosController.cs" />
-    <Compile Include="Controllers\Administrativos\CitasController.cs" />
-    <Compile Include="Controllers\Administrativos\ConsultoriosController.cs" />
-    <Compile Include="Controllers\Administrativos\DepartamentosController.cs" />
-    <Compile Include="Controllers\Administrativos\EmpleadosController.cs" />
-    <Compile Include="Controllers\Administrativos\FinalidadesController.cs" />
-    <Compile Include="Controllers\Administrativos\MunicipiosController.cs" />
+    <Compile Include="Controllers\Administrativos\GenerosController.cs" />
+    <Compile Include="Controllers\Administrativos\HistoriaMedicasController.cs" />
     <Compile Include="Controllers\Administrativos\PersonasController.cs" />
-    <Compile Include="Controllers\Administrativos\AfiliadosController.cs" />
-    <Compile Include="Controllers\Administrativos\ProveedorController.cs" />
-    <Compile Include="Controllers\Administrativos\SucursalesController.cs" />
+    <Compile Include="Controllers\Administrativos\ProcedimientoMaterialsController.cs" />
+    <Compile Include="Controllers\Administrativos\RecetaMedicaMaterialsController.cs" />
+    <Compile Include="Controllers\Administrativos\RecetaMedicasController.cs" />
+    <Compile Include="Controllers\Administrativos\TipoAfiliadosController.cs" />
+    <Compile Include="Controllers\Administrativos\TipoIdentifiacionsController.cs" />
+    <Compile Include="Controllers\Administrativos\TipoUsuarioAfiliadosController.cs" />
+    <Compile Include="Controllers\Administrativos\CausaExternasController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\Administrativos\ProcedimientosController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -247,10 +246,6 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\aspnet-ProyectoIntegrador-20210308103256.mdf" />
-    <Content Include="App_Data\aspnet-ProyectoIntegrador-20210308103256_log.ldf">
-      <DependentUpon>aspnet-ProyectoIntegrador-20210308103256.mdf</DependentUpon>
-    </Content>
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\custom.css" />
     <Content Include="favicon.ico" />
@@ -302,8 +297,7 @@
     <Content Include="Views\Administrativas\Personas\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Views\Citas\" />
-    <Folder Include="Views\Inventarios\" />
+    <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -312,56 +306,56 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\bootstrap.min.css.map" />
     <None Include="packages.config" />
-    <Content Include="Views\Administrativas\Afiliados\Create.cshtml" />
-    <Content Include="Views\Administrativas\Afiliados\Delete.cshtml" />
-    <Content Include="Views\Administrativas\Afiliados\Details.cshtml" />
-    <Content Include="Views\Administrativas\Afiliados\Edit.cshtml" />
-    <Content Include="Views\Administrativas\Afiliados\Index.cshtml" />
-    <Content Include="Views\Administrativas\Empleados\Create.cshtml" />
-    <Content Include="Views\Administrativas\Empleados\Delete.cshtml" />
-    <Content Include="Views\Administrativas\Empleados\Details.cshtml" />
-    <Content Include="Views\Administrativas\Empleados\Edit.cshtml" />
-    <Content Include="Views\Administrativas\Empleados\Index.cshtml" />
-    <Content Include="Views\Administrativas\Cargos\Create.cshtml" />
-    <Content Include="Views\Administrativas\Cargos\Delete.cshtml" />
-    <Content Include="Views\Administrativas\Cargos\Details.cshtml" />
-    <Content Include="Views\Administrativas\Cargos\Edit.cshtml" />
-    <Content Include="Views\Administrativas\Cargos\Index.cshtml" />
-    <Content Include="Views\Administrativas\Proveedor\Create.cshtml" />
-    <Content Include="Views\Administrativas\Proveedor\Delete.cshtml" />
-    <Content Include="Views\Administrativas\Proveedor\Details.cshtml" />
-    <Content Include="Views\Administrativas\Proveedor\Edit.cshtml" />
-    <Content Include="Views\Administrativas\Proveedor\Index.cshtml" />
-    <Content Include="Views\Administrativas\Municipios\Create.cshtml" />
-    <Content Include="Views\Administrativas\Municipios\Delete.cshtml" />
-    <Content Include="Views\Administrativas\Municipios\Details.cshtml" />
-    <Content Include="Views\Administrativas\Municipios\Edit.cshtml" />
-    <Content Include="Views\Administrativas\Municipios\Index.cshtml" />
-    <Content Include="Views\Administrativas\Departamentos\Create.cshtml" />
-    <Content Include="Views\Administrativas\Departamentos\Delete.cshtml" />
-    <Content Include="Views\Administrativas\Departamentos\Details.cshtml" />
-    <Content Include="Views\Administrativas\Departamentos\Edit.cshtml" />
-    <Content Include="Views\Administrativas\Departamentos\Index.cshtml" />
-    <Content Include="Views\Administrativas\Sucursales\Create.cshtml" />
-    <Content Include="Views\Administrativas\Sucursales\Delete.cshtml" />
-    <Content Include="Views\Administrativas\Sucursales\Details.cshtml" />
-    <Content Include="Views\Administrativas\Sucursales\Edit.cshtml" />
-    <Content Include="Views\Administrativas\Sucursales\Index.cshtml" />
-    <Content Include="Views\Administrativas\Consultorios\Create.cshtml" />
-    <Content Include="Views\Administrativas\Consultorios\Delete.cshtml" />
-    <Content Include="Views\Administrativas\Consultorios\Details.cshtml" />
-    <Content Include="Views\Administrativas\Consultorios\Edit.cshtml" />
-    <Content Include="Views\Administrativas\Consultorios\Index.cshtml" />
-    <Content Include="Views\Administrativas\Citas\Create.cshtml" />
-    <Content Include="Views\Administrativas\Citas\Delete.cshtml" />
-    <Content Include="Views\Administrativas\Citas\Details.cshtml" />
-    <Content Include="Views\Administrativas\Citas\Edit.cshtml" />
-    <Content Include="Views\Administrativas\Citas\Index.cshtml" />
-    <Content Include="Views\Administrativas\Finalidades\Create.cshtml" />
-    <Content Include="Views\Administrativas\Finalidades\Delete.cshtml" />
-    <Content Include="Views\Administrativas\Finalidades\Details.cshtml" />
-    <Content Include="Views\Administrativas\Finalidades\Edit.cshtml" />
-    <Content Include="Views\Administrativas\Finalidades\Index.cshtml" />
+    <Content Include="Views\Administrativas\TipoIdentifiacions\Create.cshtml" />
+    <Content Include="Views\Administrativas\TipoIdentifiacions\Delete.cshtml" />
+    <Content Include="Views\Administrativas\TipoIdentifiacions\Details.cshtml" />
+    <Content Include="Views\Administrativas\TipoIdentifiacions\Edit.cshtml" />
+    <Content Include="Views\Administrativas\TipoIdentifiacions\Index.cshtml" />
+    <Content Include="Views\Administrativas\TipoAfiliados\Create.cshtml" />
+    <Content Include="Views\Administrativas\TipoAfiliados\Delete.cshtml" />
+    <Content Include="Views\Administrativas\TipoAfiliados\Details.cshtml" />
+    <Content Include="Views\Administrativas\TipoAfiliados\Edit.cshtml" />
+    <Content Include="Views\Administrativas\TipoAfiliados\Index.cshtml" />
+    <Content Include="Views\Administrativas\TipoUsuarioAfiliados\Create.cshtml" />
+    <Content Include="Views\Administrativas\TipoUsuarioAfiliados\Delete.cshtml" />
+    <Content Include="Views\Administrativas\TipoUsuarioAfiliados\Details.cshtml" />
+    <Content Include="Views\Administrativas\TipoUsuarioAfiliados\Edit.cshtml" />
+    <Content Include="Views\Administrativas\TipoUsuarioAfiliados\Index.cshtml" />
+    <Content Include="Views\Administrativas\Generos\Create.cshtml" />
+    <Content Include="Views\Administrativas\Generos\Delete.cshtml" />
+    <Content Include="Views\Administrativas\Generos\Details.cshtml" />
+    <Content Include="Views\Administrativas\Generos\Edit.cshtml" />
+    <Content Include="Views\Administrativas\Generos\Index.cshtml" />
+    <Content Include="Views\Administrativas\Procedimientos\Create.cshtml" />
+    <Content Include="Views\Administrativas\Procedimientos\Delete.cshtml" />
+    <Content Include="Views\Administrativas\Procedimientos\Details.cshtml" />
+    <Content Include="Views\Administrativas\Procedimientos\Edit.cshtml" />
+    <Content Include="Views\Administrativas\Procedimientos\Index.cshtml" />
+    <Content Include="Views\Administrativas\CausaExternas\Create.cshtml" />
+    <Content Include="Views\Administrativas\CausaExternas\Delete.cshtml" />
+    <Content Include="Views\Administrativas\CausaExternas\Details.cshtml" />
+    <Content Include="Views\Administrativas\CausaExternas\Edit.cshtml" />
+    <Content Include="Views\Administrativas\CausaExternas\Index.cshtml" />
+    <Content Include="Views\Administrativas\RecetaMedicas\Create.cshtml" />
+    <Content Include="Views\Administrativas\RecetaMedicas\Delete.cshtml" />
+    <Content Include="Views\Administrativas\RecetaMedicas\Details.cshtml" />
+    <Content Include="Views\Administrativas\RecetaMedicas\Edit.cshtml" />
+    <Content Include="Views\Administrativas\RecetaMedicas\Index.cshtml" />
+    <Content Include="Views\Administrativas\RecetaMedicaMaterials\Create.cshtml" />
+    <Content Include="Views\Administrativas\RecetaMedicaMaterials\Delete.cshtml" />
+    <Content Include="Views\Administrativas\RecetaMedicaMaterials\Details.cshtml" />
+    <Content Include="Views\Administrativas\RecetaMedicaMaterials\Edit.cshtml" />
+    <Content Include="Views\Administrativas\RecetaMedicaMaterials\Index.cshtml" />
+    <Content Include="Views\Administrativas\HistoriaMedicas\Create.cshtml" />
+    <Content Include="Views\Administrativas\HistoriaMedicas\Delete.cshtml" />
+    <Content Include="Views\Administrativas\HistoriaMedicas\Details.cshtml" />
+    <Content Include="Views\Administrativas\HistoriaMedicas\Edit.cshtml" />
+    <Content Include="Views\Administrativas\HistoriaMedicas\Index.cshtml" />
+    <Content Include="Views\Administrativas\ProcedimientoMaterials\Create.cshtml" />
+    <Content Include="Views\Administrativas\ProcedimientoMaterials\Delete.cshtml" />
+    <Content Include="Views\Administrativas\ProcedimientoMaterials\Details.cshtml" />
+    <Content Include="Views\Administrativas\ProcedimientoMaterials\Edit.cshtml" />
+    <Content Include="Views\Administrativas\ProcedimientoMaterials\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202103091609006_InitialCreate.resx">
