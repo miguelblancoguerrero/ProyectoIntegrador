@@ -1,0 +1,82 @@
+﻿@model ProyectoIntegrador.Models.DBModels.Cita
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Cita</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AfiliadoF.RecidenciaBarrio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AfiliadoF.RecidenciaBarrio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ConsultorioF.Codigo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ConsultorioF.Codigo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MedicoF.RecidenciaBarrio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MedicoF.RecidenciaBarrio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tipo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tipo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fecha)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fecha)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Duracion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Duracion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaCrea)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaCrea)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estado)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

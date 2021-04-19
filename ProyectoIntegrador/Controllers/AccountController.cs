@@ -70,6 +70,7 @@ namespace ProyectoIntegrador.Controllers
         {
             if (!ModelState.IsValid)
             {
+                ViewBag.noMostrarErrorSup = true;
                 return View(model);
             }
 
@@ -79,6 +80,8 @@ namespace ProyectoIntegrador.Controllers
             switch (result)
             {
                 case SignInStatus.Success:
+                    var user = SignInManager.UserManager.Find(model.Email, model.Password);
+                    Session["user"] = user;
                     return RedirectToLocal(returnUrl);
                 case SignInStatus.LockedOut:
                     return View("Lockout");
@@ -151,7 +154,7 @@ namespace ProyectoIntegrador.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                var user = new ApplicationUser { UserName = model.Email };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
@@ -391,6 +394,7 @@ namespace ProyectoIntegrador.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult LogOff()
         {
+            Session["user"] = null;
             AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
             return RedirectToAction("Index", "Home");
         }

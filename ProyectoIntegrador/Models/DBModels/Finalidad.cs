@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -16,6 +17,7 @@ namespace ProyectoIntegrador.Models.DBModels
         [Column("descripcion")]
         [MaxLength(100)]
         [Required]
+        [DisplayName("Descripción")]
         public string Descripcion { get; set; }
     }
 }

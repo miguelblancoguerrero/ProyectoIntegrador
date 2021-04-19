@@ -1,63 +1,103 @@
 ﻿@using ProyectoIntegrador.Models
 @model LoginViewModel
 @{
-    ViewBag.Title = "Iniciar sesión";
+    Layout = null;
+    ViewBag.Title = "Inicio de sesión";
 }
+<!DOCTYPE html>
+<html style="height: 100%;">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/bootstrap.min.css")
+    @Styles.Render("~/Content/custom.css")
+    @Scripts.Render("~/bundles/modernizr")
+    <style>
+        .loginLabel {
+            width: max-content;
+            height: 1rem;
+            margin-bottom: -1rem;
+            transform: translate(0vw, -3.5vh);
+            color: #00000080;
+            transition: all 0.1s linear;
+            padding-left: 1vw;
+        }
 
-<h2>@ViewBag.Title.</h2>
-<div class="row">
-    <div class="col-md-8">
-        <section id="loginForm">
-            @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
-            {
-                @Html.AntiForgeryToken()
-                <h4>Utilice una cuenta local para iniciar sesión.</h4>
-                <hr />
-                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-                <div class="form-group">
-                    @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
-                    <div class="col-md-10">
-                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
-                        @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+        .loginInput:focus + .loginLabel, .notEmpty + .loginLabel {
+            background: white;
+            padding: 1px 4px;
+            text-align: left;
+            transform: translate(0.5vw, -5.3vh);
+            font-size: small;
+            color: #80bdff;
+        }
+
+        .alert ul {
+            margin-bottom: 0px;
+        }
+
+    </style>
+</head>
+<body class="bg-dark" style="height: 100%;">
+    <div class="row justify-content-center align-items-center" style="height: 100%;">
+        <div class="col-md-4 ">
+            <section id="loginForm" class="p-3 bg-light" style="padding: 1rem 3rem !important;">
+                @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { role = "form" }))
+                {
+                    @Html.AntiForgeryToken()
+                    if (ViewBag.noMostrarErrorSup == null || !ViewBag.noMostrarErrorSup) { 
+                        @Html.ValidationSummary(true, "", new { @class = "alert alert-danger" })
+                    }   
+                    <h3>Datos de Ingreso</h3>
+                    <hr />
+                    <div class="form-group" style="display: flex; flex-direction: column;">
+                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control loginInput" })
+                        @Html.LabelFor(m => m.Email, new { @class = "loginLabel"})
+                        @Html.ValidationMessageFor(m => m.Email, "", new { @class = "form-text text-danger" })
+                        @if (Model != null && Model.Email != null && !Model.Email.IsEmpty()) {
+                            <script type="text/javascript">
+                                document.querySelector('[name="Email"').classList.add('notEmpty');
+                            </script>
+                        }
                     </div>
-                </div>
-                <div class="form-group">
-                    @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
-                    <div class="col-md-10">
-                        @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
-                        @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                    <div class="form-group" style="display: flex; flex-direction: column;">
+                        @Html.PasswordFor(m => m.Password, new { @class = "form-control loginInput" })
+                        @Html.LabelFor(m => m.Password, new { @class = "loginLabel" })
+                        @Html.ValidationMessageFor(m => m.Email, "", new { @class = "form-text text-danger" })
+                        @if (Model != null && Model.Password != null && !Model.Password.IsEmpty())
+                        {
+                            <script type="text/javascript">
+                                document.querySelector('[name="Email"').classList.add('notEmpty');
+                            </script>
+                        }
                     </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-md-offset-2 col-md-10">
-                        <div class="checkbox">
-                            @Html.CheckBoxFor(m => m.RememberMe)
-                            @Html.LabelFor(m => m.RememberMe)
-                        </div>
+                    <div class="d-flex justify-content-end">
+                        <input type="submit" value="Iniciar sesión" class="btn btn-primary" style="" />
                     </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-md-offset-2 col-md-10">
-                        <input type="submit" value="Iniciar sesión" class="btn btn-default" />
-                    </div>
-                </div>
-                <p>
-                    @Html.ActionLink("Registrarse como usuario nuevo", "Register")
-                </p>
-                @* Habilite esta opción una vez tenga la confirmación de la cuenta habilitada para la funcionalidad de restablecimiento de contraseña
-                    <p>
-                        @Html.ActionLink("¿Ha olvidado su contraseña?", "ForgotPassword")
-                    </p>*@
+                }
+            </section>
+        </div>
+        @*
+            <div class="col-md-4">
+                <section id="socialLoginForm">
+                    @Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl })
+                </section>
+            </div>
+        *@
+    </div>
+    @Scripts.Render("~/Scripts/jquery-3.2.1.min.js")
+    @Scripts.Render("~/Scripts/popper.min.js")
+    @Scripts.Render("~/Scripts/bootstrap.min.js")
+    <script type="text/javascript">
+        $(".loginInput").change(function () {
+            if (this.value) {
+                this.classList.add('notEmpty');
+            } else {
+                this.classList.remove('notEmpty');
             }
-        </section>
-    </div>
-    <div class="col-md-4">
-        <section id="socialLoginForm">
-            @Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl })
-        </section>
-    </div>
-</div>
-
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}
+        });
+    </script>
+</body>
+</html>

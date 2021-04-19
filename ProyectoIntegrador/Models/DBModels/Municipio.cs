@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel;
 
 namespace ProyectoIntegrador.Models.DBModels
 {   
@@ -19,10 +20,12 @@ namespace ProyectoIntegrador.Models.DBModels
         [Column("nombre")]
         [MaxLength(20)]
         [Required]
+        [DisplayName("Nombre del Municipio")]
         public string Nombre { get; set; }
 
         [Column("departamento")]
         [Required]
+        [DisplayName("Departamento del Municipio")]
         public long Departamento { get; set; }
 
 

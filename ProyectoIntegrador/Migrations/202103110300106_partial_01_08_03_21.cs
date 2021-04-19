@@ -7,7 +7,7 @@ namespace ProyectoIntegrador.Migrations
     {
         public override void Up()
         {
-            Down();
+            
             CreateIndex("dbo.sucursales", "municipio");
             AddForeignKey("dbo.sucursales", "municipio", "dbo.municipios", "id");
         }

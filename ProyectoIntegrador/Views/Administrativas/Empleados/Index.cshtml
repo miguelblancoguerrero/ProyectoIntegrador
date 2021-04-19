@@ -1,0 +1,75 @@
+﻿@model IEnumerable<ProyectoIntegrador.Models.DBModels.Empleado>
+
+@{
+    ViewBag.Title = "Empleados";
+}
+
+<h2>Empleados</h2>
+
+<p>
+    @Html.ActionLink("Crear nuevo Empleado", "Create", null, new { @class = "btn btn-primary" })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CargoF.Codigo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PersonaF.IdentificacionNumero)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RecidenciaMunicipioF.Codigo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SucursalF.Codigo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RecidenciaBarrio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RecidenciaDireccion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaIngreso)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaEgreso)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CargoF.Codigo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PersonaF.IdentificacionNumero)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RecidenciaMunicipioF.Codigo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SucursalF.Codigo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RecidenciaBarrio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RecidenciaDireccion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaIngreso)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaEgreso)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

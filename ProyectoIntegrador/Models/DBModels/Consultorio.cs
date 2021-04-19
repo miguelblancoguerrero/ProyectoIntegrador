@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -16,6 +17,7 @@ namespace ProyectoIntegrador.Models.DBModels
 
         [Column("sucursal")]
         [Required]
+        [DisplayName("Sucursal del consultorio")]
         public long Sucursal { get; set; }
 
         [Column("codigo")]
@@ -25,9 +27,11 @@ namespace ProyectoIntegrador.Models.DBModels
 
         [Column("tipo")]
         [Required]
+        [DisplayName("Tipo del consultorio")]
         public short Tipo { get; set; }
 
         [Column("capacidad")]
+        [DisplayName("Capacidad del consultorio")]
         public int Capacidad { get; set; }
 
 
