@@ -49,8 +49,8 @@ namespace ProyectoIntegrador.Models
     public class LoginViewModel
     {
         [Required]
-        [Display(Name = "Correo electrónico")]
-        [EmailAddress]
+        [Display(Name = "Usuario o Correo electrónico")]
+        //[EmailAddress]
         public string Email { get; set; }
 
         [Required]
@@ -65,7 +65,7 @@ namespace ProyectoIntegrador.Models
     public class RegisterViewModel
     {
         [Required]
-        [EmailAddress]
+        //[EmailAddress]
         [Display(Name = "Correo electrónico")]
         public string Email { get; set; }
 
