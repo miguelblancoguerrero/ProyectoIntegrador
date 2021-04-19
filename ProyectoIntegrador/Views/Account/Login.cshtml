@@ -14,7 +14,7 @@
     @Styles.Render("~/Content/bootstrap.min.css")
     @Styles.Render("~/Content/custom.css")
     @Scripts.Render("~/bundles/modernizr")
-    <style>
+<style>
         .loginLabel {
             width: max-content;
             height: 1rem;
@@ -31,10 +31,10 @@
         }
 
         .loginInput:focus + .loginLabel, .notEmpty + .loginLabel {
-            background: white;
+            background: #ffffff80;
             padding: 1px 4px;
             text-align: left;
-            transform: translate(0.5vw, -5.3vh);
+            transform: translate(0.5vw, -5.1vh);
             font-size: 1.3vh;
             color: #80bdff;
         }
@@ -43,12 +43,18 @@
             margin-bottom: 0px;
         }
 
-    </style>
+        #fullpg {
+            background-image: url( @Url.Content("~/content/Imgs/back.jpg") );
+        }
+
+</style>
 </head>
-<body class="bg-dark" style="height: 100%;">
-    <div class="row justify-content-center align-items-center" style="height: 100%;">
+<body class="bg-dark" style="height: 100%; width: 100%;">
+    <div id="fullpg" class="row justify-content-center align-items-center" style="height: 100%; width: 100%;">
+        <div class="col-md-8 ">
+        </div>      
         <div class="col-md-4 ">
-            <section id="loginForm" class="p-3 bg-light" style="padding: 1rem 3rem !important;">
+            <section id="loginForm" class="p-3" style="padding: 1rem 3rem !important; background-color: #ffffffbf; box-shadow: -7px 11px 20px 5px black;">
                 @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { role = "form" }))
                 {
                     @Html.AntiForgeryToken()
