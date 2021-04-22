@@ -18,7 +18,7 @@ namespace ProyectoIntegrador.Controllers.Administrativos
         // GET: TipoUsuarioAfiliadoes
         public ActionResult Index()
         {
-            return View("/Views/Administrativas/TipoUsuadioAfiliados/Index.cshtml", db.TipoUsuarioAfiliado.ToList());
+            return View("/Views/Administrativas/TipoUsuarioAfiliados/Index.cshtml", db.TipoUsuarioAfiliado.ToList());
         }
 
         // GET: TipoUsuarioAfiliadoes/Details/5
@@ -33,13 +33,13 @@ namespace ProyectoIntegrador.Controllers.Administrativos
             {
                 return HttpNotFound();
             }
-            return View("/Views/Administrativas/TipoUsuadioAfiliados/Details.cshtml", tipoUsuarioAfiliado);
+            return View("/Views/Administrativas/TipoUsuarioAfiliados/Details.cshtml", tipoUsuarioAfiliado);
         }
 
         // GET: TipoUsuarioAfiliadoes/Create
         public ActionResult Create()
         {
-            return View("/Views/Administrativas/TipoUsuadioAfiliados/Create.cshtml");
+            return View("/Views/Administrativas/TipoUsuarioAfiliados/Create.cshtml");
         }
 
         // POST: TipoUsuarioAfiliadoes/Create
@@ -56,7 +56,7 @@ namespace ProyectoIntegrador.Controllers.Administrativos
                 return RedirectToAction("Index");
             }
 
-            return View("/Views/Administrativas/TipoUsuadioAfiliados/Create.cshtm", tipoUsuarioAfiliado); ;
+            return View("/Views/Administrativas/TipoUsuarioAfiliados/Create.cshtm", tipoUsuarioAfiliado); ;
         }
 
         // GET: TipoUsuarioAfiliadoes/Edit/5
@@ -71,7 +71,7 @@ namespace ProyectoIntegrador.Controllers.Administrativos
             {
                 return HttpNotFound();
             }
-            return View("/Views/Administrativas/TipoUsuadioAfiliados/Edit.cshtml", tipoUsuarioAfiliado);
+            return View("/Views/Administrativas/TipoUsuarioAfiliados/Edit.cshtml", tipoUsuarioAfiliado);
         }
 
         // POST: TipoUsuarioAfiliadoes/Edit/5
@@ -87,7 +87,7 @@ namespace ProyectoIntegrador.Controllers.Administrativos
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View("/Views/Administrativas/TipoUsuadioAfiliados/Edit.cshtml", tipoUsuarioAfiliado);
+            return View("/Views/Administrativas/TipoUsuarioAfiliados/Edit.cshtml", tipoUsuarioAfiliado);
         }
 
         // GET: TipoUsuarioAfiliadoes/Delete/5
@@ -102,7 +102,7 @@ namespace ProyectoIntegrador.Controllers.Administrativos
             {
                 return HttpNotFound();
             }
-            return View("/Views/Administrativas/TipoUsuadioAfiliados/Delete.cshtml", tipoUsuarioAfiliado);
+            return View("/Views/Administrativas/TipoUsuarioAfiliados/Delete.cshtml", tipoUsuarioAfiliado);
         }
 
         // POST: TipoUsuarioAfiliadoes/Delete/5

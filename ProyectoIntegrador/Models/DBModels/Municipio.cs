@@ -18,9 +18,9 @@ namespace ProyectoIntegrador.Models.DBModels
         public string Codigo { get; set; }
 
         [Column("nombre")]
-        [MaxLength(20)]
+        [MaxLength(30)]
         [Required]
-        [DisplayName("Nombre del Municipio")]
+        [DisplayName("Nombre")]
         public string Nombre { get; set; }
 
         [Column("departamento")]
