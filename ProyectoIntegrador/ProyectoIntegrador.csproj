@@ -215,13 +215,9 @@
     <Compile Include="Migrations\202103180123341_partial_01_08_03_21_3.Designer.cs">
       <DependentUpon>202103180123341_partial_01_08_03_21_3.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202104221347570_ajuste-departamento.cs" />
-    <Compile Include="Migrations\202104221347570_ajuste-departamento.Designer.cs">
-      <DependentUpon>202104221347570_ajuste-departamento.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202104221411411_ajuste-municipio.cs" />
-    <Compile Include="Migrations\202104221411411_ajuste-municipio.Designer.cs">
-      <DependentUpon>202104221411411_ajuste-municipio.cs</DependentUpon>
+    <Compile Include="Migrations\202104231325568_ajuste-dep-mun.cs" />
+    <Compile Include="Migrations\202104231325568_ajuste-dep-mun.Designer.cs">
+      <DependentUpon>202104231325568_ajuste-dep-mun.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -445,11 +441,8 @@
     <EmbeddedResource Include="Migrations\202103180123341_partial_01_08_03_21_3.resx">
       <DependentUpon>202103180123341_partial_01_08_03_21_3.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202104221347570_ajuste-departamento.resx">
-      <DependentUpon>202104221347570_ajuste-departamento.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202104221411411_ajuste-municipio.resx">
-      <DependentUpon>202104221411411_ajuste-municipio.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202104231325568_ajuste-dep-mun.resx">
+      <DependentUpon>202104231325568_ajuste-dep-mun.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
