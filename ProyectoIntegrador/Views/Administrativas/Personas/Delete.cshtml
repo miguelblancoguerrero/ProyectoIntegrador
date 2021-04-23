@@ -82,19 +82,17 @@
         <dd>
             @Html.DisplayFor(model => model.Telefonos)
         </dd>
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Eliminar" class="btn btn-primary" />
-                <a href="/personas" value="Volver" class="btn btn-secondary">Volver</a>
-            </div>
-        </div>
+
     </dl>
 
-    @using (Html.BeginForm())
-    {
-        @Html.AntiForgeryToken()
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="col-md-offset-2 col-md-10">
+        <input type="submit" value="Eliminar" class="btn btn-primary" />
+        @Html.ActionLink("Back to List", "Index")
+    </div>
 
-
-    }
+}
 
 </div>
