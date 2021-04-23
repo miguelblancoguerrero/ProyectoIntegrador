@@ -75,10 +75,17 @@
     <div class="container bg-white pt-5" style="flex-grow: 1;">
         @RenderBody()
     </div>
-    <div class="container-fluid bg-dark rounded-top footer text-white d-flex justify-content-center align-items-center pt-2">
-        <footer>
-            <p>&copy; @DateTime.Now.Year - Proyecto Integrador</p>
+    <div class="container-fluid bg-transparent rounded-top footer d-flex justify-content-center align-items-center pt-2">
+        <footer class="bg-transparent text-dark h5">
+            <div id="footer ">
+                <p>
+                    <marquee direction=left>
+                    Copyright &copy;  @DateTime.Now.Year VacunaApp Miguel Blanco - Camilo Quintana - Andres Perdomo  
+                    </marquee>
+                </p>
+            </div>
         </footer>
+        
     </div>
 </body>
 </html>
