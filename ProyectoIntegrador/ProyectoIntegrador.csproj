@@ -192,6 +192,7 @@
     <Compile Include="Controllers\Administrativos\AfiliadosController.cs" />
     <Compile Include="Controllers\Administrativos\ProveedorController.cs" />
     <Compile Include="Controllers\Administrativos\SucursalesController.cs" />
+    <Compile Include="Controllers\PublicController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -424,6 +425,7 @@
     <Content Include="Views\Administrativas\Finalidades\Details.cshtml" />
     <Content Include="Views\Administrativas\Finalidades\Edit.cshtml" />
     <Content Include="Views\Administrativas\Finalidades\Index.cshtml" />
+    <Content Include="Views\Public\HomeInfo.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202103091609006_InitialCreate.resx">

@@ -8,6 +8,8 @@ namespace ProyectoIntegrador.App_Start.Filters
 {
     public class SessionFilter: ActionFilterAttribute
     {
+        private static string[] publicPages = { "public/homeinfo", "public/consultesucita" };
+
         override
         public void OnActionExecuting(ActionExecutingContext filterContext)
         {
@@ -17,9 +19,20 @@ namespace ProyectoIntegrador.App_Start.Filters
             var user = session["user"];
             if (user == null && !controllerName.Equals("account/login"))
             {
-                var url = new UrlHelper(filterContext.RequestContext);
-                var loginUrl = url.Content("~/Account/Login");
-                filterContext.HttpContext.Response.Redirect(loginUrl, true);
+                Boolean isPublic = false;
+                foreach (string name in publicPages)
+                {
+                    if (controllerName.Equals(name))
+                    {
+                        isPublic = true;
+                        break;
+                    }
+                }
+                if (!isPublic) { 
+                    var url = new UrlHelper(filterContext.RequestContext);
+                    var loginUrl = url.Content("~/Account/Login");
+                    filterContext.HttpContext.Response.Redirect(loginUrl, true);
+                }
             }
         }
     }
