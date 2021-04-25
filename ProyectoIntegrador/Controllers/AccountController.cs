@@ -395,6 +395,7 @@ namespace ProyectoIntegrador.Controllers
         public ActionResult LogOff()
         {
             Session["user"] = null;
+            Session["menus"] = null;
             AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
             return RedirectToAction("Index", "Home");
         }

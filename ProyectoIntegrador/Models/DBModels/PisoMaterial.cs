@@ -33,6 +33,10 @@ namespace ProyectoIntegrador.Models.DBModels
         [Column("fecha_caducidad")]
         public DateTime FechaCaducidad { get; set; }
 
+        [Column("cantidad")]
+        [Required]
+        public long Cantidad { get; set; }
+
 
         [ForeignKey("Material")]
         public Material MaterialF { get; set; }

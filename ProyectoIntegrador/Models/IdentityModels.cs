@@ -1,4 +1,6 @@
-﻿using System.Data.Entity;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Security.Claims;
 using System.Threading.Tasks;
@@ -11,6 +13,12 @@ namespace ProyectoIntegrador.Models
     // Para agregar datos de perfil del usuario, agregue más propiedades a su clase ApplicationUser. Visite https://go.microsoft.com/fwlink/?LinkID=317594 para obtener más información.
     public class ApplicationUser : IdentityUser
     {
+        [Column("persona")]
+        public long? Persona { get; set; }
+
+        [ForeignKey("Persona")]
+        public Persona FPersona { get; set; }
+
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {
             // Tenga en cuenta que el valor de authenticationType debe coincidir con el definido en CookieAuthenticationOptions.AuthenticationType
@@ -36,6 +44,8 @@ namespace ProyectoIntegrador.Models
         {
             return new ApplicationDbContext();
         }
+
+        public DbSet<IdentityUserRole> UserRoles { get; set; }
 
         public DbSet<Afiliado> Afiliado { get; set; }
         public DbSet<Bodega> Bodega { get; set; }
@@ -71,5 +81,8 @@ namespace ProyectoIntegrador.Models
         public DbSet<TipoIdentifiacion> TipoIdentifiacion { get; set; }
         public DbSet<TipoUsuarioAfiliado> TipoUsuarioAfiliado { get; set; }
         public DbSet<Zona> Zona { get; set; }
+
+        public DbSet<Menu> Menu { get; set; }
+        public DbSet<RolMenu> RolMenu { get; set; }
     }
 }

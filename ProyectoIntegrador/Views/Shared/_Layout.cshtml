@@ -23,50 +23,47 @@
             </button>
             <div class="navbar-collapse collapse" id="navbarNav">
                 <ul class="nav navbar-nav mr-auto">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-white" id="navbarDropdownAdministrativas" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Administrativas
-                        </a>
-                        <div class="dropdown-menu text-white" aria-labelledby="navbarDropdownAdministrativas">
-                            <a class="dropdown-item" href="/administrativos/personas">Personas</a>
-                            <a class="dropdown-item" href="/administrativos/TipoIdentifiacions">TipoIdentificación</a>
-                            <a class="dropdown-item" href="/administrativos/TipoUsuarioAfiliadoes">Tipo Usuario Afiliados</a>
-                            <a class="dropdown-item" href="/administrativos/TipoAfiliados">Tipo Afiliados</a>
-                            <a class="dropdown-item" href="/administrativos/Generos">Generos</a>
-                            <a class="dropdown-item" href="/administrativos/Procedimientos">Procedimientos</a>
-                            <a class="dropdown-item" href="/administrativos/ProcedimientoMaterials"> Material Procedimiento</a>
-                            <a class="dropdown-item" href="/administrativos/CausaExternas">Causa Externa</a>
-                            <a class="dropdown-item" href="/administrativos/RecetaMedicas">Receta Médica</a>
-                            <a class="dropdown-item" href="/administrativos/RecetaMedicaMaterials">Receta Médica - Material</a>
-                            <a class="dropdown-item" href="/administrativos/HistoriaMedicas"> Historia Médica</a>
-                            <a class="dropdown-item" href="/administrativos/Afiliados">Afiliados</a>
-                            <a class="dropdown-item" href="/administrativos/Empleados">Empleados</a>
-                            <a class="dropdown-item" href="/administrativos/Cargos">Cargos</a>
-                            <a class="dropdown-item" href="/administrativos/Proveedor">Proveedores</a>
-                            <a class="dropdown-item" href="/administrativos/Municipios">Municipios</a>
-                            <a class="dropdown-item" href="/administrativos/Departamentos">Departamentos</a>
-                            <a class="dropdown-item" href="/administrativos/Sucursales">Sucursales</a>
-                            <a class="dropdown-item" href="/administrativos/Consultorios">Consultorios</a>
-                            <a class="dropdown-item" href="/administrativos/Citas">Citas</a>
-                            <a class="dropdown-item" href="/administrativos/Finalidades">Finalidades</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown ">
-                        <a class="nav-link dropdown-toggle text-white" id="navbarDropdownAdministrativas" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Citas
-                        </a>
-                        <div class="dropdown-menu text-white" aria-labelledby="navbarDropdownAdministrativas">
-                            <a class="dropdown-item" href="">None</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown ">
-                        <a class="nav-link dropdown-toggle text-white" id="navbarDropdownAdministrativas" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Inventarios
-                        </a>
-                        <div class="dropdown-menu text-white" aria-labelledby="navbarDropdownAdministrativas">
-                            <a class="dropdown-item" href="">None</a>
-                        </div>
-                    </li>
+                    @if (ViewBag.Menus != null)
+                    {
+                        foreach (ProyectoIntegrador.App_Start.Filters.Objects.MenuDTO menu in ViewBag.Menus)
+                        {
+                            if (menu.EsPadre)
+                            {
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle text-white" id="navbarDropdown@menu.Datos.Etiqueta" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        @menu.Datos.Etiqueta
+                                    </a>
+                                    <ul class="dropdown-menu text-white" aria-labelledby="navbarDropdown@menu.Datos.Etiqueta">
+                                        @foreach (ProyectoIntegrador.App_Start.Filters.Objects.MenuDTO submenu1 in menu.Hijos)
+                                        {
+                                            if (submenu1.EsPadre)
+                                            {
+                                                <li class="dropdown-submenu">
+                                                    <a class="dropdown-item dropdown-toggle">@submenu1.Datos.Etiqueta</a>
+                                                    <ul class="dropdown-menu">
+                                                        @foreach (ProyectoIntegrador.App_Start.Filters.Objects.MenuDTO submenu2 in menu.Hijos)
+                                                        {
+                                                            <li><a class="dropdown-item" href="{@submenu2.Datos.Url}">@submenu2.Datos.Etiqueta</a></li>
+                                                        }
+                                                    </ul>
+                                                </li>
+                                            }
+                                            else
+                                            {
+                                                <li><a class="dropdown-item" href="@submenu1.Datos.Url">@submenu1.Datos.Etiqueta</a></li>
+                                            }
+                                        }
+                                    </ul>
+                                </li>
+                            }
+                            else
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{@menu.Datos.Url}">@menu.Datos.Etiqueta</a>
+                                </li>
+                            }
+                        }
+                    }
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
@@ -76,16 +73,29 @@
         @RenderBody()
     </div>
     <div class="container-fluid bg-transparent rounded-top footer d-flex justify-content-center align-items-center pt-2">
-        <footer class="bg-transparent text-dark h5">
-            <div id="footer ">
+        <footer class="bg-transparent text-dark h5" style="width: 100%;">
+            <div id="footer">
                 <p>
                     <marquee direction=left>
-                    Copyright &copy;  @DateTime.Now.Year VacunaApp Miguel Blanco - Camilo Quintana - Andres Perdomo  
+                        Copyright &copy;  @DateTime.Now.Year VacunaApp Miguel Blanco - Camilo Quintana - Andres Perdomo
                     </marquee>
                 </p>
             </div>
         </footer>
-        
+
     </div>
+    <script type="text/javascript">
+        $('.dropdown-menu a.dropdown-toggle').on('click', function (e) {
+            if (!$(this).next().hasClass('show')) {
+                $(this).parents('.dropdown-menu').first().find('.show').removeClass('show');
+            }
+            var $subMenu = $(this).next('.dropdown-menu');
+            $subMenu.toggleClass('show');
+            $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function (e) {
+                $('.dropdown-submenu .show').removeClass('show');
+            });
+            return false;
+        });
+    </script>
 </body>
 </html>
