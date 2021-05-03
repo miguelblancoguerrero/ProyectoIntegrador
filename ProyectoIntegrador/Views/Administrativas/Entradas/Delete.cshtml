@@ -1,0 +1,56 @@
+﻿@model ProyectoIntegrador.Models.DBModels.Entrada
+
+@{
+    ViewBag.Title = "Eliminar Entradas";
+}
+
+<h2>Eliminar Entradas/h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Entrada</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.OrdenF.Codigo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrdenF.Codigo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Codigo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Codigo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fecha)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fecha)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.factura)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.factura)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Eliminar" class="btn btn-primary" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

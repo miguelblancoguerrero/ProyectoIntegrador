@@ -1,0 +1,96 @@
+﻿@model ProyectoIntegrador.Models.DBModels.Kardex
+
+@{
+    ViewBag.Title = "Eliminar Kardex";
+}
+
+<h2>Eliminar Kardex/h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Kardex</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BodegaF.Codigo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BodegaF.Codigo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaterialF.Codigo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaterialF.Codigo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fecha)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fecha)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Concepto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Concepto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ValorUnitario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ValorUnitario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MovimientoTipo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MovimientoTipo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MovimientoCantidad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MovimientoCantidad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MovimientoValorTotal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MovimientoValorTotal)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Eliminar" class="btn btn-primary" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

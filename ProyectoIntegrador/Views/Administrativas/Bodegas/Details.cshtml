@@ -1,0 +1,66 @@
+﻿@model ProyectoIntegrador.Models.DBModels.Bodega
+
+@{
+    ViewBag.Title = "Detalles Bodegas";
+}
+
+<h2>Detalles Bodegas</h2>
+
+<div>
+    <h4>Bodega</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MunicipioF.Codigo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MunicipioF.Codigo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SucursalF.Codigo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SucursalF.Codigo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Codigo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Codigo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Interna)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Interna)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Direccion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Direccion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Telefonos)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Telefonos)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

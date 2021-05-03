@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -32,21 +33,30 @@ namespace ProyectoIntegrador.Models.DBModels
         [Required]
         public string Concepto { get; set; }
 
+        [Column("descripcion")]
+        [MaxLength(200)]
+        [DisplayName("Descripción")]
+        public string Descripcion { get; set; }
+
         [Column("valor_unitario")]
         [Required]
+        [DisplayName("Valor Unitario")]
         public double ValorUnitario { get; set; }
 
         [Column("movimiento_tipo")]
         [MaxLength(3)]
         [Required]
+        [DisplayName("Tipo de Movimiento")]
         public string MovimientoTipo { get; set; }
 
         [Column("movimiento_cantidad")]
         [Required]
+        [DisplayName("Cantidad del movimiento")]
         public int MovimientoCantidad { get; set; }
 
         [Column("movimiento_valor_total")]
         [Required]
+        [DisplayName("Valor total del movimiento")]
         public double MovimientoValorTotal { get; set; }
 
 

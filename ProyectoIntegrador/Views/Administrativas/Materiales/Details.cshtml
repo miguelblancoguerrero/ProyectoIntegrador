@@ -1,0 +1,66 @@
+﻿@model ProyectoIntegrador.Models.DBModels.Material
+
+@{
+    ViewBag.Title = "Detalles Materiales";
+}
+
+<h2>Detalles Materiales</h2>
+
+<div>
+    <h4>Material</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MarcaF.Codigo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MarcaF.Codigo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PadreF.Codigo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PadreF.Codigo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Codigo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Codigo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tipo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tipo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TemperaturaAlmacenamiento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TemperaturaAlmacenamiento)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

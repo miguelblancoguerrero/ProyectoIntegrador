@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -17,6 +18,7 @@ namespace ProyectoIntegrador.Models.DBModels
         [Column("codigo")]
         [MaxLength(15)]
         [Required]
+        [DisplayName("Código")]
         public string Codigo { get; set; }
 
         [Column("interna")]
@@ -34,11 +36,13 @@ namespace ProyectoIntegrador.Models.DBModels
         [Column("direccion")]
         [MaxLength(100)]
         [Required]
+        [DisplayName("Dirección")]
         public string Direccion { get; set; }
 
         [Column("telefonos")]
         [MaxLength(100)]
         [Required]
+        [DisplayName("Teléfonos")]
         public string Telefonos { get; set; }
 
 

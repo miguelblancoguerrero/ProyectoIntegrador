@@ -1,0 +1,66 @@
+﻿@model ProyectoIntegrador.Models.DBModels.PisoMaterial
+
+@{
+    ViewBag.Title = "Detalles PisosMateriales";
+}
+
+<h2>Detalles Pisos Materiales</h2>
+
+<div>
+    <h4>PisoMaterial</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MaterialF.Codigo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaterialF.Codigo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PisoF.Codigo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PisoF.Codigo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Posicion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Posicion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaEntrada)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaEntrada)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaCaducidad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaCaducidad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cantidad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cantidad)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

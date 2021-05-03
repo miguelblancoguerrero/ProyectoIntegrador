@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -28,9 +29,11 @@ namespace ProyectoIntegrador.Models.DBModels
 
         [Column("fecha_entrada")]
         [Required]
+        [DisplayName("Fecha de Entrada")]
         public DateTime FechaEntrada { get; set; }
 
         [Column("fecha_caducidad")]
+        [DisplayName("Fecha de Caduciad")]
         public DateTime FechaCaducidad { get; set; }
 
         [Column("cantidad")]

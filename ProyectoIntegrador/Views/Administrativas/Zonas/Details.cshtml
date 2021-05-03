@@ -1,0 +1,42 @@
+﻿@model ProyectoIntegrador.Models.DBModels.Zona
+
+@{
+    ViewBag.Title = "Detalles Zonas";
+}
+
+<h2>Detalles Zonas</h2>
+
+<div>
+    <h4>Zona</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BodegaF.Codigo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BodegaF.Codigo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Codigo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Codigo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tipo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tipo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

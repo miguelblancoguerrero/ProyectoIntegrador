@@ -170,9 +170,20 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\Filters\SessionFilter.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\Administrativos\BodegasController.cs" />
+    <Compile Include="Controllers\Administrativos\EntradasController.cs" />
+    <Compile Include="Controllers\Administrativos\EntradasMaterialesController.cs" />
     <Compile Include="Controllers\Administrativos\GenerosController.cs" />
     <Compile Include="Controllers\Administrativos\HistoriaMedicasController.cs" />
+    <Compile Include="Controllers\Administrativos\KardexController.cs" />
+    <Compile Include="Controllers\Administrativos\MarcasController.cs" />
+    <Compile Include="Controllers\Administrativos\MaterialesController.cs" />
+    <Compile Include="Controllers\Administrativos\OrdenesController.cs" />
+    <Compile Include="Controllers\Administrativos\OrdenesMaterialesController.cs" />
+    <Compile Include="Controllers\Administrativos\PasillosController.cs" />
     <Compile Include="Controllers\Administrativos\PersonasController.cs" />
+    <Compile Include="Controllers\Administrativos\PisosController.cs" />
+    <Compile Include="Controllers\Administrativos\PisosMaterialesController.cs" />
     <Compile Include="Controllers\Administrativos\ProcedimientoMaterialsController.cs" />
     <Compile Include="Controllers\Administrativos\RecetaMedicaMaterialsController.cs" />
     <Compile Include="Controllers\Administrativos\RecetaMedicasController.cs" />
@@ -180,6 +191,8 @@
     <Compile Include="Controllers\Administrativos\TipoIdentifiacionsController.cs" />
     <Compile Include="Controllers\Administrativos\TipoUsuarioAfiliadosController.cs" />
     <Compile Include="Controllers\Administrativos\CausaExternasController.cs" />
+    <Compile Include="Controllers\Administrativos\ZonasController.cs" />
+    <Compile Include="Controllers\Administrativos\EstantesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\Administrativos\ProcedimientosController.cs" />
@@ -228,6 +241,10 @@
     <Compile Include="Migrations\202104250001091_menus.cs" />
     <Compile Include="Migrations\202104250001091_menus.Designer.cs">
       <DependentUpon>202104250001091_menus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105030204426_aute-kardex.cs" />
+    <Compile Include="Migrations\202105030204426_aute-kardex.Designer.cs">
+      <DependentUpon>202105030204426_aute-kardex.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -437,6 +454,71 @@
     <Content Include="Views\Administrativas\Finalidades\Edit.cshtml" />
     <Content Include="Views\Administrativas\Finalidades\Index.cshtml" />
     <Content Include="Views\Public\HomeInfo.cshtml" />
+    <Content Include="Views\Administrativas\Materiales\Create.cshtml" />
+    <Content Include="Views\Administrativas\Materiales\Delete.cshtml" />
+    <Content Include="Views\Administrativas\Materiales\Details.cshtml" />
+    <Content Include="Views\Administrativas\Materiales\Edit.cshtml" />
+    <Content Include="Views\Administrativas\Materiales\Index.cshtml" />
+    <Content Include="Views\Administrativas\Marcas\Create.cshtml" />
+    <Content Include="Views\Administrativas\Marcas\Delete.cshtml" />
+    <Content Include="Views\Administrativas\Marcas\Details.cshtml" />
+    <Content Include="Views\Administrativas\Marcas\Edit.cshtml" />
+    <Content Include="Views\Administrativas\Marcas\Index.cshtml" />
+    <Content Include="Views\Administrativas\Bodegas\Create.cshtml" />
+    <Content Include="Views\Administrativas\Bodegas\Delete.cshtml" />
+    <Content Include="Views\Administrativas\Bodegas\Details.cshtml" />
+    <Content Include="Views\Administrativas\Bodegas\Edit.cshtml" />
+    <Content Include="Views\Administrativas\Bodegas\Index.cshtml" />
+    <Content Include="Views\Administrativas\Zonas\Create.cshtml" />
+    <Content Include="Views\Administrativas\Zonas\Delete.cshtml" />
+    <Content Include="Views\Administrativas\Zonas\Details.cshtml" />
+    <Content Include="Views\Administrativas\Zonas\Edit.cshtml" />
+    <Content Include="Views\Administrativas\Zonas\Index.cshtml" />
+    <Content Include="Views\Administrativas\Pasillos\Create.cshtml" />
+    <Content Include="Views\Administrativas\Pasillos\Delete.cshtml" />
+    <Content Include="Views\Administrativas\Pasillos\Details.cshtml" />
+    <Content Include="Views\Administrativas\Pasillos\Edit.cshtml" />
+    <Content Include="Views\Administrativas\Pasillos\Index.cshtml" />
+    <Content Include="Views\Administrativas\Estantes\Create.cshtml" />
+    <Content Include="Views\Administrativas\Estantes\Delete.cshtml" />
+    <Content Include="Views\Administrativas\Estantes\Details.cshtml" />
+    <Content Include="Views\Administrativas\Estantes\Edit.cshtml" />
+    <Content Include="Views\Administrativas\Estantes\Index.cshtml" />
+    <Content Include="Views\Administrativas\Pisos\Create.cshtml" />
+    <Content Include="Views\Administrativas\Pisos\Delete.cshtml" />
+    <Content Include="Views\Administrativas\Pisos\Details.cshtml" />
+    <Content Include="Views\Administrativas\Pisos\Edit.cshtml" />
+    <Content Include="Views\Administrativas\Pisos\Index.cshtml" />
+    <Content Include="Views\Administrativas\Ordenes\Create.cshtml" />
+    <Content Include="Views\Administrativas\Ordenes\Delete.cshtml" />
+    <Content Include="Views\Administrativas\Ordenes\Details.cshtml" />
+    <Content Include="Views\Administrativas\Ordenes\Edit.cshtml" />
+    <Content Include="Views\Administrativas\Ordenes\Index.cshtml" />
+    <Content Include="Views\Administrativas\OrdenesMateriales\Create.cshtml" />
+    <Content Include="Views\Administrativas\OrdenesMateriales\Delete.cshtml" />
+    <Content Include="Views\Administrativas\OrdenesMateriales\Details.cshtml" />
+    <Content Include="Views\Administrativas\OrdenesMateriales\Edit.cshtml" />
+    <Content Include="Views\Administrativas\OrdenesMateriales\Index.cshtml" />
+    <Content Include="Views\Administrativas\Entradas\Create.cshtml" />
+    <Content Include="Views\Administrativas\Entradas\Delete.cshtml" />
+    <Content Include="Views\Administrativas\Entradas\Details.cshtml" />
+    <Content Include="Views\Administrativas\Entradas\Edit.cshtml" />
+    <Content Include="Views\Administrativas\Entradas\Index.cshtml" />
+    <Content Include="Views\Administrativas\EntradasMateriales\Create.cshtml" />
+    <Content Include="Views\Administrativas\EntradasMateriales\Delete.cshtml" />
+    <Content Include="Views\Administrativas\EntradasMateriales\Details.cshtml" />
+    <Content Include="Views\Administrativas\EntradasMateriales\Edit.cshtml" />
+    <Content Include="Views\Administrativas\EntradasMateriales\Index.cshtml" />
+    <Content Include="Views\Administrativas\PisosMateriales\Create.cshtml" />
+    <Content Include="Views\Administrativas\PisosMateriales\Delete.cshtml" />
+    <Content Include="Views\Administrativas\PisosMateriales\Details.cshtml" />
+    <Content Include="Views\Administrativas\PisosMateriales\Edit.cshtml" />
+    <Content Include="Views\Administrativas\PisosMateriales\Index.cshtml" />
+    <Content Include="Views\Administrativas\Kardex\Create.cshtml" />
+    <Content Include="Views\Administrativas\Kardex\Delete.cshtml" />
+    <Content Include="Views\Administrativas\Kardex\Details.cshtml" />
+    <Content Include="Views\Administrativas\Kardex\Edit.cshtml" />
+    <Content Include="Views\Administrativas\Kardex\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202103091609006_InitialCreate.resx">
@@ -462,6 +544,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104250001091_menus.resx">
       <DependentUpon>202104250001091_menus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105030204426_aute-kardex.resx">
+      <DependentUpon>202105030204426_aute-kardex.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
