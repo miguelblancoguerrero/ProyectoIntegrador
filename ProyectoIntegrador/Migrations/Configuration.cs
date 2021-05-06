@@ -23,7 +23,7 @@ namespace ProyectoIntegrador.Migrations
             {
                 var store = new RoleStore<IdentityRole>(context);
                 var manager = new RoleManager<IdentityRole>(store);
-                var role = new IdentityRole { Name = "Admin" };
+                var role = new IdentityRole { Id= "dc9bcfe3-2d00-4b2a-847f-0c4c3f39003a", Name = "Admin" };
                 manager.Create(role);
             }
 
@@ -1222,6 +1222,10 @@ namespace ProyectoIntegrador.Migrations
                 if (!context.Menu.Any(d => d.Id.Equals(20))) context.Menu.Add(new Models.DBModels.Menu { Id = 20, Orden = 6, Etiqueta = "Consultorios", Url = "/administrativos/Consultorios", Padre = 1 });
                 if (!context.Menu.Any(d => d.Id.Equals(21))) context.Menu.Add(new Models.DBModels.Menu { Id = 21, Orden = 5, Etiqueta = "Citas", Url = "/administrativos/Citas", Padre = 1 });
                 if (!context.Menu.Any(d => d.Id.Equals(22))) context.Menu.Add(new Models.DBModels.Menu { Id = 22, Orden = 12, Etiqueta = "Finalidades", Url = "/administrativos/Finalidades", Padre = 1 });
+
+                if (!context.Menu.Any(d => d.Id.Equals(23))) context.Menu.Add(new Models.DBModels.Menu { Id = 23, Orden = 2, Etiqueta = "Citas" });
+                if (!context.Menu.Any(d => d.Id.Equals(24))) context.Menu.Add(new Models.DBModels.Menu { Id = 24, Orden = 3, Etiqueta = "Inventarios" });
+
                 if (!context.Menu.Any(d => d.Id.Equals(25))) context.Menu.Add(new Models.DBModels.Menu { Id = 25, Orden = 2, Etiqueta = "Bodegas", Url = "/administrativos/Bodegas", Padre = 1 });
                 if (!context.Menu.Any(d => d.Id.Equals(26))) context.Menu.Add(new Models.DBModels.Menu { Id = 26, Orden = 9, Etiqueta = "Entradas", Url = "/administrativos/Entradas", Padre = 1 });
                 if (!context.Menu.Any(d => d.Id.Equals(27))) context.Menu.Add(new Models.DBModels.Menu { Id = 27, Orden = 10, Etiqueta = "EntradasMateriales", Url = "/administrativos/EntradasMateriales", Padre = 1 });
@@ -1236,14 +1240,11 @@ namespace ProyectoIntegrador.Migrations
                 if (!context.Menu.Any(d => d.Id.Equals(36))) context.Menu.Add(new Models.DBModels.Menu { Id = 36, Orden = 11, Etiqueta = "Estantes", Url = "/administrativos/Estantes", Padre = 1 });
                 if (!context.Menu.Any(d => d.Id.Equals(37))) context.Menu.Add(new Models.DBModels.Menu { Id = 37, Orden = 15, Etiqueta = "Kardex", Url = "/administrativos/Kardex", Padre = 1 });
 
-                if (!context.Menu.Any(d => d.Id.Equals(23))) context.Menu.Add(new Models.DBModels.Menu { Id = 23, Orden = 2, Etiqueta = "Citas" });
-                if (!context.Menu.Any(d => d.Id.Equals(24))) context.Menu.Add(new Models.DBModels.Menu { Id = 24, Orden = 3, Etiqueta = "Inventarios" });
-                
             }
 
             // Rol_Menus
             {
-                if (!context.RolMenu.Any(d => d.Id.Equals(1))) context.RolMenu.Add(new Models.DBModels.RolMenu { Id = 1, Rol = "dc9bcfe3-2d00-4b2a-847f-0c4c3f39003a" , Menu = 1});
+                if (!context.RolMenu.Any(d => d.Id.Equals(1))) context.RolMenu.Add(new Models.DBModels.RolMenu { Id = 1, Rol = "dc9bcfe3-2d00-4b2a-847f-0c4c3f39003a", Menu = 1});
                 if (!context.RolMenu.Any(d => d.Id.Equals(2))) context.RolMenu.Add(new Models.DBModels.RolMenu { Id = 2, Rol = "dc9bcfe3-2d00-4b2a-847f-0c4c3f39003a", Menu = 2 });
                 if (!context.RolMenu.Any(d => d.Id.Equals(3))) context.RolMenu.Add(new Models.DBModels.RolMenu { Id = 3, Rol = "dc9bcfe3-2d00-4b2a-847f-0c4c3f39003a", Menu = 3 });
                 if (!context.RolMenu.Any(d => d.Id.Equals(4))) context.RolMenu.Add(new Models.DBModels.RolMenu { Id = 4, Rol = "dc9bcfe3-2d00-4b2a-847f-0c4c3f39003a", Menu = 4 });
