@@ -246,6 +246,22 @@
     <Compile Include="Migrations\202105030204426_aute-kardex.Designer.cs">
       <DependentUpon>202105030204426_aute-kardex.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105090217575_Codigo_TipoIdentificacion.cs" />
+    <Compile Include="Migrations\202105090217575_Codigo_TipoIdentificacion.Designer.cs">
+      <DependentUpon>202105090217575_Codigo_TipoIdentificacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105090223357_tipo_documentos.cs" />
+    <Compile Include="Migrations\202105090223357_tipo_documentos.Designer.cs">
+      <DependentUpon>202105090223357_tipo_documentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105090401193_citas_medico_nulleable.cs" />
+    <Compile Include="Migrations\202105090401193_citas_medico_nulleable.Designer.cs">
+      <DependentUpon>202105090401193_citas_medico_nulleable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105090427438_tipo_consultorio.cs" />
+    <Compile Include="Migrations\202105090427438_tipo_consultorio.Designer.cs">
+      <DependentUpon>202105090427438_tipo_consultorio.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\DBModels\Afiliado.cs" />
@@ -281,6 +297,7 @@
     <Compile Include="Models\DBModels\RecetaMedicaMaterial.cs" />
     <Compile Include="Models\DBModels\Sucursal.cs" />
     <Compile Include="Models\DBModels\TipoAfiliado.cs" />
+    <Compile Include="Models\DBModels\TipoConsultorio.cs" />
     <Compile Include="Models\DBModels\TipoUsuarioAfiliado.cs" />
     <Compile Include="Models\DBModels\Zona.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -345,7 +362,10 @@
     <Content Include="Views\Administrativas\Personas\Edit.cshtml" />
     <Content Include="Views\Administrativas\Personas\Index.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Controllers\Citas\DTOs\" />
+    <Folder Include="Controllers\Configuracion\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -547,6 +567,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105030204426_aute-kardex.resx">
       <DependentUpon>202105030204426_aute-kardex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105090223357_tipo_documentos.resx">
+      <DependentUpon>202105090223357_tipo_documentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105090401193_citas_medico_nulleable.resx">
+      <DependentUpon>202105090401193_citas_medico_nulleable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105090427438_tipo_consultorio.resx">
+      <DependentUpon>202105090427438_tipo_consultorio.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

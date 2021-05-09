@@ -8,26 +8,24 @@ using System.Web;
 
 namespace ProyectoIntegrador.Models.DBModels
 {
-    [Table("tipos_identificacion")]
-    public class TipoIdentifiacion
+    [Table("tipos_consultorios")]
+    public class TipoConsultorio
     {
-        
+
         [Key]
         [Column("id")]
-        public long Id { get; set; }
+        public short Id { get; set; }
 
         [Column("codigo")]
-        [MaxLength(3)]
+        [MaxLength(15)]
         [Required]
         [DisplayName("Código")]
         public string Codigo { get; set; }
 
         [Column("nombre")]
-        [MaxLength(40)]
+        [MaxLength(20)]
         [Required]
-        [DisplayName("Nombre del tipo de identificación")]
         public string Nombre { get; set; }
-
 
     }
 }

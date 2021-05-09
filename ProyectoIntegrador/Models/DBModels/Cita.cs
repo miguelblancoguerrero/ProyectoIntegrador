@@ -21,9 +21,8 @@ namespace ProyectoIntegrador.Models.DBModels
         public long Afiliado { get; set; }
 
         [Column("medico")]
-        [Required]
         [DisplayName("Médico de la cita")]
-        public long Medico { get; set; }
+        public long? Medico { get; set; }
 
         [Column("consultorio")]
         [Required]

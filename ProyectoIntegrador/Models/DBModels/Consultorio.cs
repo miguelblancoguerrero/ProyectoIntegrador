@@ -37,5 +37,7 @@ namespace ProyectoIntegrador.Models.DBModels
 
         [ForeignKey("Sucursal")]
         public Sucursal SucursalF { get; set; }
+        [ForeignKey("Tipo")]
+        public TipoConsultorio TipoF { get; set; }
     }
 }

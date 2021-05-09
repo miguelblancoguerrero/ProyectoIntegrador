@@ -11,6 +11,7 @@ namespace ProyectoIntegrador.Controllers
         // GET: Public
         public ActionResult homeInfo()
         {
+
             return View("/Views/Public/HomeInfo.cshtml");
         }
     }

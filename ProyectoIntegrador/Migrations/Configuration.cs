@@ -7,6 +7,7 @@ namespace ProyectoIntegrador.Migrations
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
+    using Models.DBModels;
 
     internal sealed class Configuration : DbMigrationsConfiguration<ProyectoIntegrador.Models.ApplicationDbContext>
     {
@@ -1196,6 +1197,21 @@ namespace ProyectoIntegrador.Migrations
                 if (!context.Municipio.Any(d => d.Id.Equals(1119))) context.Municipio.Add(new Models.DBModels.Municipio { Id = 1119, Codigo = "99524", Nombre = "LA PRIMAVERA", Departamento = 33 });
                 if (!context.Municipio.Any(d => d.Id.Equals(1120))) context.Municipio.Add(new Models.DBModels.Municipio { Id = 1120, Codigo = "99624", Nombre = "SANTA ROSALÍA", Departamento = 33 });
                 if (!context.Municipio.Any(d => d.Id.Equals(1121))) context.Municipio.Add(new Models.DBModels.Municipio { Id = 1121, Codigo = "99773", Nombre = "CUMARIBO", Departamento = 33 });
+            }
+
+            //Tipos De Identificacion
+            {
+                if (!context.TipoIdentifiacion.Any(o => o.Id.Equals(1))) context.TipoIdentifiacion.Add(new TipoIdentifiacion { Id = 1, Codigo = "CC", Nombre = "Cédula ciudadanía" });
+                if (!context.TipoIdentifiacion.Any(o => o.Id.Equals(2))) context.TipoIdentifiacion.Add(new TipoIdentifiacion { Id = 2, Codigo = "CE", Nombre = "Cédula de extranjería" });
+                if (!context.TipoIdentifiacion.Any(o => o.Id.Equals(3))) context.TipoIdentifiacion.Add(new TipoIdentifiacion { Id = 3, Codigo = "CD", Nombre = "Carné diplomático" });
+                if (!context.TipoIdentifiacion.Any(o => o.Id.Equals(4))) context.TipoIdentifiacion.Add(new TipoIdentifiacion { Id = 4, Codigo = "PA", Nombre = "Pasaporte" });
+                if (!context.TipoIdentifiacion.Any(o => o.Id.Equals(5))) context.TipoIdentifiacion.Add(new TipoIdentifiacion { Id = 5, Codigo = "SC", Nombre = "Salvoconducto" });
+                if (!context.TipoIdentifiacion.Any(o => o.Id.Equals(6))) context.TipoIdentifiacion.Add(new TipoIdentifiacion { Id = 6, Codigo = "PE", Nombre = "Permiso Especial de Permanencia" });
+                if (!context.TipoIdentifiacion.Any(o => o.Id.Equals(7))) context.TipoIdentifiacion.Add(new TipoIdentifiacion { Id = 7, Codigo = "RC", Nombre = "Registro civil" });
+                if (!context.TipoIdentifiacion.Any(o => o.Id.Equals(8))) context.TipoIdentifiacion.Add(new TipoIdentifiacion { Id = 8, Codigo = "TI", Nombre = "Tarjeta de identidad" });
+                if (!context.TipoIdentifiacion.Any(o => o.Id.Equals(9))) context.TipoIdentifiacion.Add(new TipoIdentifiacion { Id = 9, Codigo = "CN", Nombre = "Certificado de nacido vivo" });
+                if (!context.TipoIdentifiacion.Any(o => o.Id.Equals(10))) context.TipoIdentifiacion.Add(new TipoIdentifiacion { Id = 10, Codigo = "AS", Nombre = "Adulto sin identificar" });
+                if (!context.TipoIdentifiacion.Any(o => o.Id.Equals(11))) context.TipoIdentifiacion.Add(new TipoIdentifiacion { Id = 11, Codigo = "MS", Nombre = "Menor sin identifica" });
             }
 
             // Menus
