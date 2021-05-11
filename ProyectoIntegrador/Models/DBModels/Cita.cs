@@ -40,11 +40,6 @@ namespace ProyectoIntegrador.Models.DBModels
         [DisplayName("Fecha de la cita")]
         public DateTime Fecha { get; set; }
 
-        [Column("duracion")]
-        [Required]
-        [DisplayName("Duración de la cita")]
-        public int Duracion { get; set; }
-
         [Column("fecha_crea")]
         [Required]
         [DisplayName("Fecha de creación de la cita")]

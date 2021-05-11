@@ -19,6 +19,12 @@ namespace ProyectoIntegrador
                 namespaces: new[] { "ProyectoIntegrador.Controllers.Administrativos" }
             );
             routes.MapRoute(
+                name: "Citas",
+                url: "Citas/{controller}/{action}/{id}",
+                defaults: new { controller = "Personas", action = "Index", id = UrlParameter.Optional },
+                namespaces: new[] { "ProyectoIntegrador.Controllers.Administrativos" }
+            );
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }

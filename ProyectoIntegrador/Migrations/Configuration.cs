@@ -74,6 +74,52 @@ namespace ProyectoIntegrador.Migrations
                 if (!context.Departamento.Any(d => d.Id.Equals(33))) context.Departamento.Add(new Models.DBModels.Departamento { Id = 33, Codigo = "99", Nombre = "VICHADA" });
             }
 
+            // Menus
+            {
+                if (!context.Menu.Any(d => d.Id.Equals(1))) context.Menu.Add(new Models.DBModels.Menu { Id = 1, Orden = 1, Etiqueta = "Administrativas" });
+                if (!context.Menu.Any(d => d.Id.Equals(2))) context.Menu.Add(new Models.DBModels.Menu { Id = 2, Orden = 23, Etiqueta = "Personas", Url = "/administrativos/personas", Padre = 1 });
+                if (!context.Menu.Any(d => d.Id.Equals(3))) context.Menu.Add(new Models.DBModels.Menu { Id = 3, Orden = 33, Etiqueta = "TipoIdentificación", Url = "/administrativos/TipoIdentifiacions", Padre = 1 });
+                if (!context.Menu.Any(d => d.Id.Equals(4))) context.Menu.Add(new Models.DBModels.Menu { Id = 4, Orden = 32, Etiqueta = "Tipo Usuario Afiliados", Url = "/administrativos/TipoUsuarioAfiliadoes", Padre = 1 });
+                if (!context.Menu.Any(d => d.Id.Equals(5))) context.Menu.Add(new Models.DBModels.Menu { Id = 5, Orden = 31, Etiqueta = "Tipo Afiliados", Url = "/administrativos/TipoAfiliados", Padre = 1 });
+                if (!context.Menu.Any(d => d.Id.Equals(6))) context.Menu.Add(new Models.DBModels.Menu { Id = 6, Orden = 13, Etiqueta = "Generos", Url = "/administrativos/Generos", Padre = 1 });
+                if (!context.Menu.Any(d => d.Id.Equals(7))) context.Menu.Add(new Models.DBModels.Menu { Id = 7, Orden = 26, Etiqueta = "Procedimientos", Url = "/administrativos/Procedimientos", Padre = 1 });
+                if (!context.Menu.Any(d => d.Id.Equals(8))) context.Menu.Add(new Models.DBModels.Menu { Id = 8, Orden = 17, Etiqueta = "Material Procedimiento", Url = "/administrativos/ProcedimientoMaterials", Padre = 1 });
+                if (!context.Menu.Any(d => d.Id.Equals(9))) context.Menu.Add(new Models.DBModels.Menu { Id = 9, Orden = 4, Etiqueta = "Causa Externa", Url = "/administrativos/CausaExternas", Padre = 1 });
+                if (!context.Menu.Any(d => d.Id.Equals(10))) context.Menu.Add(new Models.DBModels.Menu { Id = 10, Orden = 28, Etiqueta = "Receta Médica", Url = "/administrativos/RecetaMedicas", Padre = 1 });
+                if (!context.Menu.Any(d => d.Id.Equals(11))) context.Menu.Add(new Models.DBModels.Menu { Id = 11, Orden = 29, Etiqueta = "Receta Médica - Material", Url = "/administrativos/RecetaMedicaMaterials", Padre = 1 });
+                if (!context.Menu.Any(d => d.Id.Equals(12))) context.Menu.Add(new Models.DBModels.Menu { Id = 12, Orden = 14, Etiqueta = "Historia Médica", Url = "/administrativos/HistoriaMedicas", Padre = 1 });
+                if (!context.Menu.Any(d => d.Id.Equals(13))) context.Menu.Add(new Models.DBModels.Menu { Id = 13, Orden = 1, Etiqueta = "Afiliados", Url = "/administrativos/Afiliados", Padre = 1 });
+                if (!context.Menu.Any(d => d.Id.Equals(14))) context.Menu.Add(new Models.DBModels.Menu { Id = 14, Orden = 8, Etiqueta = "Empleados", Url = "/administrativos/Empleados", Padre = 1 });
+                if (!context.Menu.Any(d => d.Id.Equals(15))) context.Menu.Add(new Models.DBModels.Menu { Id = 15, Orden = 3, Etiqueta = "Cargos", Url = "/administrativos/Cargos", Padre = 1 });
+                if (!context.Menu.Any(d => d.Id.Equals(16))) context.Menu.Add(new Models.DBModels.Menu { Id = 16, Orden = 27, Etiqueta = "Proveedores", Url = "/administrativos/Proveedor", Padre = 1 });
+                if (!context.Menu.Any(d => d.Id.Equals(17))) context.Menu.Add(new Models.DBModels.Menu { Id = 17, Orden = 19, Etiqueta = "Municipios", Url = "/administrativos/Municipios", Padre = 1 });
+                if (!context.Menu.Any(d => d.Id.Equals(18))) context.Menu.Add(new Models.DBModels.Menu { Id = 18, Orden = 7, Etiqueta = "Departamentos", Url = "/administrativos/Departamentos", Padre = 1 });
+                if (!context.Menu.Any(d => d.Id.Equals(19))) context.Menu.Add(new Models.DBModels.Menu { Id = 19, Orden = 30, Etiqueta = "Sucursales", Url = "/administrativos/Sucursales", Padre = 1 });
+                if (!context.Menu.Any(d => d.Id.Equals(20))) context.Menu.Add(new Models.DBModels.Menu { Id = 20, Orden = 6, Etiqueta = "Consultorios", Url = "/administrativos/Consultorios", Padre = 1 });
+                if (!context.Menu.Any(d => d.Id.Equals(21))) context.Menu.Add(new Models.DBModels.Menu { Id = 21, Orden = 5, Etiqueta = "Citas", Url = "/administrativos/Citas", Padre = 1 });
+                if (!context.Menu.Any(d => d.Id.Equals(22))) context.Menu.Add(new Models.DBModels.Menu { Id = 22, Orden = 12, Etiqueta = "Finalidades", Url = "/administrativos/Finalidades", Padre = 1 });
+
+                if (!context.Menu.Any(d => d.Id.Equals(23))) context.Menu.Add(new Models.DBModels.Menu { Id = 23, Orden = 2, Etiqueta = "Citas" });
+                if (!context.Menu.Any(d => d.Id.Equals(38))) context.Menu.Add(new Models.DBModels.Menu { Id = 38, Orden = 1, Etiqueta = "Crear Cita", Url = "/citas/CrearCita", Padre = 23 });
+
+                if (!context.Menu.Any(d => d.Id.Equals(24))) context.Menu.Add(new Models.DBModels.Menu { Id = 24, Orden = 3, Etiqueta = "Inventarios" });
+
+                if (!context.Menu.Any(d => d.Id.Equals(25))) context.Menu.Add(new Models.DBModels.Menu { Id = 25, Orden = 2, Etiqueta = "Bodegas", Url = "/administrativos/Bodegas", Padre = 1 });
+                if (!context.Menu.Any(d => d.Id.Equals(26))) context.Menu.Add(new Models.DBModels.Menu { Id = 26, Orden = 9, Etiqueta = "Entradas", Url = "/administrativos/Entradas", Padre = 1 });
+                if (!context.Menu.Any(d => d.Id.Equals(27))) context.Menu.Add(new Models.DBModels.Menu { Id = 27, Orden = 10, Etiqueta = "EntradasMateriales", Url = "/administrativos/EntradasMateriales", Padre = 1 });
+                if (!context.Menu.Any(d => d.Id.Equals(28))) context.Menu.Add(new Models.DBModels.Menu { Id = 28, Orden = 16, Etiqueta = "Marcas", Url = "/administrativos/Marcas", Padre = 1 });
+                if (!context.Menu.Any(d => d.Id.Equals(29))) context.Menu.Add(new Models.DBModels.Menu { Id = 29, Orden = 18, Etiqueta = "Materiales", Url = "/administrativos/Materiales", Padre = 1 });
+                if (!context.Menu.Any(d => d.Id.Equals(30))) context.Menu.Add(new Models.DBModels.Menu { Id = 30, Orden = 20, Etiqueta = "Ordenes", Url = "/administrativos/Ordenes", Padre = 1 });
+                if (!context.Menu.Any(d => d.Id.Equals(31))) context.Menu.Add(new Models.DBModels.Menu { Id = 31, Orden = 21, Etiqueta = "OrdenesMateriales", Url = "/administrativos/OrdenesMateriales", Padre = 1 });
+                if (!context.Menu.Any(d => d.Id.Equals(32))) context.Menu.Add(new Models.DBModels.Menu { Id = 32, Orden = 22, Etiqueta = "Pasillos", Url = "/administrativos/Pasillos", Padre = 1 });
+                if (!context.Menu.Any(d => d.Id.Equals(33))) context.Menu.Add(new Models.DBModels.Menu { Id = 33, Orden = 24, Etiqueta = "Pisos", Url = "/administrativos/Pisos", Padre = 1 });
+                if (!context.Menu.Any(d => d.Id.Equals(34))) context.Menu.Add(new Models.DBModels.Menu { Id = 34, Orden = 25, Etiqueta = "PisosMateriales", Url = "/administrativos/PisosMateriales", Padre = 1 });
+                if (!context.Menu.Any(d => d.Id.Equals(35))) context.Menu.Add(new Models.DBModels.Menu { Id = 35, Orden = 34, Etiqueta = "Zonas", Url = "/administrativos/Zonas", Padre = 1 });
+                if (!context.Menu.Any(d => d.Id.Equals(36))) context.Menu.Add(new Models.DBModels.Menu { Id = 36, Orden = 11, Etiqueta = "Estantes", Url = "/administrativos/Estantes", Padre = 1 });
+                if (!context.Menu.Any(d => d.Id.Equals(37))) context.Menu.Add(new Models.DBModels.Menu { Id = 37, Orden = 15, Etiqueta = "Kardex", Url = "/administrativos/Kardex", Padre = 1 });
+
+            }
+
             // Municipios 
             {
                 if (!context.Municipio.Any(d => d.Id.Equals(1))) context.Municipio.Add(new Models.DBModels.Municipio { Id = 1, Codigo = "05001", Nombre = "MEDELLÍN", Departamento = 1 });
@@ -1199,68 +1245,9 @@ namespace ProyectoIntegrador.Migrations
                 if (!context.Municipio.Any(d => d.Id.Equals(1121))) context.Municipio.Add(new Models.DBModels.Municipio { Id = 1121, Codigo = "99773", Nombre = "CUMARIBO", Departamento = 33 });
             }
 
-            //Tipos De Identificacion
-            {
-                if (!context.TipoIdentifiacion.Any(o => o.Id.Equals(1))) context.TipoIdentifiacion.Add(new TipoIdentifiacion { Id = 1, Codigo = "CC", Nombre = "Cédula ciudadanía" });
-                if (!context.TipoIdentifiacion.Any(o => o.Id.Equals(2))) context.TipoIdentifiacion.Add(new TipoIdentifiacion { Id = 2, Codigo = "CE", Nombre = "Cédula de extranjería" });
-                if (!context.TipoIdentifiacion.Any(o => o.Id.Equals(3))) context.TipoIdentifiacion.Add(new TipoIdentifiacion { Id = 3, Codigo = "CD", Nombre = "Carné diplomático" });
-                if (!context.TipoIdentifiacion.Any(o => o.Id.Equals(4))) context.TipoIdentifiacion.Add(new TipoIdentifiacion { Id = 4, Codigo = "PA", Nombre = "Pasaporte" });
-                if (!context.TipoIdentifiacion.Any(o => o.Id.Equals(5))) context.TipoIdentifiacion.Add(new TipoIdentifiacion { Id = 5, Codigo = "SC", Nombre = "Salvoconducto" });
-                if (!context.TipoIdentifiacion.Any(o => o.Id.Equals(6))) context.TipoIdentifiacion.Add(new TipoIdentifiacion { Id = 6, Codigo = "PE", Nombre = "Permiso Especial de Permanencia" });
-                if (!context.TipoIdentifiacion.Any(o => o.Id.Equals(7))) context.TipoIdentifiacion.Add(new TipoIdentifiacion { Id = 7, Codigo = "RC", Nombre = "Registro civil" });
-                if (!context.TipoIdentifiacion.Any(o => o.Id.Equals(8))) context.TipoIdentifiacion.Add(new TipoIdentifiacion { Id = 8, Codigo = "TI", Nombre = "Tarjeta de identidad" });
-                if (!context.TipoIdentifiacion.Any(o => o.Id.Equals(9))) context.TipoIdentifiacion.Add(new TipoIdentifiacion { Id = 9, Codigo = "CN", Nombre = "Certificado de nacido vivo" });
-                if (!context.TipoIdentifiacion.Any(o => o.Id.Equals(10))) context.TipoIdentifiacion.Add(new TipoIdentifiacion { Id = 10, Codigo = "AS", Nombre = "Adulto sin identificar" });
-                if (!context.TipoIdentifiacion.Any(o => o.Id.Equals(11))) context.TipoIdentifiacion.Add(new TipoIdentifiacion { Id = 11, Codigo = "MS", Nombre = "Menor sin identifica" });
-            }
-
-            // Menus
-            {
-                if (!context.Menu.Any(d => d.Id.Equals(1))) context.Menu.Add(new Models.DBModels.Menu { Id = 1, Orden = 1, Etiqueta = "Administrativas"});
-                if (!context.Menu.Any(d => d.Id.Equals(2))) context.Menu.Add(new Models.DBModels.Menu { Id = 2, Orden = 23, Etiqueta = "Personas", Url = "/administrativos/personas", Padre = 1 });
-                if (!context.Menu.Any(d => d.Id.Equals(3))) context.Menu.Add(new Models.DBModels.Menu { Id = 3, Orden = 33, Etiqueta = "TipoIdentificación", Url = "/administrativos/TipoIdentifiacions", Padre = 1 });
-                if (!context.Menu.Any(d => d.Id.Equals(4))) context.Menu.Add(new Models.DBModels.Menu { Id = 4, Orden = 32, Etiqueta = "Tipo Usuario Afiliados", Url = "/administrativos/TipoUsuarioAfiliadoes", Padre = 1 });
-                if (!context.Menu.Any(d => d.Id.Equals(5))) context.Menu.Add(new Models.DBModels.Menu { Id = 5, Orden = 31, Etiqueta = "Tipo Afiliados", Url = "/administrativos/TipoAfiliados", Padre = 1 });
-                if (!context.Menu.Any(d => d.Id.Equals(6))) context.Menu.Add(new Models.DBModels.Menu { Id = 6, Orden = 13, Etiqueta = "Generos", Url = "/administrativos/Generos", Padre = 1 });
-                if (!context.Menu.Any(d => d.Id.Equals(7))) context.Menu.Add(new Models.DBModels.Menu { Id = 7, Orden = 26, Etiqueta = "Procedimientos", Url = "/administrativos/Procedimientos", Padre = 1 });
-                if (!context.Menu.Any(d => d.Id.Equals(8))) context.Menu.Add(new Models.DBModels.Menu { Id = 8, Orden = 17, Etiqueta = "Material Procedimiento", Url = "/administrativos/ProcedimientoMaterials", Padre = 1 });
-                if (!context.Menu.Any(d => d.Id.Equals(9))) context.Menu.Add(new Models.DBModels.Menu { Id = 9, Orden = 4, Etiqueta = "Causa Externa", Url = "/administrativos/CausaExternas", Padre = 1 });
-                if (!context.Menu.Any(d => d.Id.Equals(10))) context.Menu.Add(new Models.DBModels.Menu { Id = 10, Orden = 28, Etiqueta = "Receta Médica", Url = "/administrativos/RecetaMedicas", Padre = 1 });
-                if (!context.Menu.Any(d => d.Id.Equals(11))) context.Menu.Add(new Models.DBModels.Menu { Id = 11, Orden = 29, Etiqueta = "Receta Médica - Material", Url = "/administrativos/RecetaMedicaMaterials", Padre = 1 });
-                if (!context.Menu.Any(d => d.Id.Equals(12))) context.Menu.Add(new Models.DBModels.Menu { Id = 12, Orden = 14, Etiqueta = "Historia Médica", Url = "/administrativos/HistoriaMedicas", Padre = 1 });
-                if (!context.Menu.Any(d => d.Id.Equals(13))) context.Menu.Add(new Models.DBModels.Menu { Id = 13, Orden = 1, Etiqueta = "Afiliados", Url = "/administrativos/Afiliados", Padre = 1 });
-                if (!context.Menu.Any(d => d.Id.Equals(14))) context.Menu.Add(new Models.DBModels.Menu { Id = 14, Orden = 8, Etiqueta = "Empleados", Url = "/administrativos/Empleados", Padre = 1 });
-                if (!context.Menu.Any(d => d.Id.Equals(15))) context.Menu.Add(new Models.DBModels.Menu { Id = 15, Orden = 3, Etiqueta = "Cargos", Url = "/administrativos/Cargos", Padre = 1 });
-                if (!context.Menu.Any(d => d.Id.Equals(16))) context.Menu.Add(new Models.DBModels.Menu { Id = 16, Orden = 27, Etiqueta = "Proveedores", Url = "/administrativos/Proveedor", Padre = 1 });
-                if (!context.Menu.Any(d => d.Id.Equals(17))) context.Menu.Add(new Models.DBModels.Menu { Id = 17, Orden = 19, Etiqueta = "Municipios", Url = "/administrativos/Municipios", Padre = 1 });
-                if (!context.Menu.Any(d => d.Id.Equals(18))) context.Menu.Add(new Models.DBModels.Menu { Id = 18, Orden = 7, Etiqueta = "Departamentos", Url = "/administrativos/Departamentos", Padre = 1 });
-                if (!context.Menu.Any(d => d.Id.Equals(19))) context.Menu.Add(new Models.DBModels.Menu { Id = 19, Orden = 30, Etiqueta = "Sucursales", Url = "/administrativos/Sucursales", Padre = 1 });
-                if (!context.Menu.Any(d => d.Id.Equals(20))) context.Menu.Add(new Models.DBModels.Menu { Id = 20, Orden = 6, Etiqueta = "Consultorios", Url = "/administrativos/Consultorios", Padre = 1 });
-                if (!context.Menu.Any(d => d.Id.Equals(21))) context.Menu.Add(new Models.DBModels.Menu { Id = 21, Orden = 5, Etiqueta = "Citas", Url = "/administrativos/Citas", Padre = 1 });
-                if (!context.Menu.Any(d => d.Id.Equals(22))) context.Menu.Add(new Models.DBModels.Menu { Id = 22, Orden = 12, Etiqueta = "Finalidades", Url = "/administrativos/Finalidades", Padre = 1 });
-
-                if (!context.Menu.Any(d => d.Id.Equals(23))) context.Menu.Add(new Models.DBModels.Menu { Id = 23, Orden = 2, Etiqueta = "Citas" });
-                if (!context.Menu.Any(d => d.Id.Equals(24))) context.Menu.Add(new Models.DBModels.Menu { Id = 24, Orden = 3, Etiqueta = "Inventarios" });
-
-                if (!context.Menu.Any(d => d.Id.Equals(25))) context.Menu.Add(new Models.DBModels.Menu { Id = 25, Orden = 2, Etiqueta = "Bodegas", Url = "/administrativos/Bodegas", Padre = 1 });
-                if (!context.Menu.Any(d => d.Id.Equals(26))) context.Menu.Add(new Models.DBModels.Menu { Id = 26, Orden = 9, Etiqueta = "Entradas", Url = "/administrativos/Entradas", Padre = 1 });
-                if (!context.Menu.Any(d => d.Id.Equals(27))) context.Menu.Add(new Models.DBModels.Menu { Id = 27, Orden = 10, Etiqueta = "EntradasMateriales", Url = "/administrativos/EntradasMateriales", Padre = 1 });
-                if (!context.Menu.Any(d => d.Id.Equals(28))) context.Menu.Add(new Models.DBModels.Menu { Id = 28, Orden = 16, Etiqueta = "Marcas", Url = "/administrativos/Marcas", Padre = 1 });
-                if (!context.Menu.Any(d => d.Id.Equals(29))) context.Menu.Add(new Models.DBModels.Menu { Id = 29, Orden = 18, Etiqueta = "Materiales", Url = "/administrativos/Materiales", Padre = 1 });
-                if (!context.Menu.Any(d => d.Id.Equals(30))) context.Menu.Add(new Models.DBModels.Menu { Id = 30, Orden = 20, Etiqueta = "Ordenes", Url = "/administrativos/Ordenes", Padre = 1 });
-                if (!context.Menu.Any(d => d.Id.Equals(31))) context.Menu.Add(new Models.DBModels.Menu { Id = 31, Orden = 21, Etiqueta = "OrdenesMateriales", Url = "/administrativos/OrdenesMateriales", Padre = 1 });
-                if (!context.Menu.Any(d => d.Id.Equals(32))) context.Menu.Add(new Models.DBModels.Menu { Id = 32, Orden = 22, Etiqueta = "Pasillos", Url = "/administrativos/Pasillos", Padre = 1 });
-                if (!context.Menu.Any(d => d.Id.Equals(33))) context.Menu.Add(new Models.DBModels.Menu { Id = 33, Orden = 24, Etiqueta = "Pisos", Url = "/administrativos/Pisos", Padre = 1 });
-                if (!context.Menu.Any(d => d.Id.Equals(34))) context.Menu.Add(new Models.DBModels.Menu { Id = 34, Orden = 25, Etiqueta = "PisosMateriales", Url = "/administrativos/PisosMateriales", Padre = 1 });
-                if (!context.Menu.Any(d => d.Id.Equals(35))) context.Menu.Add(new Models.DBModels.Menu { Id = 35, Orden = 34, Etiqueta = "Zonas", Url = "/administrativos/Zonas", Padre = 1 });
-                if (!context.Menu.Any(d => d.Id.Equals(36))) context.Menu.Add(new Models.DBModels.Menu { Id = 36, Orden = 11, Etiqueta = "Estantes", Url = "/administrativos/Estantes", Padre = 1 });
-                if (!context.Menu.Any(d => d.Id.Equals(37))) context.Menu.Add(new Models.DBModels.Menu { Id = 37, Orden = 15, Etiqueta = "Kardex", Url = "/administrativos/Kardex", Padre = 1 });
-
-            }
-
             // Rol_Menus
             {
-                if (!context.RolMenu.Any(d => d.Id.Equals(1))) context.RolMenu.Add(new Models.DBModels.RolMenu { Id = 1, Rol = "dc9bcfe3-2d00-4b2a-847f-0c4c3f39003a", Menu = 1});
+                if (!context.RolMenu.Any(d => d.Id.Equals(1))) context.RolMenu.Add(new Models.DBModels.RolMenu { Id = 1, Rol = "dc9bcfe3-2d00-4b2a-847f-0c4c3f39003a", Menu = 1 });
                 if (!context.RolMenu.Any(d => d.Id.Equals(2))) context.RolMenu.Add(new Models.DBModels.RolMenu { Id = 2, Rol = "dc9bcfe3-2d00-4b2a-847f-0c4c3f39003a", Menu = 2 });
                 if (!context.RolMenu.Any(d => d.Id.Equals(3))) context.RolMenu.Add(new Models.DBModels.RolMenu { Id = 3, Rol = "dc9bcfe3-2d00-4b2a-847f-0c4c3f39003a", Menu = 3 });
                 if (!context.RolMenu.Any(d => d.Id.Equals(4))) context.RolMenu.Add(new Models.DBModels.RolMenu { Id = 4, Rol = "dc9bcfe3-2d00-4b2a-847f-0c4c3f39003a", Menu = 4 });
@@ -1297,6 +1284,48 @@ namespace ProyectoIntegrador.Migrations
                 if (!context.RolMenu.Any(d => d.Id.Equals(35))) context.RolMenu.Add(new Models.DBModels.RolMenu { Id = 35, Rol = "dc9bcfe3-2d00-4b2a-847f-0c4c3f39003a", Menu = 35 });
                 if (!context.RolMenu.Any(d => d.Id.Equals(36))) context.RolMenu.Add(new Models.DBModels.RolMenu { Id = 36, Rol = "dc9bcfe3-2d00-4b2a-847f-0c4c3f39003a", Menu = 36 });
                 if (!context.RolMenu.Any(d => d.Id.Equals(37))) context.RolMenu.Add(new Models.DBModels.RolMenu { Id = 37, Rol = "dc9bcfe3-2d00-4b2a-847f-0c4c3f39003a", Menu = 37 });
+                if (!context.RolMenu.Any(d => d.Id.Equals(38))) context.RolMenu.Add(new Models.DBModels.RolMenu { Id = 38, Rol = "dc9bcfe3-2d00-4b2a-847f-0c4c3f39003a", Menu = 38 });
+            }
+
+            // Tipo Afiliado
+            {
+                if (!context.TipoAfiliado.Any(o => o.Id.Equals(1))) context.TipoAfiliado.Add(new TipoAfiliado { Id = 1, Codigo = "C", Nombre = "Cotizante" });
+                if (!context.TipoAfiliado.Any(o => o.Id.Equals(2))) context.TipoAfiliado.Add(new TipoAfiliado { Id = 2, Codigo = "B", Nombre = "Beneficiario" });
+                if (!context.TipoAfiliado.Any(o => o.Id.Equals(3))) context.TipoAfiliado.Add(new TipoAfiliado { Id = 3, Codigo = "A", Nombre = "Adicional" });
+            }
+
+            // Tipos De Identificacion
+            {
+                if (!context.TipoIdentifiacion.Any(o => o.Id.Equals(1))) context.TipoIdentifiacion.Add(new TipoIdentifiacion { Id = 1, Codigo = "CC", Nombre = "Cédula ciudadanía" });
+                if (!context.TipoIdentifiacion.Any(o => o.Id.Equals(2))) context.TipoIdentifiacion.Add(new TipoIdentifiacion { Id = 2, Codigo = "CE", Nombre = "Cédula de extranjería" });
+                if (!context.TipoIdentifiacion.Any(o => o.Id.Equals(3))) context.TipoIdentifiacion.Add(new TipoIdentifiacion { Id = 3, Codigo = "CD", Nombre = "Carné diplomático" });
+                if (!context.TipoIdentifiacion.Any(o => o.Id.Equals(4))) context.TipoIdentifiacion.Add(new TipoIdentifiacion { Id = 4, Codigo = "PA", Nombre = "Pasaporte" });
+                if (!context.TipoIdentifiacion.Any(o => o.Id.Equals(5))) context.TipoIdentifiacion.Add(new TipoIdentifiacion { Id = 5, Codigo = "SC", Nombre = "Salvoconducto" });
+                if (!context.TipoIdentifiacion.Any(o => o.Id.Equals(6))) context.TipoIdentifiacion.Add(new TipoIdentifiacion { Id = 6, Codigo = "PE", Nombre = "Permiso Especial de Permanencia" });
+                if (!context.TipoIdentifiacion.Any(o => o.Id.Equals(7))) context.TipoIdentifiacion.Add(new TipoIdentifiacion { Id = 7, Codigo = "RC", Nombre = "Registro civil" });
+                if (!context.TipoIdentifiacion.Any(o => o.Id.Equals(8))) context.TipoIdentifiacion.Add(new TipoIdentifiacion { Id = 8, Codigo = "TI", Nombre = "Tarjeta de identidad" });
+                if (!context.TipoIdentifiacion.Any(o => o.Id.Equals(9))) context.TipoIdentifiacion.Add(new TipoIdentifiacion { Id = 9, Codigo = "CN", Nombre = "Certificado de nacido vivo" });
+                if (!context.TipoIdentifiacion.Any(o => o.Id.Equals(10))) context.TipoIdentifiacion.Add(new TipoIdentifiacion { Id = 10, Codigo = "AS", Nombre = "Adulto sin identificar" });
+                if (!context.TipoIdentifiacion.Any(o => o.Id.Equals(11))) context.TipoIdentifiacion.Add(new TipoIdentifiacion { Id = 11, Codigo = "MS", Nombre = "Menor sin identifica" });
+            }
+
+            // Tipos Consultorios
+            {
+                if (!context.TipoConsultorio.Any(o => o.Id.Equals(1))) context.TipoConsultorio.Add(new TipoConsultorio { Id = 1, Codigo = "CON_GENERAL", Nombre = "CONSULTORIO GENERAL", DuracionProcedimiento = 30 });
+                if (!context.TipoConsultorio.Any(o => o.Id.Equals(2))) context.TipoConsultorio.Add(new TipoConsultorio { Id = 2, Codigo = "LAB_GENERAL", Nombre = "LABORATORIO GENERAL", DuracionProcedimiento = 15 });
+                if (!context.TipoConsultorio.Any(o => o.Id.Equals(3))) context.TipoConsultorio.Add(new TipoConsultorio { Id = 3, Codigo = "INYECTOLOGIA", Nombre = "ZONA INYECTOLOGÍA", DuracionProcedimiento = 5 });
+            }
+
+            // Tipos Usuarios Afiliados
+            {
+                if (!context.TipoUsuarioAfiliado.Any(o => o.Id.Equals(1))) context.TipoUsuarioAfiliado.Add(new TipoUsuarioAfiliado { Id = 1, Codigo = "C", Nombre = "Contributivo" });
+                if (!context.TipoUsuarioAfiliado.Any(o => o.Id.Equals(2))) context.TipoUsuarioAfiliado.Add(new TipoUsuarioAfiliado { Id = 2, Codigo = "S", Nombre = "Subsidiado" });
+                if (!context.TipoUsuarioAfiliado.Any(o => o.Id.Equals(3))) context.TipoUsuarioAfiliado.Add(new TipoUsuarioAfiliado { Id = 3, Codigo = "V", Nombre = "Vinculado" });
+                if (!context.TipoUsuarioAfiliado.Any(o => o.Id.Equals(4))) context.TipoUsuarioAfiliado.Add(new TipoUsuarioAfiliado { Id = 4, Codigo = "P", Nombre = "Particular" });
+                if (!context.TipoUsuarioAfiliado.Any(o => o.Id.Equals(5))) context.TipoUsuarioAfiliado.Add(new TipoUsuarioAfiliado { Id = 5, Codigo = "O", Nombre = "Otro" });
+                if (!context.TipoUsuarioAfiliado.Any(o => o.Id.Equals(6))) context.TipoUsuarioAfiliado.Add(new TipoUsuarioAfiliado { Id = 6, Codigo = "VRC", Nombre = "Víctima con afiliación al Régimen Contributivo" });
+                if (!context.TipoUsuarioAfiliado.Any(o => o.Id.Equals(7))) context.TipoUsuarioAfiliado.Add(new TipoUsuarioAfiliado { Id = 7, Codigo = "VRS", Nombre = "Víctima con afiliación al Régimen subsidiado" });
+                if (!context.TipoUsuarioAfiliado.Any(o => o.Id.Equals(8))) context.TipoUsuarioAfiliado.Add(new TipoUsuarioAfiliado { Id = 8, Codigo = "VNA", Nombre = "Víctima no asegurado (Vinculado)" });
             }
 
             //  This method will be called after migrating to the latest version.

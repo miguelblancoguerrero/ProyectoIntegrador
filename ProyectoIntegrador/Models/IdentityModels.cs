@@ -78,6 +78,7 @@ namespace ProyectoIntegrador.Models
         public DbSet<RecetaMedicaMaterial> RecetaMedicaMaterial { get; set; }
         public DbSet<Sucursal> Sucursal { get; set; }
         public DbSet<TipoAfiliado> TipoAfiliado { get; set; }
+        public DbSet<TipoConsultorio> TipoConsultorio { get; set; }
         public DbSet<TipoIdentifiacion> TipoIdentifiacion { get; set; }
         public DbSet<TipoUsuarioAfiliado> TipoUsuarioAfiliado { get; set; }
         public DbSet<Zona> Zona { get; set; }

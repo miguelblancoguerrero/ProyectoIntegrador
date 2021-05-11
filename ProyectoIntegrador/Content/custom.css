@@ -56,3 +56,21 @@ body {
     .dropdown-menu::-webkit-scrollbar-thumb:hover {
         background: #62adfd;
     }
+
+.titlePage {
+    text-align: center;
+    background: cadetblue;
+    color: white;
+}
+
+.cardField {
+
+}
+
+.cardField h6 {
+    transform: translateY(-30px);
+    margin-bottom: 0px;
+    position: absolute;
+    background-color: white;
+    padding: 0px 4px;
+}

@@ -1,0 +1,49 @@
+﻿@model ProyectoIntegrador.Controllers.Citas.DTOs.CrearCitaDTO
+
+@{
+    ViewBag.Title = "Crear Cita";
+}
+<h4 class="titlePage mb-4">Citas</h4>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="card cardField">
+        <div class="card-body">
+            <h6 class="card-title"> Datos Afiliado</h6>
+            <div class="form-row">
+                <div class="form-group col-3">
+                    <label>Tipo Identificacion</label>
+                    @Html.DropDownListFor(m => m.Afiliado.PersonaF.IdentificacionTipoF, new SelectList(Model.TiposIdentificaciones.Select(o => new { Value = o.Id, Text = o.Nombre }), "Value", "Text"), "Seleccione...", htmlAttributes: new { @class = "form-control", element = "afiliadoTipodentificacion" })
+                </div>
+                <div class="form-group col-3">
+                    <label>Número de Identificación</label>
+                    @Html.EditorFor(m => m.Afiliado.PersonaF.IdentificacionNumero, new { htmlAttributes = new { @class = "form-control", placeholder = "Ingrese número identificación", numbermask = "", element = "afiliadoNumeroIdentificacion" } })
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-6">
+                    <label>Nombres</label>
+                    <input type="text" element="afiliadoNombres" value="@Model.Afiliado.PersonaF.Nombres" class="form-control" disabled />
+                </div>
+                <div class="form-group col-3">
+                    <label>Primer Apellido</label>
+                    <input type="text" element="afiliadoPrimerApellido" value="@Model.Afiliado.PersonaF.PrimerApellido" class="form-control" disabled />
+                </div>
+                <div class="form-group col-3">
+                    <label>Segundo Apellido</label>
+                    <input type="text" element="afiliadoSegundoApellido" value="@Model.Afiliado.PersonaF.SegundoApellido" class="form-control" disabled />
+                </div>
+                <div class="form-group col-3">
+                    <label>Genero</label>
+                    <input type="text" element="afiliadoGenero" value="@Model.Afiliado.PersonaF.GeneroF.Nombre" class="form-control" disabled />
+                </div>
+                <div class="form-group col-6">
+                    <label>Recidencia</label>
+                    <input type="text" element="afiliadoRecidencia" value="@Model.Afiliado.RecidenciaMunicipioF.Nombre - @Model.Afiliado.RecidenciaMunicipioF.DepartamentoF.Nombre" class="form-control" disabled />
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@Scripts.Render("~/Scripts/Citas/CrearCita.js")

@@ -27,5 +27,10 @@ namespace ProyectoIntegrador.Models.DBModels
         [Required]
         public string Nombre { get; set; }
 
+        [Column("duracion_procedimiento")]
+        [Required]
+        [DisplayName("Duración Normal Procedimiento")]
+        public int DuracionProcedimiento { get; set; }
+
     }
 }

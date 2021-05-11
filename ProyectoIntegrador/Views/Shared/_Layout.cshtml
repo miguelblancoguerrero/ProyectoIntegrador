@@ -7,12 +7,28 @@
     <title>@ViewBag.Title - VacunaApp</title>
     @Styles.Render("~/Content/bootstrap.min.css")
     @Styles.Render("~/Content/custom.css")
+    @Styles.Render("~/Content/iziToast.css")
+    @Styles.Render("~/Content/notice.min.css")
     @Scripts.Render("~/bundles/modernizr")
 
     @Scripts.Render("~/Scripts/jquery-3.2.1.min.js")
     @Scripts.Render("~/Scripts/popper.min.js")
     @Scripts.Render("~/Scripts/bootstrap.min.js")
+    @Scripts.Render("~/Scripts/iziToast.js")
+    @Scripts.Render("~/Scripts/notice.min.js")
     @RenderSection("scripts", required: false)
+    <script type="text/javascript">
+        window.spinner = new Notice();
+        function showLoading() {
+            window.spinner.showLoading({
+                type: 'cube_zoom'
+            });
+        }
+
+        function hideLoading() {
+            window.spinner.hideLoading();
+        }
+    </script>
 </head>
 <body class="bg-light">
     <div class="navbar navbar-expand-lg navbar-light bg-primary">
@@ -97,5 +113,6 @@
             return false;
         });
     </script>
+    @Scripts.Render("~/Scripts/utils.js")
 </body>
 </html>

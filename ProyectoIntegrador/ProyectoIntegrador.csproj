@@ -193,6 +193,8 @@
     <Compile Include="Controllers\Administrativos\CausaExternasController.cs" />
     <Compile Include="Controllers\Administrativos\ZonasController.cs" />
     <Compile Include="Controllers\Administrativos\EstantesController.cs" />
+    <Compile Include="Controllers\Citas\CrearCitaController.cs" />
+    <Compile Include="Controllers\Citas\DTOs\CrearCitaDTO.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\Administrativos\ProcedimientosController.cs" />
@@ -262,6 +264,18 @@
     <Compile Include="Migrations\202105090427438_tipo_consultorio.Designer.cs">
       <DependentUpon>202105090427438_tipo_consultorio.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105091652101_ajuste-tipos-consultorios.cs" />
+    <Compile Include="Migrations\202105091652101_ajuste-tipos-consultorios.Designer.cs">
+      <DependentUpon>202105091652101_ajuste-tipos-consultorios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105091802050_ajuste-tipo-usuarios-afiliados.cs" />
+    <Compile Include="Migrations\202105091802050_ajuste-tipo-usuarios-afiliados.Designer.cs">
+      <DependentUpon>202105091802050_ajuste-tipo-usuarios-afiliados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105100155240_ajuste-nonulo-fecharetiro-afiliado.cs" />
+    <Compile Include="Migrations\202105100155240_ajuste-nonulo-fecharetiro-afiliado.Designer.cs">
+      <DependentUpon>202105100155240_ajuste-nonulo-fecharetiro-afiliado.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\DBModels\Afiliado.cs" />
@@ -314,14 +328,20 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\custom.css" />
     <Content Include="Content\Imgs\bg2.png" />
+    <Content Include="Content\iziToast.css" />
+    <Content Include="Content\notice.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\Citas\CrearCita.js" />
+    <Content Include="Scripts\iziToast.js" />
     <Content Include="Scripts\jquery-3.2.1.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\notice.min.js" />
     <Content Include="Scripts\popper.min.js" />
+    <Content Include="Scripts\utils.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -362,10 +382,7 @@
     <Content Include="Views\Administrativas\Personas\Edit.cshtml" />
     <Content Include="Views\Administrativas\Personas\Index.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controllers\Citas\DTOs\" />
-    <Folder Include="Controllers\Configuracion\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -539,6 +556,7 @@
     <Content Include="Views\Administrativas\Kardex\Details.cshtml" />
     <Content Include="Views\Administrativas\Kardex\Edit.cshtml" />
     <Content Include="Views\Administrativas\Kardex\Index.cshtml" />
+    <Content Include="Views\Citas\CrearCita\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202103091609006_InitialCreate.resx">
@@ -576,6 +594,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105090427438_tipo_consultorio.resx">
       <DependentUpon>202105090427438_tipo_consultorio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105091652101_ajuste-tipos-consultorios.resx">
+      <DependentUpon>202105091652101_ajuste-tipos-consultorios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105091802050_ajuste-tipo-usuarios-afiliados.resx">
+      <DependentUpon>202105091802050_ajuste-tipo-usuarios-afiliados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105100155240_ajuste-nonulo-fecharetiro-afiliado.resx">
+      <DependentUpon>202105100155240_ajuste-nonulo-fecharetiro-afiliado.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

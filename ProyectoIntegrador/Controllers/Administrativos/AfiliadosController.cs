@@ -41,9 +41,9 @@ namespace ProyectoIntegrador.Controllers
         public ActionResult Create()
         {
             ViewBag.Persona = new SelectList(db.Persona, "Id", "IdentificacionNumero");
-            ViewBag.RecidenciaMunicipio = new SelectList(db.Municipio, "Id", "Codigo");
-            ViewBag.TipoAfiliado = new SelectList(db.TipoAfiliado, "Id", "Codigo");
-            ViewBag.TipoUsuario = new SelectList(db.TipoUsuarioAfiliado, "Id", "Codigo");
+            ViewBag.RecidenciaMunicipio = new SelectList(db.Municipio, "Id", "Nombre");
+            ViewBag.TipoAfiliado = new SelectList(db.TipoAfiliado, "Id", "Nombre");
+            ViewBag.TipoUsuario = new SelectList(db.TipoUsuarioAfiliado, "Id", "Nombre");
             return View("/Views/Administrativas/Afiliados/Create.cshtml");
         }
 
