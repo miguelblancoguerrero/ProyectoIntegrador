@@ -12,7 +12,7 @@ namespace ProyectoIntegrador.App_Start.Filters
     public class SessionFilter: ActionFilterAttribute
     {
         private ApplicationDbContext db = new ApplicationDbContext();
-        private static string[] publicPages = { "public/homeinfo", "public/consultesucita" };
+        private static string[] publicPages = { "public/homeinfo" };
 
         override
         public void OnActionExecuting(ActionExecutingContext filterContext)

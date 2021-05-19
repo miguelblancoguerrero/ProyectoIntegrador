@@ -20,12 +20,12 @@ namespace ProyectoIntegrador.Models.DBModels
         [Column("nombre")]
         [MaxLength(30)]
         [Required]
-        [DisplayName("Nombre")]
+        [DisplayName("Nombre municipio")]
         public string Nombre { get; set; }
 
         [Column("departamento")]
         [Required]
-        [DisplayName("Departamento del Municipio")]
+        [DisplayName("Departamento municipio")]
         public long Departamento { get; set; }
 
 

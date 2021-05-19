@@ -267,8 +267,37 @@
       <DependentUpon>aspnet-ProyectoIntegrador-20210308103256.mdf</DependentUpon>
     </Content>
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\customs.css" />
     <Content Include="Content\custom.css" />
+    <Content Include="Content\Imgs\about-img-01.jpg" />
+    <Content Include="Content\Imgs\about-img-02.jpg" />
+    <Content Include="Content\Imgs\about-img-03.jpg" />
+    <Content Include="Content\Imgs\apple-touch-icon.png" />
     <Content Include="Content\Imgs\bg2.png" />
+    <Content Include="Content\Imgs\blog-img-01.jpg" />
+    <Content Include="Content\Imgs\blog-img-02.jpg" />
+    <Content Include="Content\Imgs\blog-img-03.jpg" />
+    <Content Include="Content\Imgs\favicon.ico" />
+    <Content Include="Content\Imgs\footer-bg.jpg" />
+    <Content Include="Content\Imgs\gallery-01.jpg" />
+    <Content Include="Content\Imgs\gallery-02.jpg" />
+    <Content Include="Content\Imgs\gallery-03.jpg" />
+    <Content Include="Content\Imgs\gallery-04.jpg" />
+    <Content Include="Content\Imgs\gallery-05.jpg" />
+    <Content Include="Content\Imgs\gallery-06.jpg" />
+    <Content Include="Content\Imgs\gallery-07.jpg" />
+    <Content Include="Content\Imgs\gallery-08.jpg" />
+    <Content Include="Content\Imgs\img-1.jpg" />
+    <Content Include="Content\Imgs\img-2.jpg" />
+    <Content Include="Content\Imgs\img-3.jpg" />
+    <Content Include="Content\Imgs\logo.png" />
+    <Content Include="Content\Imgs\menu-arrow.png" />
+    <Content Include="Content\Imgs\preloader.gif" />
+    <Content Include="Content\Imgs\ptn-bg.jpg" />
+    <Content Include="Content\Imgs\slider-01.jpg" />
+    <Content Include="Content\Imgs\slider-02.jpg" />
+    <Content Include="Content\Imgs\slider-03.jpg" />
+    <Content Include="Content\Imgs\tag-line.png" />
     <Content Include="Content\iziToast.css" />
     <Content Include="Content\notice.min.css" />
     <Content Include="favicon.ico" />
@@ -503,6 +532,7 @@
     <Content Include="Views\Administrativas\Kardex\Index.cshtml" />
     <Content Include="Views\Citas\CrearCita\Index.cshtml" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

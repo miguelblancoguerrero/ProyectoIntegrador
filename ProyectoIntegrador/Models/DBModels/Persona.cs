@@ -18,14 +18,14 @@ namespace ProyectoIntegrador.Models.DBModels
         [Column("identificacion_tipo")]
         [Required]
         [Index("PersonaIdentificacionUK", 1)]
-        [DisplayName("Tipo de Identificación")]
+        [DisplayName("Tipo identificación")]
         public long IdentificacionTipo { get; set; }
 
         [Column("identificacion_numero")]
         [MaxLength(20)]
         [Required]
         [Index("PersonaIdentificacionUK", 2)]
-        [DisplayName("Numero de Identificación")]
+        [DisplayName("Numero identificación")]
         public string IdentificacionNumero { get; set; }
 
         [Column("nombres")]
@@ -36,12 +36,12 @@ namespace ProyectoIntegrador.Models.DBModels
         [Column("primer_apellido")]
         [MaxLength(30)]
         [Required]
-        [DisplayName("Primer Apellido")]
+        [DisplayName("Primer apellido")]
         public string PrimerApellido { get; set; }
 
         [Column("segundo_apellido")]
         [MaxLength(30)]
-        [DisplayName("Segundo Apellido")]
+        [DisplayName("Segundo apellido")]
         public string SegundoApellido { get; set; }
 
         [Column("genero")]
@@ -50,23 +50,23 @@ namespace ProyectoIntegrador.Models.DBModels
 
         [Column("fecha_nacimiento")]
         [Required]
-        [DisplayName("Fecha de Nacimiento")]
+        [DisplayName("Fecha nacimiento")]
         public DateTime FechaNacimiento { get; set; }
 
         [Column("correo_electronico")]
         [MaxLength(30)]
-        [DisplayName("Correo Electronico")]
+        [DisplayName("Correo electronico")]
         public string CorreoElectronico { get; set; }
 
         [Column("telefonos")]
         [MaxLength(100)]
         [Required]
-        [DisplayName("Numerós Telefónicos")]
+        [DisplayName("Número telefónico")]
         public string Telefonos { get; set; }
 
 
         [ForeignKey("IdentificacionTipo")]
-        [DisplayName("Tipo de Identificación")]
+        [DisplayName("Tipo identificación")]
         public TipoIdentifiacion IdentificacionTipoF { get; set; }
         [ForeignKey("Genero")]
         public Genero GeneroF { get; set; }
