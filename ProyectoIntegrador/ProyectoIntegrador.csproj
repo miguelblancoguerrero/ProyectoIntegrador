@@ -280,11 +280,9 @@
     <Content Include="Content\css\responsiveslides.css" />
     <Content Include="Content\css\styles.css" />
     <Content Include="Content\css\timeline.css" />
-    <Content Include="Content\custom.css" />
     <Content Include="Content\fonts\Flaticon.svg" />
     <Content Include="Content\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\customs.css" />
-    <Content Include="Content\custom.css" />
     <Content Include="Content\Imgs\about-img-01.jpg" />
     <Content Include="Content\Imgs\about-img-02.jpg" />
     <Content Include="Content\Imgs\about-img-03.jpg" />
