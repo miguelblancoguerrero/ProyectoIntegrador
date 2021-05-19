@@ -267,10 +267,73 @@
       <DependentUpon>aspnet-ProyectoIntegrador-20210308103256.mdf</DependentUpon>
     </Content>
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\css\animate.css" />
+    <Content Include="Content\css\bootstrap.min.css" />
+    <Content Include="Content\css\custom.css" />
+    <Content Include="Content\css\flashy.min.css" />
+    <Content Include="Content\css\flaticon.css" />
+    <Content Include="Content\css\font-awesome.min.css" />
+    <Content Include="Content\css\magnific-popup.css" />
+    <Content Include="Content\css\owl.carousel.min.css" />
+    <Content Include="Content\css\pogo-slider.min.css" />
+    <Content Include="Content\css\responsive.css" />
+    <Content Include="Content\css\responsiveslides.css" />
+    <Content Include="Content\css\styles.css" />
+    <Content Include="Content\css\timeline.css" />
     <Content Include="Content\custom.css" />
+    <Content Include="Content\fonts\Flaticon.svg" />
+    <Content Include="Content\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\Imgs\apple-touch-icon.png" />
     <Content Include="Content\Imgs\bg2.png" />
+    <Content Include="Content\Imgs\blog-img-01.jpg" />
+    <Content Include="Content\Imgs\blog-img-02.jpg" />
+    <Content Include="Content\Imgs\blog-img-03.jpg" />
+    <Content Include="Content\Imgs\cam.png" />
+    <Content Include="Content\Imgs\footer-bg.jpg" />
+    <Content Include="Content\Imgs\gallery-01.jpg" />
+    <Content Include="Content\Imgs\gallery-02.jpg" />
+    <Content Include="Content\Imgs\gallery-03.jpg" />
+    <Content Include="Content\Imgs\gallery-04.jpg" />
+    <Content Include="Content\Imgs\gallery-05.jpg" />
+    <Content Include="Content\Imgs\gallery-06.jpg" />
+    <Content Include="Content\Imgs\gallery-07.jpg" />
+    <Content Include="Content\Imgs\gallery-08.jpg" />
+    <Content Include="Content\Imgs\img-1.jpg" />
+    <Content Include="Content\Imgs\img-2.jpg" />
+    <Content Include="Content\Imgs\img-3.jpg" />
+    <Content Include="Content\Imgs\info.jpg" />
+    <Content Include="Content\Imgs\logo1.png" />
+    <Content Include="Content\Imgs\logooo.ico" />
+    <Content Include="Content\Imgs\logovacunapp.png" />
+    <Content Include="Content\Imgs\menu-arrow.png" />
+    <Content Include="Content\Imgs\miguel.jpg" />
+    <Content Include="Content\Imgs\papasito.jpg" />
+    <Content Include="Content\Imgs\preloader.gif" />
+    <Content Include="Content\Imgs\ptn-bg.jpg" />
+    <Content Include="Content\Imgs\slider1.jpg" />
+    <Content Include="Content\Imgs\slider2.png" />
+    <Content Include="Content\Imgs\slider3.jpg" />
+    <Content Include="Content\Imgs\tag-line.png" />
+    <Content Include="Content\Imgs\xxx.jpg" />
     <Content Include="Content\iziToast.css" />
+    <Content Include="Content\js\bootstrap.min.js" />
+    <Content Include="Content\js\contact-form-script.js" />
+    <Content Include="Content\js\custom.js" />
+    <Content Include="Content\js\form-validator.min.js" />
+    <Content Include="Content\js\images-loded.min.js" />
+    <Content Include="Content\js\isotope.min.js" />
+    <Content Include="Content\js\jquery.magnific-popup.min.js" />
+    <Content Include="Content\js\jquery.min.js" />
+    <Content Include="Content\js\jquery.pogo-slider.min.js" />
+    <Content Include="Content\js\main.js" />
+    <Content Include="Content\js\owl.carousel.min.js" />
+    <Content Include="Content\js\popper.min.js" />
+    <Content Include="Content\js\responsiveslides.min.js" />
+    <Content Include="Content\js\slider-index.js" />
+    <Content Include="Content\js\smoothscroll.js" />
+    <Content Include="Content\js\TweenMax.min.js" />
     <Content Include="Content\notice.min.css" />
+    <Content Include="Content\php\form-process.php" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -334,6 +397,14 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\fonts\Flaticon.eot" />
+    <Content Include="Content\fonts\Flaticon.ttf" />
+    <Content Include="Content\fonts\Flaticon.woff" />
+    <Content Include="Content\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\fonts\FontAwesome.otf" />
     <None Include="packages.config" />
     <Content Include="Views\Administrativas\TipoIdentifiacions\Create.cshtml" />
     <Content Include="Views\Administrativas\TipoIdentifiacions\Delete.cshtml" />
@@ -503,6 +574,7 @@
     <Content Include="Views\Administrativas\Kardex\Index.cshtml" />
     <Content Include="Views\Citas\CrearCita\Index.cshtml" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
