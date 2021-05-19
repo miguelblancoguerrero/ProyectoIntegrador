@@ -267,7 +267,6 @@
       <DependentUpon>aspnet-ProyectoIntegrador-20210308103256.mdf</DependentUpon>
     </Content>
     <Content Include="Content\bootstrap.min.css" />
-
     <Content Include="Content\css\animate.css" />
     <Content Include="Content\css\bootstrap.min.css" />
     <Content Include="Content\css\custom.css" />
@@ -281,25 +280,19 @@
     <Content Include="Content\css\responsiveslides.css" />
     <Content Include="Content\css\styles.css" />
     <Content Include="Content\css\timeline.css" />
-    <Content Include="Content\custom.css" />
     <Content Include="Content\fonts\Flaticon.svg" />
     <Content Include="Content\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\customs.css" />
-    <Content Include="Content\custom.css" />
     <Content Include="Content\Imgs\about-img-01.jpg" />
     <Content Include="Content\Imgs\about-img-02.jpg" />
     <Content Include="Content\Imgs\about-img-03.jpg" />
-
     <Content Include="Content\Imgs\apple-touch-icon.png" />
     <Content Include="Content\Imgs\bg2.png" />
     <Content Include="Content\Imgs\blog-img-01.jpg" />
     <Content Include="Content\Imgs\blog-img-02.jpg" />
     <Content Include="Content\Imgs\blog-img-03.jpg" />
-
     <Content Include="Content\Imgs\cam.png" />
-
     <Content Include="Content\Imgs\favicon.ico" />
-
     <Content Include="Content\Imgs\footer-bg.jpg" />
     <Content Include="Content\Imgs\gallery-01.jpg" />
     <Content Include="Content\Imgs\gallery-02.jpg" />
@@ -326,13 +319,11 @@
     <Content Include="Content\Imgs\slider3.jpg" />
     <Content Include="Content\Imgs\tag-line.png" />
     <Content Include="Content\Imgs\xxx.jpg" />
-
     <Content Include="Content\Imgs\logo.png" />
     <Content Include="Content\Imgs\menu-arrow.png" />
     <Content Include="Content\Imgs\preloader.gif" />
     <Content Include="Content\Imgs\ptn-bg.jpg" />
     <Content Include="Content\Imgs\tag-line.png" />
-
     <Content Include="Content\iziToast.css" />
     <Content Include="Content\js\bootstrap.min.js" />
     <Content Include="Content\js\contact-form-script.js" />
