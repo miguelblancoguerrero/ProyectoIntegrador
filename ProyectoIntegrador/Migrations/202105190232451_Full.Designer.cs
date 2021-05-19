@@ -7,13 +7,13 @@ namespace ProyectoIntegrador.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class ajustetiposconsultorios : IMigrationMetadata
+    public sealed partial class Full : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(ajustetiposconsultorios));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Full));
         
         string IMigrationMetadata.Id
         {
-            get { return "202105091652101_ajuste-tipos-consultorios"; }
+            get { return "202105190232451_Full"; }
         }
         
         string IMigrationMetadata.Source

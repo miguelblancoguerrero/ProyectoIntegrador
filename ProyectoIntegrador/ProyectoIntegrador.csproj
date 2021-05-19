@@ -212,81 +212,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202103091609006_InitialCreate.cs" />
-    <Compile Include="Migrations\202103091609006_InitialCreate.Designer.cs">
-      <DependentUpon>202103091609006_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202103110217017_global_08_03_21.cs" />
-    <Compile Include="Migrations\202103110217017_global_08_03_21.Designer.cs">
-      <DependentUpon>202103110217017_global_08_03_21.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202103110300106_partial_01_08_03_21.cs" />
-    <Compile Include="Migrations\202103110300106_partial_01_08_03_21.Designer.cs">
-      <DependentUpon>202103110300106_partial_01_08_03_21.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202103180122183_partial_01_08_03_21_2.cs" />
-    <Compile Include="Migrations\202103180122183_partial_01_08_03_21_2.Designer.cs">
-      <DependentUpon>202103180122183_partial_01_08_03_21_2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202103180123341_partial_01_08_03_21_3.cs" />
-    <Compile Include="Migrations\202103180123341_partial_01_08_03_21_3.Designer.cs">
-      <DependentUpon>202103180123341_partial_01_08_03_21_3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202104231325568_ajuste-dep-mun.cs" />
-    <Compile Include="Migrations\202104231325568_ajuste-dep-mun.Designer.cs">
-      <DependentUpon>202104231325568_ajuste-dep-mun.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202104242325585_user-persona.cs" />
-    <Compile Include="Migrations\202104242325585_user-persona.Designer.cs">
-      <DependentUpon>202104242325585_user-persona.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202104250001091_menus.cs" />
-    <Compile Include="Migrations\202104250001091_menus.Designer.cs">
-      <DependentUpon>202104250001091_menus.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105030204426_aute-kardex.cs" />
-    <Compile Include="Migrations\202105030204426_aute-kardex.Designer.cs">
-      <DependentUpon>202105030204426_aute-kardex.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105090217575_Codigo_TipoIdentificacion.cs" />
-    <Compile Include="Migrations\202105090217575_Codigo_TipoIdentificacion.Designer.cs">
-      <DependentUpon>202105090217575_Codigo_TipoIdentificacion.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105090223357_tipo_documentos.cs" />
-    <Compile Include="Migrations\202105090223357_tipo_documentos.Designer.cs">
-      <DependentUpon>202105090223357_tipo_documentos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105090401193_citas_medico_nulleable.cs" />
-    <Compile Include="Migrations\202105090401193_citas_medico_nulleable.Designer.cs">
-      <DependentUpon>202105090401193_citas_medico_nulleable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105090427438_tipo_consultorio.cs" />
-    <Compile Include="Migrations\202105090427438_tipo_consultorio.Designer.cs">
-      <DependentUpon>202105090427438_tipo_consultorio.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105091652101_ajuste-tipos-consultorios.cs" />
-    <Compile Include="Migrations\202105091652101_ajuste-tipos-consultorios.Designer.cs">
-      <DependentUpon>202105091652101_ajuste-tipos-consultorios.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105091802050_ajuste-tipo-usuarios-afiliados.cs" />
-    <Compile Include="Migrations\202105091802050_ajuste-tipo-usuarios-afiliados.Designer.cs">
-      <DependentUpon>202105091802050_ajuste-tipo-usuarios-afiliados.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105100155240_ajuste-nonulo-fecharetiro-afiliado.cs" />
-    <Compile Include="Migrations\202105100155240_ajuste-nonulo-fecharetiro-afiliado.Designer.cs">
-      <DependentUpon>202105100155240_ajuste-nonulo-fecharetiro-afiliado.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105120033205_tipo_citas.cs" />
-    <Compile Include="Migrations\202105120033205_tipo_citas.Designer.cs">
-      <DependentUpon>202105120033205_tipo_citas.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105120034230_tipo_citas_2.cs" />
-    <Compile Include="Migrations\202105120034230_tipo_citas_2.Designer.cs">
-      <DependentUpon>202105120034230_tipo_citas_2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105120123121_ajuste-empleados.cs" />
-    <Compile Include="Migrations\202105120123121_ajuste-empleados.Designer.cs">
-      <DependentUpon>202105120123121_ajuste-empleados.cs</DependentUpon>
+    <Compile Include="Migrations\202105190232451_Full.cs" />
+    <Compile Include="Migrations\202105190232451_Full.Designer.cs">
+      <DependentUpon>202105190232451_Full.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -395,7 +323,11 @@
     <Content Include="Views\Administrativas\Personas\Edit.cshtml" />
     <Content Include="Views\Administrativas\Personas\Index.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202105190232451_Full.resx">
+      <DependentUpon>202105190232451_Full.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -570,62 +502,6 @@
     <Content Include="Views\Administrativas\Kardex\Edit.cshtml" />
     <Content Include="Views\Administrativas\Kardex\Index.cshtml" />
     <Content Include="Views\Citas\CrearCita\Index.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\202103091609006_InitialCreate.resx">
-      <DependentUpon>202103091609006_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202103110217017_global_08_03_21.resx">
-      <DependentUpon>202103110217017_global_08_03_21.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202103110300106_partial_01_08_03_21.resx">
-      <DependentUpon>202103110300106_partial_01_08_03_21.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202103180122183_partial_01_08_03_21_2.resx">
-      <DependentUpon>202103180122183_partial_01_08_03_21_2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202103180123341_partial_01_08_03_21_3.resx">
-      <DependentUpon>202103180123341_partial_01_08_03_21_3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202104231325568_ajuste-dep-mun.resx">
-      <DependentUpon>202104231325568_ajuste-dep-mun.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202104242325585_user-persona.resx">
-      <DependentUpon>202104242325585_user-persona.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202104250001091_menus.resx">
-      <DependentUpon>202104250001091_menus.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105030204426_aute-kardex.resx">
-      <DependentUpon>202105030204426_aute-kardex.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105090223357_tipo_documentos.resx">
-      <DependentUpon>202105090223357_tipo_documentos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105090401193_citas_medico_nulleable.resx">
-      <DependentUpon>202105090401193_citas_medico_nulleable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105090427438_tipo_consultorio.resx">
-      <DependentUpon>202105090427438_tipo_consultorio.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105091652101_ajuste-tipos-consultorios.resx">
-      <DependentUpon>202105091652101_ajuste-tipos-consultorios.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105091802050_ajuste-tipo-usuarios-afiliados.resx">
-      <DependentUpon>202105091802050_ajuste-tipo-usuarios-afiliados.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105100155240_ajuste-nonulo-fecharetiro-afiliado.resx">
-      <DependentUpon>202105100155240_ajuste-nonulo-fecharetiro-afiliado.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105120033205_tipo_citas.resx">
-      <DependentUpon>202105120033205_tipo_citas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105120034230_tipo_citas_2.resx">
-      <DependentUpon>202105120034230_tipo_citas_2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105120123121_ajuste-empleados.resx">
-      <DependentUpon>202105120123121_ajuste-empleados.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
