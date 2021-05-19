@@ -11,11 +11,11 @@ namespace ProyectoIntegrador.Controllers.Citas.DTOs
     {
 
         public List<TipoIdentifiacion> TiposIdentificaciones { get; set; }
-        public List<TipoConsultorio> TiposConsultorios { get; set; }
+        public List<TipoCitas> TiposCitas { get; set; }
 
         public Afiliado Afiliado { get; set; }
         public TipoIdentifiacion TipoIdentificacionAfiliado { get; set; }
-        public TipoConsultorio TipoCita { get; set; }
+        public TipoCitas TipoCita { get; set; }
 
         public CrearCitaDTO()
         {

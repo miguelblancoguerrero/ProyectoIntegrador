@@ -276,6 +276,18 @@
     <Compile Include="Migrations\202105100155240_ajuste-nonulo-fecharetiro-afiliado.Designer.cs">
       <DependentUpon>202105100155240_ajuste-nonulo-fecharetiro-afiliado.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105120033205_tipo_citas.cs" />
+    <Compile Include="Migrations\202105120033205_tipo_citas.Designer.cs">
+      <DependentUpon>202105120033205_tipo_citas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105120034230_tipo_citas_2.cs" />
+    <Compile Include="Migrations\202105120034230_tipo_citas_2.Designer.cs">
+      <DependentUpon>202105120034230_tipo_citas_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105120123121_ajuste-empleados.cs" />
+    <Compile Include="Migrations\202105120123121_ajuste-empleados.Designer.cs">
+      <DependentUpon>202105120123121_ajuste-empleados.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\DBModels\Afiliado.cs" />
@@ -311,6 +323,7 @@
     <Compile Include="Models\DBModels\RecetaMedicaMaterial.cs" />
     <Compile Include="Models\DBModels\Sucursal.cs" />
     <Compile Include="Models\DBModels\TipoAfiliado.cs" />
+    <Compile Include="Models\DBModels\TipoCita.cs" />
     <Compile Include="Models\DBModels\TipoConsultorio.cs" />
     <Compile Include="Models\DBModels\TipoUsuarioAfiliado.cs" />
     <Compile Include="Models\DBModels\Zona.cs" />
@@ -603,6 +616,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105100155240_ajuste-nonulo-fecharetiro-afiliado.resx">
       <DependentUpon>202105100155240_ajuste-nonulo-fecharetiro-afiliado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105120033205_tipo_citas.resx">
+      <DependentUpon>202105120033205_tipo_citas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105120034230_tipo_citas_2.resx">
+      <DependentUpon>202105120034230_tipo_citas_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105120123121_ajuste-empleados.resx">
+      <DependentUpon>202105120123121_ajuste-empleados.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

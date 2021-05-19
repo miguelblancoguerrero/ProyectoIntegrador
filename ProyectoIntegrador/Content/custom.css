@@ -1,16 +1,47 @@
-﻿html {
-    height: 100%;
-}
-
-body {
+﻿body {
     height: 100%;
     display: flex;
     flex-direction: column;
 }
 
-.footer p {
-    margin: 0px 0px;
+.cardField {
 }
+
+    .cardField h6 {
+        transform: translateY(-30px);
+        margin-bottom: 0px;
+        position: absolute;
+        background-color: white;
+        padding: 0px 4px;
+    }
+
+.dropdown-menu {
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+    .dropdown-menu::-webkit-scrollbar {
+        width: 10px;
+        border-radius: 0px 5px 5px 0px;
+    }
+
+    /* Handle */
+    .dropdown-menu::-webkit-scrollbar-thumb {
+        background: #007bff;
+        border-radius: 5px;
+    }
+
+        /* Handle on hover */
+        .dropdown-menu::-webkit-scrollbar-thumb:hover {
+            background: #62adfd;
+        }
+
+    /* Track */
+    .dropdown-menu::-webkit-scrollbar-track {
+        border-radius: 0px 5px 5px 0px;
+        background-color: white;
+    }
+        
 
 .dropdown-submenu {
     position: relative;
@@ -30,47 +61,31 @@ body {
         margin-right: .1rem;
     }
 
-.dropdown-menu {
-    max-height: 500px;
-    overflow-y: auto;
+.footer p {
+    margin: 0px 0px;
 }
 
-    .dropdown-menu::-webkit-scrollbar {
-        width: 10px;
-        border-radius: 0px 5px 5px 0px;
+html {
+    height: 100%;
+}
+
+.table {
+    font-size: 0.7rem;
+}
+    .table th {
+        background-color: #007bff;
+        color: white;
+        text-align: center;
     }
 
-    /* Track */
-    .dropdown-menu::-webkit-scrollbar-track {
-        border-radius: 0px 5px 5px 0px;
-        background-color: white;
-    }
-
-    /* Handle */
-    .dropdown-menu::-webkit-scrollbar-thumb {
-        background: #007bff;
-        border-radius: 5px;
-    }
-
-    /* Handle on hover */
-    .dropdown-menu::-webkit-scrollbar-thumb:hover {
-        background: #62adfd;
+    .table td, .table th {
+        padding: 0rem ;
+        vertical-align: middle;
+        border: 1px solid #dee2e6;
     }
 
 .titlePage {
     text-align: center;
     background: cadetblue;
     color: white;
-}
-
-.cardField {
-
-}
-
-.cardField h6 {
-    transform: translateY(-30px);
-    margin-bottom: 0px;
-    position: absolute;
-    background-color: white;
-    padding: 0px 4px;
 }

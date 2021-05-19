@@ -8,8 +8,8 @@ using System.Web;
 
 namespace ProyectoIntegrador.Models.DBModels
 {
-    [Table("tipos_consultorios")]
-    public class TipoConsultorio
+    [Table("tipos_citas")]
+    public class TipoCitas
     {
 
         [Key]
@@ -27,10 +27,13 @@ namespace ProyectoIntegrador.Models.DBModels
         [Required]
         public string Nombre { get; set; }
 
-        [Column("duracion_procedimiento")]
+        [Column("tipo_consultorio")]
         [Required]
-        [DisplayName("Duración Normal Procedimiento")]
-        public int DuracionProcedimiento { get; set; }
+        [DisplayName("Tipo Consultorio")]
+        public short TipoConsultorio { get; set; }
+
+        [ForeignKey("TipoConsultorio")]
+        public TipoConsultorio TipoConsultorioF { get; set; }
 
     }
 }

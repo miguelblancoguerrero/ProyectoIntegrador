@@ -1309,6 +1309,13 @@ namespace ProyectoIntegrador.Migrations
                 if (!context.TipoIdentifiacion.Any(o => o.Id.Equals(11))) context.TipoIdentifiacion.Add(new TipoIdentifiacion { Id = 11, Codigo = "MS", Nombre = "Menor sin identifica" });
             }
 
+            // Tipos Citas
+            {
+                if (!context.TipoCitas.Any(o => o.Id.Equals(1))) context.TipoCitas.Add(new TipoCitas { Id = 1, Codigo = "CON_GENERAL", Nombre = "CONSULTA GENERAL", TipoConsultorio = 1 });
+                if (!context.TipoCitas.Any(o => o.Id.Equals(2))) context.TipoCitas.Add(new TipoCitas { Id = 2, Codigo = "PRU_LAB_GENERAL", Nombre = "PRUEBA LABORATORIO GENERAL", TipoConsultorio = 2 });
+                if (!context.TipoCitas.Any(o => o.Id.Equals(3))) context.TipoCitas.Add(new TipoCitas { Id = 3, Codigo = "VAC_CO_VID", Nombre = "VACUNACION COVID", TipoConsultorio = 3 });
+            }
+
             // Tipos Consultorios
             {
                 if (!context.TipoConsultorio.Any(o => o.Id.Equals(1))) context.TipoConsultorio.Add(new TipoConsultorio { Id = 1, Codigo = "CON_GENERAL", Nombre = "CONSULTORIO GENERAL", DuracionProcedimiento = 30 });

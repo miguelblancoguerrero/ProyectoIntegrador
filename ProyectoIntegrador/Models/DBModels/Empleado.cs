@@ -53,7 +53,7 @@ namespace ProyectoIntegrador.Models.DBModels
 
         [Column("fecha_egreso")]
         [DisplayName("Fecha de egreso")]
-        public DateTime FechaEgreso { get; set; }
+        public DateTime? FechaEgreso { get; set; }
 
 
         [ForeignKey("Persona")]

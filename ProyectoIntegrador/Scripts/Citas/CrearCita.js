@@ -33,8 +33,8 @@
         }
         let url = '/Citas/CrearCita/ValidarAfiliado?'+$.param(params);
         $.ajax(url)
-        .done(function(data, textStatus, jqXHR ){
-            try {
+       .done(function(data, textStatus, jqXHR ){
+            try { 
                 if (data.success) {
                     view.afiliadoConsultado = data.objeto;
                     view.afiliadoNombres.value = view.afiliadoConsultado.PersonaF.Nombres;

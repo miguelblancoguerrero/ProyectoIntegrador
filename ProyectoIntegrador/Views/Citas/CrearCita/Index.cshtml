@@ -2,14 +2,15 @@
 
 @{
     ViewBag.Title = "Crear Cita";
+    ProyectoIntegrador.Models.DBModels.Empleado empleado = Session["empleado"] != null ? (ProyectoIntegrador.Models.DBModels.Empleado) Session["empleado"] : null;
 }
 <h4 class="titlePage mb-4">Citas</h4>
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    <div class="card cardField">
+    <div class="card cardField mb-4">
         <div class="card-body">
-            <h6 class="card-title"> Datos Afiliado</h6>
+            <h6 class="card-title"> Datos Afiliado </h6>
             <div class="form-row">
                 <div class="form-group col-3">
                     <label>Tipo Identificacion</label>
@@ -42,6 +43,31 @@
                     <input type="text" element="afiliadoRecidencia" value="@Model.Afiliado.RecidenciaMunicipioF.Nombre - @Model.Afiliado.RecidenciaMunicipioF.DepartamentoF.Nombre" class="form-control" disabled />
                 </div>
             </div>
+        </div>
+    </div>
+
+    <div class="card cardField mb-4">
+        <div class="card-body">
+            <h6 class="card-title"> Datos Cita </h6>
+            <div class="form-row">
+                <div class="form-group col-3">
+                    <label>Tipo Procedimiento</label>
+                    @Html.DropDownListFor(m => m.TipoCita.Id, new SelectList(Model.TiposCitas.Select(o => new { Value = o.Id, Text = o.Nombre }), "Value", "Text"), "Seleccione...", htmlAttributes: new { @class = "form-control", element = "tipoCita" })
+                </div>
+            </div>
+
+            <div id="vacunaCovid" class="form-row">
+                <div class="form-group col-12">
+                    <label>Sucursal</label>
+                    <span>
+                        @if(empleado != null)
+                        {
+                            Html.Raw(empleado.SucursalF.Nombre + " - " + empleado.SucursalF.Direccion + " [" + empleado.SucursalF.MunicipioF.Nombre + " - " + empleado.SucursalF.MunicipioF.DepartamentoF.Nombre + "]");
+                        }
+                    </span>
+                </div>
+            </div>
+
         </div>
     </div>
 }

@@ -16,11 +16,11 @@ namespace ProyectoIntegrador.Models.DBModels
         [MaxLength(15)]
         public string Codigo { get; set; }
 
-        [Column("nombe")]
+        [Column("nombre")]
         [Required]
         [MaxLength(100)]
         [DisplayName("Nombre de la sucursal")]
-        public string Nombe { get; set; }
+        public string Nombre { get; set; }
 
         [Column("municipio")]
         [Required]

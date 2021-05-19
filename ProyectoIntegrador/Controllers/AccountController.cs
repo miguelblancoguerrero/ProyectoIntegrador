@@ -9,6 +9,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using ProyectoIntegrador.Models;
+using ProyectoIntegrador.Models.DBModels;
 
 namespace ProyectoIntegrador.Controllers
 {
@@ -17,6 +18,7 @@ namespace ProyectoIntegrador.Controllers
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
+        private ApplicationDbContext db = new ApplicationDbContext();
 
         public AccountController()
         {
@@ -80,7 +82,33 @@ namespace ProyectoIntegrador.Controllers
             switch (result)
             {
                 case SignInStatus.Success:
-                    var user = SignInManager.UserManager.Find(model.Email, model.Password);
+                    ApplicationUser user = SignInManager.UserManager.Find(model.Email, model.Password);
+                    if (user.Persona != null)
+                    {
+                        var eResult = (from e in db.Empleado
+                                       join p in db.Persona on e.Persona equals p.Id
+                                       join s in db.Sucursal on e.Sucursal equals s.Id
+                                       join m in db.Municipio on s.Municipio equals m.Id
+                                       join d in db.Departamento on m.Departamento equals d.Id
+                                       where p.Id == user.Persona
+                                       select new
+                                       {
+                                           e = e,
+                                           p = p,
+                                           s = s,
+                                           m = m,
+                                           d = d
+                                       }).FirstOrDefault();
+                        if (eResult != null)
+                        {
+                            Empleado empleado = eResult.e;
+                            empleado.PersonaF = eResult.p;
+                            empleado.SucursalF = eResult.s;
+                            empleado.SucursalF.MunicipioF = eResult.m;
+                            empleado.SucursalF.MunicipioF.DepartamentoF = eResult.d;
+                            Session["empleado"] = empleado;
+                        }
+                    }
                     Session["user"] = user;
                     return RedirectToLocal(returnUrl);
                 case SignInStatus.LockedOut:

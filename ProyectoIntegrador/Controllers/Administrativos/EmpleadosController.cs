@@ -42,7 +42,7 @@ namespace ProyectoIntegrador.Controllers.Administrativos
         {
             ViewBag.Cargo = new SelectList(db.Cargo, "Id", "Codigo");
             ViewBag.Persona = new SelectList(db.Persona, "Id", "IdentificacionNumero");
-            ViewBag.RecidenciaMunicipio = new SelectList(db.Municipio, "Id", "Codigo");
+            ViewBag.RecidenciaMunicipio = new SelectList(db.Municipio, "Id", "Nombre");
             ViewBag.Sucursal = new SelectList(db.Sucursal, "Id", "Codigo");
             return View("/Views/Administrativas/Empleados/Create.cshtml");
         }

@@ -30,15 +30,19 @@ namespace ProyectoIntegrador.Models.DBModels
         public long Consultorio { get; set; }
 
         [Column("tipo")]
-        [MaxLength(15)]
         [Required]
         [DisplayName("Tipo de cita")]
-        public string Tipo { get; set; }
+        public short Tipo { get; set; }
 
         [Column("fecha")]
         [Required]
         [DisplayName("Fecha de la cita")]
         public DateTime Fecha { get; set; }
+
+        [Column("duracion")]
+        [Required]
+        [DisplayName("Duración de la cita")]
+        public int Duracion { get; set; }
 
         [Column("fecha_crea")]
         [Required]

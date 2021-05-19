@@ -19,7 +19,7 @@ namespace ProyectoIntegrador.Controllers.Citas
         {
             CrearCitaDTO vDto = new CrearCitaDTO();
             vDto.TiposIdentificaciones = db.TipoIdentifiacion.Select(o => o).ToList();
-            vDto.TiposConsultorios = db.TipoConsultorio.Select(o => o).ToList();
+            vDto.TiposCitas = db.TipoCitas.Select(o => o).ToList();
             return View("/Views/Citas/CrearCita/Index.cshtml", vDto);
         }
 
