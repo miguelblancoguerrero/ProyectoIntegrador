@@ -60,7 +60,7 @@
                         <li><a class="nav-link" href="#gallery">Galeria</a></li>
                         <li><a class="nav-link" href="#team">Diseñadores</a></li>
                         <li><a class="nav-link" href="#contact">Contactenos</a></li>
-                        <li><a class="btn btn-primary" href="~/Account/Login">Iniciar Sesion</a></li>
+                        <li><a class="btn btn-primary" href="~/Account/Login" style="margin-left: 0.5rem;">Iniciar Sesion</a></li>
                     </ul>
                 </div>
             </div>
@@ -194,7 +194,7 @@
                                 <div class="col-md-12">
                                     <div class="form-group" >
                                         <label class="control-label" for="email">Numero de Identificación</label>
-                                        <input id="email" name="email" type="text" class="form-control input-md", new { htmlAttributes = new { placeholder = "Ingrese número identificación", numbermask = "" } }>
+                                        <input id="email" name="email" type="text" class="form-control input-md", placeholder = "Ingrese número identificación" numbermask>
                                     </div>
                                 </div>
                                 <!-- Button -->
@@ -398,6 +398,7 @@
 
     <!-- End Team -->
     <!-- Start Contact -->
+    @if (false) {
     <div id="contact" class="contact-box">
         <div class="container">
             <div class="row">
@@ -490,6 +491,7 @@
             </div>
         </div>
     </div>
+    }
     <!-- End Contact -->
     <!-- Start Footer -->
     <footer class="footer-box">
@@ -511,6 +513,7 @@
     <script src="~/Content/js/jquery.min.js"></script>
     <script src="~/Content/js/popper.min.js"></script>
     <script src="~/Content/js/bootstrap.min.js"></script>
+
     <!-- ALL PLUGINS -->
     <script src="~/Content/js/jquery.magnific-popup.min.js"></script>
     <script src="~/Content/js/jquery.pogo-slider.min.js"></script>

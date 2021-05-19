@@ -35,14 +35,14 @@ namespace ProyectoIntegrador.Controllers
             {
                 return HttpNotFound();
             }
-            return View("/Views/Administrativas/Procedimiento/Details.cshtml", procedimiento);
+            return View("/Views/Administrativas/Procedimientos/Details.cshtml", procedimiento);
         }
 
         // GET: Procedimientos/Create
         public ActionResult Create()
         {
             ViewBag.Cita = new SelectList(db.Cita, "Id", "Tipo");
-            return View("/Views/Administrativas/Personas/Create.cshtml");
+            return View("/Views/Administrativas/Procedimientos/Create.cshtml");
         }
 
         // POST: Procedimientos/Create

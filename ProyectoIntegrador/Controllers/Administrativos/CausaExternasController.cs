@@ -34,13 +34,13 @@ namespace ProyectoIntegrador.Controllers
             {
                 return HttpNotFound();
             }
-            return View("/Views/Administrativas/CausaExterna/Details.cshtml",causaExterna);
+            return View("/Views/Administrativas/CausaExternas/Details.cshtml",causaExterna);
         }
 
         // GET: CausaExternas/Create
         public ActionResult Create()
         {
-            return View("/Views/Administrativas/CausaExterna/Create.cshtml");
+            return View("/Views/Administrativas/CausaExternas/Create.cshtml");
         }
 
         // POST: CausaExternas/Create
@@ -57,7 +57,7 @@ namespace ProyectoIntegrador.Controllers
                 return RedirectToAction("Index");
             }
 
-            return View("/Views/Administrativas/CausaExterna/Create.cshtml",causaExterna);
+            return View("/Views/Administrativas/CausaExternas/Create.cshtml",causaExterna);
         }
 
         // GET: CausaExternas/Edit/5
@@ -72,7 +72,7 @@ namespace ProyectoIntegrador.Controllers
             {
                 return HttpNotFound();
             }
-            return View("/Views/Administrativas/CausaExterna/Edit.cshtml",causaExterna);
+            return View("/Views/Administrativas/CausaExternas/Edit.cshtml",causaExterna);
         }
 
         // POST: CausaExternas/Edit/5
@@ -88,7 +88,7 @@ namespace ProyectoIntegrador.Controllers
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
-            return View("/Views/Administrativas/CausaExterna/Edit.cshtml",causaExterna);
+            return View("/Views/Administrativas/CausaExternas/Edit.cshtml",causaExterna);
         }
 
         // GET: CausaExternas/Delete/5
@@ -103,7 +103,7 @@ namespace ProyectoIntegrador.Controllers
             {
                 return HttpNotFound();
             }
-            return View("/Views/Administrativas/CausaExterna/Delete.cshtml",causaExterna);
+            return View("/Views/Administrativas/CausaExternas/Delete.cshtml",causaExterna);
         }
 
         // POST: CausaExternas/Delete/5
