@@ -8,6 +8,11 @@
     afiliadoGenero;
     afiliadoRecidencia;
 
+    tipoCita;
+
+    vacunaCovidBloque;
+    fechaCita;
+
     // Json Cargado
     afiliadoConsultado;
 
@@ -19,7 +24,8 @@
                 this[name] = element;
             }
         }
-        this.afiliadoNumeroIdentificacion.addEventListener('change', function(){view.getDataAfiliado();});
+        this.afiliadoNumeroIdentificacion.addEventListener('change', function () { view.getDataAfiliado(); });
+        this.tipoCita.addEventListener('change', this.validarTipoCita );
     }
 
     getDataAfiliado() {
@@ -33,7 +39,7 @@
         }
         let url = '/Citas/CrearCita/ValidarAfiliado?'+$.param(params);
         $.ajax(url)
-       .done(function(data, textStatus, jqXHR ){
+        .done(function(data, textStatus, jqXHR ){
             try { 
                 if (data.success) {
                     view.afiliadoConsultado = data.objeto;
@@ -65,6 +71,15 @@
         view.afiliadoSegundoApellido.value = '';
         view.afiliadoGenero.value = '';
         view.afiliadoRecidencia.value = '';
+    }
+
+    validarTipoCita() {
+        let vCodigo = this.options[this.selectedIndex].value;
+        if (vCodigo == 'VAC_CO_VID') {
+            view.vacunaCovidBloque.classList.remove('d-none');
+        } else {
+            view.vacunaCovidBloque.classList.add('d-none');
+        }
     }
 }
 

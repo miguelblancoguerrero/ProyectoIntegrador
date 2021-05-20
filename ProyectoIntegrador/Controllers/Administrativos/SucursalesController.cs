@@ -40,7 +40,7 @@ namespace ProyectoIntegrador.Controllers.Administrativos
         // GET: Sucursales/Create
         public ActionResult Create()
         {
-            ViewBag.Municipio = new SelectList(db.Municipio, "Id", "Codigo");
+            ViewBag.Municipio = new SelectList(db.Municipio, "Id", "Nombre");
             return View("/Views/Administrativas/Sucursales/Create.cshtml");
         }
 
@@ -58,7 +58,7 @@ namespace ProyectoIntegrador.Controllers.Administrativos
                 return RedirectToAction("Index");
             }
 
-            ViewBag.Municipio = new SelectList(db.Municipio, "Id", "Codigo", sucursal.Municipio);
+            ViewBag.Municipio = new SelectList(db.Municipio, "Id", "Nombre", sucursal.Municipio);
             return View("/Views/Administrativas/Sucursales/Create.cshtml", sucursal);
         }
 

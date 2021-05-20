@@ -52,22 +52,31 @@
             <div class="form-row">
                 <div class="form-group col-3">
                     <label>Tipo Procedimiento</label>
-                    @Html.DropDownListFor(m => m.TipoCita.Id, new SelectList(Model.TiposCitas.Select(o => new { Value = o.Id, Text = o.Nombre }), "Value", "Text"), "Seleccione...", htmlAttributes: new { @class = "form-control", element = "tipoCita" })
+                    @Html.DropDownListFor(m => m.TipoCita.Id, new SelectList(Model.TiposCitas.Select(o => new { Value = o.Codigo, Text = o.Nombre }), "Value", "Text"), "Seleccione...", htmlAttributes: new { @class = "form-control", element = "tipoCita" })
                 </div>
             </div>
 
-            <div id="vacunaCovid" class="form-row">
-                <div class="form-group col-12">
-                    <label>Sucursal</label>
-                    <span>
-                        @if(empleado != null)
+            <div id="vacunaCovid" class="container-fluid d-none" element="vacunaCovidBloque" style="padding-left: 0px; padding-right: 0px;">
+                <div class="form-group row">
+                    <label class="col-2 col-form-label">Sucursal</label>
+                    <div class="col-10">
+                        @if (empleado != null)
                         {
-                            Html.Raw(empleado.SucursalF.Nombre + " - " + empleado.SucursalF.Direccion + " [" + empleado.SucursalF.MunicipioF.Nombre + " - " + empleado.SucursalF.MunicipioF.DepartamentoF.Nombre + "]");
+                            <input type="text" value="@Html.Raw(empleado.SucursalF.Nombre + " - " + empleado.SucursalF.Direccion + " [" + empleado.SucursalF.MunicipioF.Nombre + " - " + empleado.SucursalF.MunicipioF.DepartamentoF.Nombre + "]")" class="form-control" disabled />
                         }
-                    </span>
+                        else
+                        {
+                            <input type="text" value="El usuario no tine un registro de empleado asociado, no hay datos de sucursal al cual asociar la cita" class="form-control" disabled />
+                        }
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-2 col-form-label">Fecha</label>
+                    <div class="col-4">
+                        <input type="date" element="fechaCita" class="form-control" id="fechaCita" />
+                    </div>
                 </div>
             </div>
-
         </div>
     </div>
 }
