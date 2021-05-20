@@ -40,7 +40,7 @@ namespace ProyectoIntegrador.Controllers.Administrativos
         // GET: Sucursales/Create
         public ActionResult Create()
         {
-            ViewBag.Municipio = new SelectList(db.Municipio, "Id", "Nombre");
+            ViewBag.Municipio = new SelectList(db.Municipio, "Id", "Codigo");
             return View("/Views/Administrativas/Sucursales/Create.cshtml");
         }
 
@@ -49,7 +49,7 @@ namespace ProyectoIntegrador.Controllers.Administrativos
         // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Codigo,Nombe,Municipio,Direccion,Telefonos")] Sucursal sucursal)
+        public ActionResult Create([Bind(Include = "Id,Codigo,Nombre,Municipio,Direccion,Telefonos")] Sucursal sucursal)
         {
             if (ModelState.IsValid)
             {
@@ -59,7 +59,7 @@ namespace ProyectoIntegrador.Controllers.Administrativos
             }
 
             ViewBag.Municipio = new SelectList(db.Municipio, "Id", "Codigo", sucursal.Municipio);
-            return View("/Views/Administrativas/Sucursales/Index.cshtml", sucursal);
+            return View("/Views/Administrativas/Sucursales/Create.cshtml", sucursal);
         }
 
         // GET: Sucursales/Edit/5
@@ -83,7 +83,7 @@ namespace ProyectoIntegrador.Controllers.Administrativos
         // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Codigo,Nombe,Municipio,Direccion,Telefonos")] Sucursal sucursal)
+        public ActionResult Edit([Bind(Include = "Id,Codigo,Nombre,Municipio,Direccion,Telefonos")] Sucursal sucursal)
         {
             if (ModelState.IsValid)
             {

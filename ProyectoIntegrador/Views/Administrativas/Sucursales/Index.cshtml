@@ -1,18 +1,18 @@
 ﻿@model IEnumerable<ProyectoIntegrador.Models.DBModels.Sucursal>
 
 @{
-    ViewBag.Title = "Sucursales";
+    ViewBag.Title = "Index";
 }
 
-<h2>Sucursales</h2>
+<h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Crear nueva Sucursal", "Create", null, new { @class = "btn btn-primary" })
+    @Html.ActionLink("Create New", "Create")
 </p>
 <table class="table">
     <tr>
         <th>
-            Municipio @Html.DisplayNameFor(model => model.MunicipioF.Nombre)
+            @Html.DisplayNameFor(model => model.MunicipioF.Codigo)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Codigo)
@@ -32,7 +32,7 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.MunicipioF.Nombre)
+            @Html.DisplayFor(modelItem => item.MunicipioF.Codigo)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Codigo)

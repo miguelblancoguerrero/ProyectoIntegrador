@@ -187,6 +187,7 @@
     <Compile Include="Controllers\Administrativos\ProcedimientoMaterialsController.cs" />
     <Compile Include="Controllers\Administrativos\RecetaMedicaMaterialsController.cs" />
     <Compile Include="Controllers\Administrativos\RecetaMedicasController.cs" />
+    <Compile Include="Controllers\Administrativos\SucursalesController.cs" />
     <Compile Include="Controllers\Administrativos\TipoAfiliadosController.cs" />
     <Compile Include="Controllers\Administrativos\TipoIdentifiacionsController.cs" />
     <Compile Include="Controllers\Administrativos\TipoUsuarioAfiliadosController.cs" />
@@ -207,7 +208,6 @@
     <Compile Include="Controllers\Administrativos\MunicipiosController.cs" />
     <Compile Include="Controllers\Administrativos\AfiliadosController.cs" />
     <Compile Include="Controllers\Administrativos\ProveedorController.cs" />
-    <Compile Include="Controllers\Administrativos\SucursalesController.cs" />
     <Compile Include="Controllers\PublicController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -495,11 +495,6 @@
     <Content Include="Views\Administrativas\Departamentos\Details.cshtml" />
     <Content Include="Views\Administrativas\Departamentos\Edit.cshtml" />
     <Content Include="Views\Administrativas\Departamentos\Index.cshtml" />
-    <Content Include="Views\Administrativas\Sucursales\Create.cshtml" />
-    <Content Include="Views\Administrativas\Sucursales\Delete.cshtml" />
-    <Content Include="Views\Administrativas\Sucursales\Details.cshtml" />
-    <Content Include="Views\Administrativas\Sucursales\Edit.cshtml" />
-    <Content Include="Views\Administrativas\Sucursales\Index.cshtml" />
     <Content Include="Views\Administrativas\Consultorios\Create.cshtml" />
     <Content Include="Views\Administrativas\Consultorios\Delete.cshtml" />
     <Content Include="Views\Administrativas\Consultorios\Details.cshtml" />
@@ -582,6 +577,11 @@
     <Content Include="Views\Administrativas\Kardex\Edit.cshtml" />
     <Content Include="Views\Administrativas\Kardex\Index.cshtml" />
     <Content Include="Views\Citas\CrearCita\Index.cshtml" />
+    <Content Include="Views\Administrativas\Sucursales\Create.cshtml" />
+    <Content Include="Views\Administrativas\Sucursales\Delete.cshtml" />
+    <Content Include="Views\Administrativas\Sucursales\Details.cshtml" />
+    <Content Include="Views\Administrativas\Sucursales\Edit.cshtml" />
+    <Content Include="Views\Administrativas\Sucursales\Index.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <PropertyGroup>
