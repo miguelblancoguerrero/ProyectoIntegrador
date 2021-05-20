@@ -1,13 +1,12 @@
 ﻿@model ProyectoIntegrador.Models.DBModels.Sucursal
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Detalles Sucursal";
 }
 
-<h2>Details</h2>
+<h2>Sucursal</h2>
 
 <div>
-    <h4>Sucursal</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -53,6 +52,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Editar", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Volver a la lista", "Index")
 </p>

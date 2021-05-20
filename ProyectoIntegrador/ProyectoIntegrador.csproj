@@ -171,6 +171,7 @@
     <Compile Include="App_Start\Filters\SessionFilter.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\Administrativos\BodegasController.cs" />
+    <Compile Include="Controllers\Administrativos\ConsultoriosController.cs" />
     <Compile Include="Controllers\Administrativos\EntradasController.cs" />
     <Compile Include="Controllers\Administrativos\EntradasMaterialesController.cs" />
     <Compile Include="Controllers\Administrativos\GenerosController.cs" />
@@ -201,7 +202,6 @@
     <Compile Include="Controllers\Administrativos\ProcedimientosController.cs" />
     <Compile Include="Controllers\Administrativos\CargosController.cs" />
     <Compile Include="Controllers\Administrativos\CitasController.cs" />
-    <Compile Include="Controllers\Administrativos\ConsultoriosController.cs" />
     <Compile Include="Controllers\Administrativos\DepartamentosController.cs" />
     <Compile Include="Controllers\Administrativos\EmpleadosController.cs" />
     <Compile Include="Controllers\Administrativos\FinalidadesController.cs" />
@@ -495,11 +495,6 @@
     <Content Include="Views\Administrativas\Departamentos\Details.cshtml" />
     <Content Include="Views\Administrativas\Departamentos\Edit.cshtml" />
     <Content Include="Views\Administrativas\Departamentos\Index.cshtml" />
-    <Content Include="Views\Administrativas\Consultorios\Create.cshtml" />
-    <Content Include="Views\Administrativas\Consultorios\Delete.cshtml" />
-    <Content Include="Views\Administrativas\Consultorios\Details.cshtml" />
-    <Content Include="Views\Administrativas\Consultorios\Edit.cshtml" />
-    <Content Include="Views\Administrativas\Consultorios\Index.cshtml" />
     <Content Include="Views\Administrativas\Citas\Create.cshtml" />
     <Content Include="Views\Administrativas\Citas\Delete.cshtml" />
     <Content Include="Views\Administrativas\Citas\Details.cshtml" />
@@ -582,6 +577,11 @@
     <Content Include="Views\Administrativas\Sucursales\Details.cshtml" />
     <Content Include="Views\Administrativas\Sucursales\Edit.cshtml" />
     <Content Include="Views\Administrativas\Sucursales\Index.cshtml" />
+    <Content Include="Views\Administrativas\Consultorios\Create.cshtml" />
+    <Content Include="Views\Administrativas\Consultorios\Delete.cshtml" />
+    <Content Include="Views\Administrativas\Consultorios\Details.cshtml" />
+    <Content Include="Views\Administrativas\Consultorios\Edit.cshtml" />
+    <Content Include="Views\Administrativas\Consultorios\Index.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <PropertyGroup>

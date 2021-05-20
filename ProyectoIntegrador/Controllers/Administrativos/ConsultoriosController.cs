@@ -18,7 +18,7 @@ namespace ProyectoIntegrador.Controllers.Administrativos
         // GET: Consultorios
         public ActionResult Index()
         {
-            var consultorio = db.Consultorio.Include(c => c.SucursalF);
+            var consultorio = db.Consultorio.Include(c => c.SucursalF).Include(c => c.TipoF);
             return View("/Views/Administrativas/Consultorios/Index.cshtml", consultorio.ToList());
         }
 
@@ -34,13 +34,14 @@ namespace ProyectoIntegrador.Controllers.Administrativos
             {
                 return HttpNotFound();
             }
-            return View("/Views/Administrativas/Consultorios/Details.cshtml", consultorio);
+            return View("/Views/Administrativas/Consultorios/Details.cshtml" , consultorio);
         }
 
         // GET: Consultorios/Create
         public ActionResult Create()
         {
             ViewBag.Sucursal = new SelectList(db.Sucursal, "Id", "Codigo");
+            ViewBag.Tipo = new SelectList(db.TipoConsultorio, "Id", "Codigo");
             return View("/Views/Administrativas/Consultorios/Create.cshtml");
         }
 
@@ -59,6 +60,7 @@ namespace ProyectoIntegrador.Controllers.Administrativos
             }
 
             ViewBag.Sucursal = new SelectList(db.Sucursal, "Id", "Codigo", consultorio.Sucursal);
+            ViewBag.Tipo = new SelectList(db.TipoConsultorio, "Id", "Codigo", consultorio.Tipo);
             return View("/Views/Administrativas/Consultorios/Create.cshtml", consultorio);
         }
 
@@ -75,6 +77,7 @@ namespace ProyectoIntegrador.Controllers.Administrativos
                 return HttpNotFound();
             }
             ViewBag.Sucursal = new SelectList(db.Sucursal, "Id", "Codigo", consultorio.Sucursal);
+            ViewBag.Tipo = new SelectList(db.TipoConsultorio, "Id", "Codigo", consultorio.Tipo);
             return View("/Views/Administrativas/Consultorios/Edit.cshtml", consultorio);
         }
 
@@ -92,6 +95,7 @@ namespace ProyectoIntegrador.Controllers.Administrativos
                 return RedirectToAction("Index");
             }
             ViewBag.Sucursal = new SelectList(db.Sucursal, "Id", "Codigo", consultorio.Sucursal);
+            ViewBag.Tipo = new SelectList(db.TipoConsultorio, "Id", "Codigo", consultorio.Tipo);
             return View("/Views/Administrativas/Consultorios/Edit.cshtml", consultorio);
         }
 
