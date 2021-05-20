@@ -54,10 +54,13 @@
 </head>
 <body class="bg-dark" style="height: 100%; width: 100%;">
     <div id="fullpg" class="d-flex justify-content-center align-items-center" style="height: 100%; width: 100%;">
-        <div class="col-md-8 ">
+        <div class="col-md-8 " style="height:100%">
+            <div style="width: 100%; height: calc(100% - 2rem); margin: 2rem 0rem; background-color: #ffffff4a;">
+
+            </div>
         </div>      
         <div class="col-md-4 ">
-            <section id="loginForm" class="p-3" style="padding: 1rem 3rem !important; background-color: #ffffffbf; box-shadow: -7px 11px 20px 5px black;">
+            <section id="loginForm" class="p-3" style="padding: 1rem 3rem !important; background-color: #ffffffbf; box-shadow: -2px 2px 7px 0px #0000005c;">
                 @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { role = "form" }))
                 {
                     @Html.AntiForgeryToken()
