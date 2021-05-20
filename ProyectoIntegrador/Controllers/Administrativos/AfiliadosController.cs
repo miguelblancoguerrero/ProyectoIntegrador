@@ -65,7 +65,7 @@ namespace ProyectoIntegrador.Controllers
             ViewBag.RecidenciaMunicipio = new SelectList(db.Municipio, "Id", "Codigo", afiliado.RecidenciaMunicipio);
             ViewBag.TipoAfiliado = new SelectList(db.TipoAfiliado, "Id", "Codigo", afiliado.TipoAfiliado);
             ViewBag.TipoUsuario = new SelectList(db.TipoUsuarioAfiliado, "Id", "Codigo", afiliado.TipoUsuario);
-            return View("/Views/Administrativas/Afiliados/Index.cshtml", afiliado);
+            return View("/Views/Administrativas/Afiliados/Create.cshtml", afiliado);
         }
 
         // GET: Afiliados/Edit/5

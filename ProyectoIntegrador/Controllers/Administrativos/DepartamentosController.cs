@@ -56,7 +56,7 @@ namespace ProyectoIntegrador.Controllers.Administrativos
                 return RedirectToAction("Index");
             }
 
-            return View("/Views/Administrativas/Departamentos/Index.cshtml", departamento);
+            return View("/Views/Administrativas/Departamentos/Create.cshtml", departamento);
         }
 
         // GET: Departamentos/Edit/5

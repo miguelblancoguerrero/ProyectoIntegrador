@@ -59,7 +59,7 @@ namespace ProyectoIntegrador.Controllers
             }
 
             ViewBag.Pasillo = new SelectList(db.Pasillo, "Id", "Codigo", estante.Pasillo);
-            return View("/Views/Administrativas/Estantes/Index.cshtml", estante);
+            return View("/Views/Administrativas/Estantes/Create.cshtml", estante);
         }
 
         // GET: Estantes/Edit/5

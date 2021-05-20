@@ -59,7 +59,7 @@ namespace ProyectoIntegrador.Controllers.Administrativos
             }
 
             ViewBag.Sucursal = new SelectList(db.Sucursal, "Id", "Codigo", consultorio.Sucursal);
-            return View("/Views/Administrativas/Consultorios/Index.cshtml", consultorio);
+            return View("/Views/Administrativas/Consultorios/Create.cshtml", consultorio);
         }
 
         // GET: Consultorios/Edit/5

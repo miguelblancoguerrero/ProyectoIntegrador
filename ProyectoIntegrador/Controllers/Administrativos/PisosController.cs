@@ -59,7 +59,7 @@ namespace ProyectoIntegrador.Controllers.Administrativos
             }
 
             ViewBag.Estante = new SelectList(db.Estante, "Id", "Codigo", piso.Estante);
-            return View("/Views/Administrativas/Pisos/Index.cshtml", piso);
+            return View("/Views/Administrativas/Pisos/Create.cshtml", piso);
         }
 
         // GET: Pisos/Edit/5

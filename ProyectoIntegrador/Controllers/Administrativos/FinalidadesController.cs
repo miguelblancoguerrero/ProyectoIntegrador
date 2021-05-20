@@ -56,7 +56,7 @@ namespace ProyectoIntegrador.Controllers.Administrativos
                 return RedirectToAction("Index");
             }
 
-            return View("/Views/Administrativas/Finalidades/Index.cshtml", finalidad);
+            return View("/Views/Administrativas/Finalidades/Create.cshtml", finalidad);
         }
 
         // GET: Finalidades/Edit/5

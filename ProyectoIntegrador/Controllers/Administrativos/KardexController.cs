@@ -61,7 +61,7 @@ namespace ProyectoIntegrador.Controllers.Administrativos
 
             ViewBag.Bodega = new SelectList(db.Material, "Id", "Codigo", kardex.Bodega);
             ViewBag.Material = new SelectList(db.Material, "Id", "Codigo", kardex.Material);
-            return View("/Views/Administrativas/Kardex/Index.cshtml", kardex);
+            return View("/Views/Administrativas/Kardex/Create.cshtml", kardex);
         }
 
         // GET: Kardex/Edit/5

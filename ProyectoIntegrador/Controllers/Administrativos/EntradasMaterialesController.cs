@@ -65,7 +65,7 @@ namespace ProyectoIntegrador.Controllers.Administrativos
             ViewBag.Entrada = new SelectList(db.Entrada, "Id", "Codigo", entradaMaterial.Entrada);
             ViewBag.Material = new SelectList(db.Material, "Id", "Codigo", entradaMaterial.Material);
             ViewBag.Proveedor = new SelectList(db.Proveedor, "Id", "IdentificacionNumero", entradaMaterial.Proveedor);
-            return View("/Views/Administrativas/EntradasMateriales/Index.cshtml", entradaMaterial);
+            return View("/Views/Administrativas/EntradasMateriales/Create.cshtml", entradaMaterial);
         }
 
         // GET: EntradasMateriales/Edit/5

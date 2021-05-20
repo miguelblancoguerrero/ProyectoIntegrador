@@ -59,7 +59,7 @@ namespace ProyectoIntegrador.Controllers.Administrativos
             }
 
             ViewBag.Bodega = new SelectList(db.Bodega, "Id", "Codigo", zona.Bodega);
-            return View("/Views/Administrativas/Zonas/Index.cshtml", zona);
+            return View("/Views/Administrativas/Zonas/Create.cshtml", zona);
         }
 
         // GET: Zonas/Edit/5

@@ -65,7 +65,7 @@ namespace ProyectoIntegrador.Controllers.Administrativos
             ViewBag.Material = new SelectList(db.Material, "Id", "Codigo", ordenMaterial.Material);
             ViewBag.Orden = new SelectList(db.Orden, "Id", "Codigo", ordenMaterial.Orden);
             ViewBag.Proveedor = new SelectList(db.Proveedor, "Id", "IdentificacionNumero", ordenMaterial.Proveedor);
-            return View("/Views/Administrativas/OrdenesMateriales/Index.cshtml", ordenMaterial);
+            return View("/Views/Administrativas/OrdenesMateriales/Create.cshtml", ordenMaterial);
         }
 
         // GET: OrdenesMateriales/Edit/5

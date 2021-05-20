@@ -65,7 +65,7 @@ namespace ProyectoIntegrador.Controllers.Administrativos
             ViewBag.Persona = new SelectList(db.Persona, "Id", "IdentificacionNumero", empleado.Persona);
             ViewBag.RecidenciaMunicipio = new SelectList(db.Municipio, "Id", "Codigo", empleado.RecidenciaMunicipio);
             ViewBag.Sucursal = new SelectList(db.Sucursal, "Id", "Codigo", empleado.Sucursal);
-            return View("/Views/Administrativas/Empleados/Index.cshtml", empleado);
+            return View("/Views/Administrativas/Empleados/Create.cshtml", empleado);
         }
 
         // GET: Empleados/Edit/5

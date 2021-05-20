@@ -59,7 +59,7 @@ namespace ProyectoIntegrador.Controllers.Administrativos
             }
 
             ViewBag.MunicipioRecide = new SelectList(db.Municipio, "Id", "Codigo", proveedor.MunicipioRecide);
-            return View("/Views/Administrativas/Proveedor/Index.cshtml", proveedor);
+            return View("/Views/Administrativas/Proveedor/Create.cshtml", proveedor);
         }
 
         // GET: Proveedor/Edit/5

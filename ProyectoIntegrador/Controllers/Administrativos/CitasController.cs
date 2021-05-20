@@ -63,7 +63,7 @@ namespace ProyectoIntegrador.Controllers.Administrativos
             ViewBag.Afiliado = new SelectList(db.Afiliado, "Id", "RecidenciaBarrio", cita.Afiliado);
             ViewBag.Consultorio = new SelectList(db.Consultorio, "Id", "Codigo", cita.Consultorio);
             ViewBag.Medico = new SelectList(db.Empleado, "Id", "RecidenciaBarrio", cita.Medico);
-            return View("/Views/Administrativas/Citas/Index.cshtml", cita);
+            return View("/Views/Administrativas/Citas/Create.cshtml", cita);
         }
 
         // GET: Citas/Edit/5

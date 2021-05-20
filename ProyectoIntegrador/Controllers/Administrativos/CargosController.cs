@@ -56,7 +56,7 @@ namespace ProyectoIntegrador.Controllers.Administrativos
                 return RedirectToAction("Index");
             }
 
-            return View("/Views/Administrativas/Cargos/Index.cshtml", cargo);
+            return View("/Views/Administrativas/Cargos/Create.cshtml", cargo);
         }
 
         // GET: Cargos/Edit/5

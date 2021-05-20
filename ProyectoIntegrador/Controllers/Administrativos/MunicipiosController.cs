@@ -56,7 +56,7 @@ namespace ProyectoIntegrador.Controllers.Administrativos
                 return RedirectToAction("Index");
             }
 
-            return View("/Views/Administrativas/Municipios/Index.cshtml", municipio);
+            return View("/Views/Administrativas/Municipios/Create.cshtml", municipio);
         }
 
         // GET: Municipios/Edit/5

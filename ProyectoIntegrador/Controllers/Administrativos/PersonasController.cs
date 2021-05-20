@@ -61,7 +61,7 @@ namespace ProyectoIntegrador.Controllers.Administrativos
 
             ViewBag.Genero = new SelectList(db.Genero, "Id", "Nombre", persona.Genero);
             ViewBag.IdentificacionTipo = new SelectList(db.TipoIdentifiacion, "Id", "Nombre", persona.IdentificacionTipo);
-            return View("/Views/Administrativas/Personas/Index.cshtml", persona);
+            return View("/Views/Administrativas/Personas/Create.cshtml", persona);
         }
 
         // GET: Personas/Edit/5

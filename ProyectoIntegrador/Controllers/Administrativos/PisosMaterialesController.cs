@@ -61,7 +61,7 @@ namespace ProyectoIntegrador.Controllers.Administrativos
 
             ViewBag.Material = new SelectList(db.Material, "Id", "Codigo", pisoMaterial.Material);
             ViewBag.Piso = new SelectList(db.Piso, "Id", "Codigo", pisoMaterial.Piso);
-            return View("/Views/Administrativas/PisosMateriales/Index.cshtml", pisoMaterial);
+            return View("/Views/Administrativas/PisosMateriales/Create.cshtml", pisoMaterial);
         }
 
         // GET: PisosMateriales/Edit/5

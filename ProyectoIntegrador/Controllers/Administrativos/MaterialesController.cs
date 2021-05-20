@@ -61,7 +61,7 @@ namespace ProyectoIntegrador.Controllers.Administrativos
 
             ViewBag.Marca = new SelectList(db.Marca, "Id", "Codigo", material.Marca);
             ViewBag.Padre = new SelectList(db.Material, "Id", "Codigo", material.Padre);
-            return View("/Views/Administrativas/Materiales/Index.cshtml", material);
+            return View("/Views/Administrativas/Materiales/Create.cshtml", material);
         }
 
         // GET: Materiales/Edit/5

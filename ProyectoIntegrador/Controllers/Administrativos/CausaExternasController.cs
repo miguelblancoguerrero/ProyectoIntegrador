@@ -57,7 +57,7 @@ namespace ProyectoIntegrador.Controllers
                 return RedirectToAction("Index");
             }
 
-            return View("/Views/Administrativas/CausaExternas/Create.cshtml",causaExterna);
+            return View("/Views/Administrativas/CausaExternas/Create.cshtml", causaExterna);
         }
 
         // GET: CausaExternas/Edit/5

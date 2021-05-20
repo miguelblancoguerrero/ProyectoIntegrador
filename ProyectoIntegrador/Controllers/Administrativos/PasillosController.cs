@@ -59,7 +59,7 @@ namespace ProyectoIntegrador.Controllers.Administrativos
             }
 
             ViewBag.Zona = new SelectList(db.Zona, "Id", "Codigo", pasillo.Zona);
-            return View("/Views/Administrativas/Pasillos/Index.cshtml", pasillo);
+            return View("/Views/Administrativas/Pasillos/Create.cshtml", pasillo);
         }
 
         // GET: Pasillos/Edit/5

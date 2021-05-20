@@ -56,7 +56,7 @@ namespace ProyectoIntegrador.Controllers.Administrativos
                 return RedirectToAction("Index");
             }
 
-            return View("/Views/Administrativas/Marcas/Index.cshtml", marca);
+            return View("/Views/Administrativas/Marcas/Create.cshtml", marca);
         }
 
         // GET: Marcas/Edit/5

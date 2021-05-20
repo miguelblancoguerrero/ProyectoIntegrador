@@ -59,7 +59,7 @@ namespace ProyectoIntegrador.Controllers.Administrativos
             }
 
             ViewBag.Orden = new SelectList(db.Orden, "Id", "Codigo", entrada.Orden);
-            return View("/Views/Administrativas/Entradas/Index.cshtml", entrada);
+            return View("/Views/Administrativas/Entradas/Create.cshtml", entrada);
         }
 
         // GET: Entradas/Edit/5

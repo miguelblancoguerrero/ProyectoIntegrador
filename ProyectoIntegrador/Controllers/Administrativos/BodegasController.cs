@@ -61,7 +61,7 @@ namespace ProyectoIntegrador.Controllers.Administrativos
 
             ViewBag.Municipio = new SelectList(db.Municipio, "Id", "Codigo", bodega.Municipio);
             ViewBag.Sucursal = new SelectList(db.Sucursal, "Id", "Codigo", bodega.Sucursal);
-            return View("/Views/Administrativas/Bodegas/Index.cshtml", bodega);
+            return View("/Views/Administrativas/Bodegas/Create.cshtml", bodega);
         }
 
         // GET: Bodegas/Edit/5
