@@ -1335,6 +1335,20 @@ namespace ProyectoIntegrador.Migrations
                 if (!context.TipoUsuarioAfiliado.Any(o => o.Id.Equals(8))) context.TipoUsuarioAfiliado.Add(new TipoUsuarioAfiliado { Id = 8, Codigo = "VNA", Nombre = "Víctima no asegurado (Vinculado)" });
             }
 
+            // Datos Basicos
+            {
+                if (!context.Cargo.Any(o => o.Id.Equals(1))) context.Cargo.Add(new Cargo { Id = 1, Codigo = "00000001", Nombre = "Administrador", Tipo = 1, Descripcion = "Administrador", NivelPrioridad = 1 });
+                if (!context.Sucursal.Any(o => o.Id.Equals(1))) context.Sucursal.Add(new Sucursal { Id = 1, Codigo = "00000001", Nombre = "Principal Bucaramanga", Municipio = 846, Direccion = "CR 33 N 55 15", Telefonos = "6959595" });
+                if (!context.Genero.Any(o => o.Id.Equals(1))) context.Genero.Add(new Genero { Id = 1, Nombre = "Masculino", SexoEquivalente = "M" });
+                if (!context.Persona.Any(o => o.Id.Equals(1))) context.Persona.Add(new Persona { Id = 1, IdentificacionTipo = 1, IdentificacionNumero = "1098731434", Nombres = "Miguel Angel", PrimerApellido = "Blanco", SegundoApellido = "Guerrero", Genero = 1, FechaNacimiento = DateTime.Parse("9/11/1992 12:00:00 a. m."), CorreoElectronico = "mabg0992@gmail.com", Telefonos = "3175529166" });
+                if (!context.Empleado.Any(o => o.Id.Equals(1))) context.Empleado.Add(new Empleado { Id = 1, Persona = 1, RecidenciaMunicipio = 846, Cargo = 1, Sucursal = 1, RecidenciaBarrio = "Altos del Cacique", RecidenciaDireccion = "CLL 83 N 59 36", FechaIngreso = DateTime.Parse("1/01/2001 12:00:00 a. m."), FechaEgreso = null });
+                if (!context.User.Any(o => o.Persona.Equals(1))){ 
+                    var User = context.User.First(o => o.Id.Equals("c96e2504-f162-4766-b121-9f6bc18237a5"));
+                    User.Persona = 1;
+                    context.User.AddOrUpdate(User);
+                }
+            }
+
             //  This method will be called after migrating to the latest version.
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 

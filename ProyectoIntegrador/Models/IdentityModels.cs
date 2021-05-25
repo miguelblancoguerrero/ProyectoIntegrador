@@ -46,6 +46,7 @@ namespace ProyectoIntegrador.Models
         }
 
         public DbSet<IdentityUserRole> UserRoles { get; set; }
+        public DbSet<ApplicationUser> User { get; set; }
 
         public DbSet<Afiliado> Afiliado { get; set; }
         public DbSet<Bodega> Bodega { get; set; }
