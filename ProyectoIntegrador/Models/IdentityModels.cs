@@ -30,7 +30,7 @@ namespace ProyectoIntegrador.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
-        public ApplicationDbContext() : base("DefaultConnection", throwIfV1Schema: false)
+        public ApplicationDbContext() : base("DefaultConnection2", throwIfV1Schema: false)
         {
         }
 
@@ -46,7 +46,8 @@ namespace ProyectoIntegrador.Models
         }
 
         public DbSet<IdentityUserRole> UserRoles { get; set; }
-        public DbSet<ApplicationUser> User { get; set; }
+        //override
+        //public IDbSet<ApplicationUser> Users { get; set; }
 
         public DbSet<Afiliado> Afiliado { get; set; }
         public DbSet<Bodega> Bodega { get; set; }
