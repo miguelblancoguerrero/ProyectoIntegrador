@@ -338,3 +338,9 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
+ProyectoIntegrador/Properties/ServiceDependencies/proyectointegrador5l - Web Deploy/profile.arm.json
+ProyectoIntegrador/Properties/serviceDependencies.proyectointegrador5l - Web Deploy.json
+ProyectoIntegrador/Properties/serviceDependencies.local.json
+ProyectoIntegrador/Properties/serviceDependencies.json
+ProyectoIntegrador/bin/ProyectoIntegrador.dll.config
+ProyectoIntegrador/bin/ProyectoIntegrador.dll
