@@ -1342,9 +1342,9 @@ namespace ProyectoIntegrador.Migrations
                 if (!context.Genero.Any(o => o.Id.Equals(1))) context.Genero.Add(new Genero { Id = 1, Nombre = "Masculino", SexoEquivalente = "M" });
                 if (!context.Persona.Any(o => o.Id.Equals(1))) context.Persona.Add(new Persona { Id = 1, IdentificacionTipo = 1, IdentificacionNumero = "1098731434", Nombres = "Miguel Angel", PrimerApellido = "Blanco", SegundoApellido = "Guerrero", Genero = 1, FechaNacimiento = DateTime.Parse("9/11/1992 12:00:00 a. m."), CorreoElectronico = "mabg0992@gmail.com", Telefonos = "3175529166" });
                 if (!context.Empleado.Any(o => o.Id.Equals(1))) context.Empleado.Add(new Empleado { Id = 1, Persona = 1, RecidenciaMunicipio = 846, Cargo = 1, Sucursal = 1, RecidenciaBarrio = "Altos del Cacique", RecidenciaDireccion = "CLL 83 N 59 36", FechaIngreso = DateTime.Parse("1/01/2001 12:00:00 a. m."), FechaEgreso = null });
-                //if (context.Database.SqlQuery<Object>("select * from AspNetUsers where persona = 1").FirstOrDefault<Object>() == null){
-                //    context.Database.ExecuteSqlCommand("update AspNetUsers set persona = 1 where id = 'c96e2504-f162-4766-b121-9f6bc18237a5'");
-                //}
+                if (context.Database.SqlQuery<Object>("select * from AspNetUsers where persona = 1").FirstOrDefault<Object>() == null){
+                    context.Database.ExecuteSqlCommand("update AspNetUsers set persona = 1 where id = 'c96e2504-f162-4766-b121-9f6bc18237a5'");
+                }
             }
 
             //  This method will be called after migrating to the latest version.
