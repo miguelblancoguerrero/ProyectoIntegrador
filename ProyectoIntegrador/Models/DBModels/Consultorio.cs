@@ -31,7 +31,7 @@ namespace ProyectoIntegrador.Models.DBModels
         public short Tipo { get; set; }
 
         [Column("capacidad")]
-        [DisplayName("Capacidad del consultorio")]
+        [DisplayName("Capacidad pacientes del consultorio")]
         public int Capacidad { get; set; }
 
 

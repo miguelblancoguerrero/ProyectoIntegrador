@@ -74,6 +74,12 @@ namespace ProyectoIntegrador.Migrations
                 if (!context.Departamento.Any(d => d.Id.Equals(33))) context.Departamento.Add(new Models.DBModels.Departamento { Id = 33, Codigo = "99", Nombre = "VICHADA" });
             }
 
+            // Generos
+            {
+                if (!context.Genero.Any(o => o.Id.Equals(1))) context.Genero.Add(new Genero { Id = 1, Nombre = "Masculino", SexoEquivalente = "M" });
+                if (!context.Genero.Any(o => o.Id.Equals(2))) context.Genero.Add(new Genero { Id = 2, Nombre = "Femenino", SexoEquivalente = "F" });
+            }
+
             // Menus
             {
                 if (!context.Menu.Any(d => d.Id.Equals(1))) context.Menu.Add(new Models.DBModels.Menu { Id = 1, Orden = 1, Etiqueta = "Administrativas" });
@@ -1311,9 +1317,9 @@ namespace ProyectoIntegrador.Migrations
 
             // Tipos Citas
             {
-                if (!context.TipoCitas.Any(o => o.Id.Equals(1))) context.TipoCitas.Add(new TipoCitas { Id = 1, Codigo = "CON_GENERAL", Nombre = "CONSULTA GENERAL", TipoConsultorio = 1 });
-                if (!context.TipoCitas.Any(o => o.Id.Equals(2))) context.TipoCitas.Add(new TipoCitas { Id = 2, Codigo = "PRU_LAB_GENERAL", Nombre = "PRUEBA LABORATORIO GENERAL", TipoConsultorio = 2 });
-                if (!context.TipoCitas.Any(o => o.Id.Equals(3))) context.TipoCitas.Add(new TipoCitas { Id = 3, Codigo = "VAC_CO_VID", Nombre = "VACUNACION COVID", TipoConsultorio = 3 });
+                if (!context.TipoCitas.Any(o => o.Id.Equals(1))) context.TipoCitas.Add(new TipoCita { Id = 1, Codigo = "CON_GENERAL", Nombre = "CONSULTA GENERAL", TipoConsultorio = 1 });
+                if (!context.TipoCitas.Any(o => o.Id.Equals(2))) context.TipoCitas.Add(new TipoCita { Id = 2, Codigo = "PRU_LAB_GENERAL", Nombre = "PRUEBA LABORATORIO GENERAL", TipoConsultorio = 2 });
+                if (!context.TipoCitas.Any(o => o.Id.Equals(3))) context.TipoCitas.Add(new TipoCita { Id = 3, Codigo = "VAC_CO_VID", Nombre = "VACUNACION COVID", TipoConsultorio = 3 });
             }
 
             // Tipos Consultorios
@@ -1339,7 +1345,6 @@ namespace ProyectoIntegrador.Migrations
             {
                 if (!context.Cargo.Any(o => o.Id.Equals(1))) context.Cargo.Add(new Cargo { Id = 1, Codigo = "00000001", Nombre = "Administrador", Tipo = 1, Descripcion = "Administrador", NivelPrioridad = 1 });
                 if (!context.Sucursal.Any(o => o.Id.Equals(1))) context.Sucursal.Add(new Sucursal { Id = 1, Codigo = "00000001", Nombre = "Principal Bucaramanga", Municipio = 846, Direccion = "CR 33 N 55 15", Telefonos = "6959595" });
-                if (!context.Genero.Any(o => o.Id.Equals(1))) context.Genero.Add(new Genero { Id = 1, Nombre = "Masculino", SexoEquivalente = "M" });
                 if (!context.Persona.Any(o => o.Id.Equals(1))) context.Persona.Add(new Persona { Id = 1, IdentificacionTipo = 1, IdentificacionNumero = "1098731434", Nombres = "Miguel Angel", PrimerApellido = "Blanco", SegundoApellido = "Guerrero", Genero = 1, FechaNacimiento = DateTime.Parse("9/11/1992 12:00:00 a. m."), CorreoElectronico = "mabg0992@gmail.com", Telefonos = "3175529166" });
                 if (!context.Empleado.Any(o => o.Id.Equals(1))) context.Empleado.Add(new Empleado { Id = 1, Persona = 1, RecidenciaMunicipio = 846, Cargo = 1, Sucursal = 1, RecidenciaBarrio = "Altos del Cacique", RecidenciaDireccion = "CLL 83 N 59 36", FechaIngreso = DateTime.Parse("1/01/2001 12:00:00 a. m."), FechaEgreso = null });
 

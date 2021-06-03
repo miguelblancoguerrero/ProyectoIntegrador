@@ -9,7 +9,7 @@
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
@@ -34,7 +34,13 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Municipio, "Municipio", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownList("Municipio", null, htmlAttributes: new { @class = "form-control" })
+                <select class="selectpicker form-control" data-live-search="true" id="Municipio" name="Municipio">
+                    @foreach (var item in ViewBag.Municipio)
+                    {
+                        <option value="@item.Value" data-tokens="@item.Value">@item.Text</option>
+                    }
+                </select>
+                <script type="text/javascript">$('#Municipio').selectpicker('val', '@Model.Municipio')</script>
                 @Html.ValidationMessageFor(model => model.Municipio, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -58,10 +64,23 @@
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
                 <input type="submit" value="Save" class="btn btn-primary mr-2" />
-                <a href="Index" class="btn btn-secondary">Volver</a>
+                <a href="../Index" class="btn btn-secondary">Volver</a>
             </div>
         </div>
     </div>
 }
 
+<script type="text/javascript">
+    $(document).ready(function () {
+        //called when key is pressed in textbox
+        $("input[numbermask]").keypress(function (e) {
+            //if the letter is not digit then display error and don't type anything
+            if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+                //display error message
+                $("#errmsg").html("Digits Only").show().fadeOut("slow");
+                return false;
+            }
+        });
+    });
+</script>
 

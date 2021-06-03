@@ -33,7 +33,12 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Municipio, "Municipio", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownList("Municipio", null, htmlAttributes: new { @class = "form-control" })
+                <select class="selectpicker form-control" data-live-search="true" id="Municipio" name="Municipio">
+                    @foreach (var item in ViewBag.Municipio)
+                    {
+                        <option value="@item.Value" data-tokens="@item.Value">@item.Text</option>
+                    }
+                </select>
                 @Html.ValidationMessageFor(model => model.Municipio, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -62,3 +67,17 @@
         </div>
     </div>
 }
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        //called when key is pressed in textbox
+        $("input[numbermask]").keypress(function (e) {
+            //if the letter is not digit then display error and don't type anything
+            if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+                //display error message
+                $("#errmsg").html("Digits Only").show().fadeOut("slow");
+                return false;
+            }
+        });
+    });
+</script>

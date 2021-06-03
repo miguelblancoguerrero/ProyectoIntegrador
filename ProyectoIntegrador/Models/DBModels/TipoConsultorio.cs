@@ -32,5 +32,11 @@ namespace ProyectoIntegrador.Models.DBModels
         [DisplayName("Duración Normal Procedimiento")]
         public int DuracionProcedimiento { get; set; }
 
+        [NotMapped]
+        public string NombreCompleto
+        {
+            get { return this.Codigo + " - " + this.Nombre; }
+        }
+
     }
 }

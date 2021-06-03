@@ -268,6 +268,7 @@
     </Content>
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\css\animate.css" />
+    <Content Include="Content\css\bootstrap-select.min.css" />
     <Content Include="Content\css\bootstrap.min.css" />
     <Content Include="Content\css\custom.css" />
     <Content Include="Content\css\flashy.min.css" />
@@ -320,6 +321,7 @@
     <Content Include="Content\Imgs\ptn-bg.jpg" />
     <Content Include="Content\Imgs\tag-line.png" />
     <Content Include="Content\iziToast.css" />
+    <Content Include="Content\js\bootstrap-select.min.js" />
     <Content Include="Content\js\bootstrap.min.js" />
     <Content Include="Content\js\contact-form-script.js" />
     <Content Include="Content\js\custom.js" />

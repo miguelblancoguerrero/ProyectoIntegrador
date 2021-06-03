@@ -74,7 +74,7 @@ namespace ProyectoIntegrador.Controllers.Administrativos
             {
                 return HttpNotFound();
             }
-            ViewBag.Municipio = new SelectList(db.Municipio, "Id", "Codigo", sucursal.Municipio);
+            ViewBag.Municipio = new SelectList(db.Municipio, "Id", "Nombre", sucursal.Municipio);
             return View("/Views/Administrativas/Sucursales/Edit.cshtml", sucursal);
         }
 
@@ -91,7 +91,7 @@ namespace ProyectoIntegrador.Controllers.Administrativos
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.Municipio = new SelectList(db.Municipio, "Id", "Codigo", sucursal.Municipio);
+            ViewBag.Municipio = new SelectList(db.Municipio, "Id", "Nombre", sucursal.Municipio);
             return View("/Views/Administrativas/Sucursales/Edit.cshtml", sucursal);
         }
 

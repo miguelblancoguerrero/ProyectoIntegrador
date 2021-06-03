@@ -1,9 +1,38 @@
 ﻿@model ProyectoIntegrador.Controllers.Citas.DTOs.CrearCitaDTO
-
 @{
+
     ViewBag.Title = "Crear Cita";
-    ProyectoIntegrador.Models.DBModels.Empleado empleado = Session["empleado"] != null ? (ProyectoIntegrador.Models.DBModels.Empleado) Session["empleado"] : null;
+    ProyectoIntegrador.Models.DBModels.Empleado empleado = Session["empleado"] != null ? (ProyectoIntegrador.Models.DBModels.Empleado)Session["empleado"] : null;
 }
+
+<style>
+    .hourColumn{
+        width: 80px;
+    }
+
+    .seleccionable:hover {
+        background-color: antiquewhite;
+    }
+
+    .seleccionable:active {
+        background-color: bisque;
+    }
+
+    .no-seleccionable {
+        background-color: darkgray;
+    }
+
+    .seleccionada {
+        background-color: coral;
+    }
+
+        .seleccionada:active {
+            background-color: darkorange;
+        }
+
+
+</style>
+
 <h4 class="titlePage mb-4">Citas</h4>
 @using (Html.BeginForm())
 {
@@ -56,10 +85,11 @@
                 </div>
             </div>
 
+            <!-- =======================AGENDAMIENTO CITA VACUNA COVID======================= -->
             <div id="vacunaCovid" class="container-fluid d-none" element="vacunaCovidBloque" style="padding-left: 0px; padding-right: 0px;">
                 <div class="form-group row">
-                    <label class="col-2 col-form-label">Sucursal</label>
-                    <div class="col-10">
+                    <label class="col-3 col-form-label">Sucursal Usuario Actual</label>
+                    <div class="col-9">
                         @if (empleado != null)
                         {
                             <input type="text" value="@Html.Raw(empleado.SucursalF.Nombre + " - " + empleado.SucursalF.Direccion + " [" + empleado.SucursalF.MunicipioF.Nombre + " - " + empleado.SucursalF.MunicipioF.DepartamentoF.Nombre + "]")" class="form-control" disabled />
@@ -70,15 +100,43 @@
                         }
                     </div>
                 </div>
+                @if (empleado != null)
+                {
+                    <div class="form-group row">
+                        <label class="col-3 col-form-label">Sucursal Cita</label>
+                        <div class="col-9">
+                            <select element="sucursalCita" name="sucursalCita" data="sucursalCita" class="form-control">
+                                @foreach (ProyectoIntegrador.Models.DBModels.Sucursal sucursal in Model.Sucursulas)
+                                {
+                                    <option value="@sucursal.Id" @if (@sucursal.Id.Equals(Model.SucursalEmpleado.Id)) { @Html.Raw("selected") }>
+                                        @sucursal.NombreCompleto
+                                    </option>
+                                }
+                            </select>
+                        </div>
+                    </div>
+                }
                 <div class="form-group row">
-                    <label class="col-2 col-form-label">Fecha</label>
+                    <label class="col-3 col-form-label">Fecha</label>
                     <div class="col-4">
                         <input type="date" element="fechaCita" class="form-control" id="fechaCita" />
                     </div>
                 </div>
+                <button type="button" class="form-control btn btn-primary" element="btnConsultarEspacioCovid">Consultar</button>
+                <div class="mt-3" element="agendaCovidContainer">
+                    <!-- Contenido por JS -->
+                </div>
+                <button type="button" class="form-control btn btn-primary d-none" element="btnConfirmarCitaCovid">Agendar</button>
             </div>
+            <!-- =======================AGENDAMIENTO CITA VACUNA COVID======================= -->
+
+
         </div>
     </div>
 }
 
+
 @Scripts.Render("~/Scripts/Citas/CrearCita.js")
+<script type="text/javascript">
+    this.view.coreData = @Html.Raw(Json.Encode(Model));
+</script>

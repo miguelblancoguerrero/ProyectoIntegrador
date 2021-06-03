@@ -42,5 +42,13 @@ namespace ProyectoIntegrador.Models.DBModels
 
         [ForeignKey("Municipio")]
         public Municipio MunicipioF { get; set; }
+
+        // Datos no mapeados
+
+        [NotMapped]
+        public string NombreCompleto
+        {
+            get { return this.Codigo + " - " + this.Nombre; }
+        }
     }
 }

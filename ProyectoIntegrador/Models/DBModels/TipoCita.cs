@@ -9,7 +9,7 @@ using System.Web;
 namespace ProyectoIntegrador.Models.DBModels
 {
     [Table("tipos_citas")]
-    public class TipoCitas
+    public class TipoCita
     {
 
         [Key]

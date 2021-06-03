@@ -12,10 +12,10 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.SucursalF.Codigo)
+            @Html.DisplayNameFor(model => model.Sucursal)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.TipoF.Codigo)
+            @Html.DisplayNameFor(model => model.Tipo)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Codigo)
@@ -29,10 +29,10 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.SucursalF.Codigo)
+            @Html.DisplayFor(modelItem => item.SucursalF.Codigo) - @Html.DisplayFor(modelItem => item.SucursalF.Nombre)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.TipoF.Codigo)
+            @Html.DisplayFor(modelItem => item.TipoF.Nombre)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Codigo)
